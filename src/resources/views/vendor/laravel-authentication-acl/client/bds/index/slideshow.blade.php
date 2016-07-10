@@ -32,7 +32,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                         <img data-u="caption" data-t="7" style="position: absolute; top: 0px; left: 379px; width: 379px; height: 213px;" src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/c-slide-3.png') !!}" />
                     </div>
                     <img style="position: absolute; top: 4px; left: 45px; width: 379px; height: 213px;" src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/c-navigator-horizontal.png') !!}" />
-                    <img data-u="caption" data-t="8" style="position: absolute; top: 740px; left: 1600px; width: 257px; height: 300px;" src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/c-finger-pointing.png') !!}" />
+                    <img data-u="caption" data-t="8" style="position: absolute; top: 740px; left: 1600px; width: 257px; height: 300px;" src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/c-navigator.png') !!}" />
                 </div>
             </div>
             <div data-p="225.00" style="display: none;">
@@ -53,7 +53,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
         <span data-u="arrowright" class="jssora22r" style="top:0px;right:12px;width:40px;height:58px;" data-autocenter="2"></span>
     </div>
 </section>
-@section('footer_scripts')
+@section('footer_scripts1')
 <script>
     jQuery(document).ready(function ($) {
 
