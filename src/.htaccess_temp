@@ -1,7 +1,0 @@
-AuthUserFile /var/www/.htpasswd
-AuthName "Login Area"
-AuthType Basic
-require user hvct
-
-
-suPHP_ConfigPath /home/hcmutxyz/public_html

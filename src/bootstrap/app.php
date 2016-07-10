@@ -41,9 +41,6 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
-$app->singleton(
-    Ktquez\Tinymce\TinymceServiceProvider::class
-);
 /*
 |--------------------------------------------------------------------------
 | Return The Application

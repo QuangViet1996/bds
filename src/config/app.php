@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', true),
+    'debug' => env('APP_DEBUG', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://hcmut.xyz'),
+    'url' => env('APP_URL', 'http://localhost'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'timezone' => 'Asia/Ho_Chi_Minh',
+    'timezone' => 'UTC',
 
     /*
     |--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'locale' => 'vi',
+    'locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -155,17 +155,6 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        
-        /*
-         * HRM
-         */
-        LaravelAcl\Authentication\AuthenticationServiceProvider::class,
-//        Barryvdh\Debugbar\ServiceProvider::class,
-        
-        App\Http\ViewComposers\ComposerServiceProvider::class,
-        Ktquez\Tinymce\TinymceServiceProvider::class,
-        Maatwebsite\Excel\ExcelServiceProvider::class,
-        
 
     ],
 
@@ -212,11 +201,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        
-//        'Debugbar' => Barryvdh\Debugbar\Facade::class,
-        
-        'tinymce' =>  Ktquez\Tinymce\TinymceServiceProvider::class,
-        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
-        'Input' => Illuminate\Support\Facades\Input::class,
+
     ],
+
 ];
