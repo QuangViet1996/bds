@@ -53,7 +53,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
         <span data-u="arrowright" class="jssora22r" style="top:0px;right:12px;width:40px;height:58px;" data-autocenter="2"></span>
     </div>
 </section>
-@section('footer_scripts1')
+@section('footer_scripts_part1')
 <script>
     jQuery(document).ready(function ($) {
 

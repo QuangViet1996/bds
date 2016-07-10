@@ -15,7 +15,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
             <div class="sec-title">
                 <h2>About <span class="theme_color">Property</span></h2>
                 <div class="separator small-separator"></div>
-                <div class="text"><p>Real Estate agents are Property consisting of land and the buildings on it, along with its seds naturals resources such seds as crops, minerals, or water; immovable property of this nature.Since this was a limited seds unit auction, we had approached by Developers to release incremental units to fulfill the demands at a stepped up cut-off price.</p></div>
+                <div class="text"><p>Real Estate agents are Property consisting of land and the buildings on it.</p></div>
             </div>        
             <!--Full Image Box-->
             <div class="five-col-theme">
@@ -28,11 +28,6 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
         <h3 class="count">3</h3>
     </div>
 </article>
-
-
-
-
-
 
 <!--Column-->
 

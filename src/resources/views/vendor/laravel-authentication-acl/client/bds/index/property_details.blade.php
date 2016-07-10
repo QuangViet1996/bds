@@ -22,8 +22,9 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                 <a href="#tab-one179" class="tab-btn active-btn">Exterior Details</a>
 
                                 <a href="#tab-one178" class="tab-btn ">Room Dimensions</a>
+                                
+                                 <a href="#tab-one181" class="tab-btn ">Interior Details</a>
 
-                                <a href="#tab-one181" class="tab-btn ">Interior Details</a>                          
                             </div>
                             <!--Tabs Content-->
                             <div class="tab-content">
@@ -39,20 +40,6 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                                 <li>Water Strg : 5000/ltr</li>
                                                 <li>No of Floors : 2</li>
                                                 <li>No Air Condition : 2</li>
-                                            </ul>
-                                        </div>
-                                        <div class="column col-md-4 col-sm-4 col-xs-12"><!--Styled List-->
-                                            <ul class="styled-list">
-                                                <li class="fa fa-share">Bathroom : 2</li>
-                                                <li>No of Stair : 4</li>
-                                                <li>No of Kitchen : 1</li>
-                                            </ul>
-                                        </div>
-                                        <div class="column col-md-4 col-sm-4 col-xs-12"><!--Styled List-->
-                                            <ul class="styled-list">
-                                                <li>Bedrooms : 2</li>
-                                                <li>Parking Capacity : 4</li>
-                                                <li>Swimming Pool : 1</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -71,20 +58,6 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                                 <li>No Air Condition : 2</li>
                                             </ul>
                                         </div>
-                                        <div class="column col-md-4 col-sm-4 col-xs-12"><!--Styled List-->
-                                            <ul class="styled-list">
-                                                <li>Bathroom : 2</li>
-                                                <li>No of Stair : 4</li>
-                                                <li>No of Kitchen : 1</li>
-                                            </ul>
-                                        </div>
-                                        <div class="column col-md-4 col-sm-4 col-xs-12"><!--Styled List-->
-                                            <ul class="styled-list">
-                                                <li>Bedrooms : 2</li>
-                                                <li>Parking Capacity : 4</li>
-                                                <li>Swimming Pool : 1</li>
-                                            </ul>
-                                        </div>
                                     </div>
                                 </div>
                                 <!--Tab / Active Tab-->
@@ -99,20 +72,6 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                                 <li>Water Strg : 5000/ltr</li>
                                                 <li>No of Floors : 2</li>
                                                 <li>No Air Condition : 2</li>
-                                            </ul>
-                                        </div>
-                                        <div class="column col-md-4 col-sm-4 col-xs-12"><!--Styled List-->
-                                            <ul class="styled-list">
-                                                <li>Bathroom : 2</li>
-                                                <li>No of Stair : 4</li>
-                                                <li>No of Kitchen : 1</li>
-                                            </ul>
-                                        </div>
-                                        <div class="column col-md-4 col-sm-4 col-xs-12"><!--Styled List-->
-                                            <ul class="styled-list">
-                                                <li>Bedrooms : 2</li>
-                                                <li>Parking Capacity : 4</li>
-                                                <li>Swimming Pool : 1</li>
                                             </ul>
                                         </div>
                                     </div>

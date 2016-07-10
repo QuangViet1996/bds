@@ -7,9 +7,6 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 ?>
 <section class="section  general-row">
     <div class="wpb_column col-md-12">
-
-
-
         <!--Agent Section-->
 
         <section class="agent-section">
@@ -17,17 +14,13 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
             <div class="auto-container">
 
                 <div class="row clearfix">
-
-
-
+                    
                     <div class="column col-md-5 col-sm-12 col-xs-12">
 
                         <figure class="agent-image wow rollIn" data-wow-delay="300ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 300ms; animation-name: rollIn;"><a href="#"><img src="http://wp1.themexlab.com/wp/dreamland/wp-content/uploads/2015/12/image-1.jpg" class="img-circle" alt=""></a></figure>
 
                     </div>
-
-
-
+                    
                     <div class="column col-md-7 col-sm-12 col-xs-12">
 
                         <!--Bordered Title-->
@@ -37,8 +30,6 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                             <h2>ABOUT <span class="theme_color">AGENT </span></h2>                  
 
                         </div>
-
-
 
                         <!--Agent Title-->
 
@@ -57,8 +48,6 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                             <p>But I must explain to you how all this mistaken idea of denouncing pleasure and the praising pain was born and I will give you a complete account of the system, and ip expound the actual teachings of the great explorer </p>
 
                         </div>
-
-
 
                         <!--Info Box-->
 
@@ -86,13 +75,9 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
                             </ul>
 
-
-
                             <a href="#" class="theme-btn btn-style-one">Contact Now</a>
 
                         </div>
-
-
 
                     </div>
 

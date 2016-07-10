@@ -52,7 +52,7 @@
         {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/jquery.min.js') !!}
         {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/bootstrap.min.js') !!}
         {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/jssor.slider.mini.js') !!}
-
+        {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/submenu_BDS.js') !!}
         {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/animate_agent.js') !!}
         {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/slugit.js') !!}
 

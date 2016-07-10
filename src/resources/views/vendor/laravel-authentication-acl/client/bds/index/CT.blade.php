@@ -8,9 +8,6 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
 <section class="section  general-row">
     <div class="wpb_column col-md-12">
-
-
-
         <!--Intro Section-->
 
         <section class="intro-section">
@@ -38,10 +35,6 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
             </div>
 
         </section>
-
-
-
-
     </div>
 
     <div class="clearfix"></div>

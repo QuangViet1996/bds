@@ -48,37 +48,6 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                             </div>
                         </div>
                     </div>
-                    <!--Column-->
-                    <div class="column col-md-4 col-sm-6 col-xs-12">
-                        <!--Faq Block-->
-                        <div class="faq-block">
-                            <div class="question"><h3>This is a simple question?</h3></div>
-                            <div class="answer">
-                                <p>Real Estate agents are Property consisting of land and the buildings on it, along with its seds naturals resources such seds as crops, minerals, or water; immovable property of this nature.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Column-->
-
-                    <div class="column col-md-4 col-sm-6 col-xs-12">
-                        <!--Faq Block-->
-                        <div class="faq-block">
-                            <div class="question"><h3>This is a simple question?</h3></div>
-                            <div class="answer">
-                                <p>Real Estate agents are Property consisting of land and the buildings on it, along with its seds naturals resources such seds as crops, minerals, or water; immovable property of this nature.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Column-->
-                    <div class="column col-md-4 col-sm-6 col-xs-12">
-                        <!--Faq Block-->
-                        <div class="faq-block">
-                            <div class="question"><h3>This is a simple question?</h3></div>
-                            <div class="answer">
-                                <p>Real Estate agents are Property consisting of land and the buildings on it, along with its seds naturals resources such seds as crops, minerals, or water; immovable property of this nature.</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
