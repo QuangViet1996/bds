@@ -43,8 +43,6 @@
         {{-- content --}}
         @yield('section')
 
-         {{-- footer --}}
-        @include('laravel-authentication-acl::client.bds.layouts.footer')
 
         {{-- Start footer scripts --}}
         @yield('before_footer_scripts')
