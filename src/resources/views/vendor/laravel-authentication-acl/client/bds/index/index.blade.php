@@ -12,4 +12,5 @@ Admin area: BDS
         @include('laravel-authentication-acl::client.bds.index.CT')
         @include('laravel-authentication-acl::client.bds.index.aboutagent')
         @include('laravel-authentication-acl::client.bds.index.client_say')
+        @include('laravel-authentication-acl::client.bds.index.FAQ')
 @stop

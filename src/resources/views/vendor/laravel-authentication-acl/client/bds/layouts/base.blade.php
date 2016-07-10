@@ -23,6 +23,8 @@
         {!! HTML::style('packages/jacopo/laravel-authentication-acl/_css/CT.css') !!}
         {!! HTML::style('packages/jacopo/laravel-authentication-acl/_css/aboutagent.css') !!}
         {!! HTML::style('packages/jacopo/laravel-authentication-acl/_css/client_say.css') !!}
+        {!! HTML::style('packages/jacopo/laravel-authentication-acl/_css/FAQ.css') !!}
+        {!! HTML::style('packages/jacopo/laravel-authentication-acl/_css/footer.css') !!}
 
         @yield('head_css')
         {{-- End head css --}}
@@ -39,9 +41,10 @@
         @include('laravel-authentication-acl::client.bds.layouts.menu')
 
         {{-- content --}}
-
         @yield('section')
 
+         {{-- footer --}}
+        @include('laravel-authentication-acl::client.bds.layouts.footer')
 
         {{-- Start footer scripts --}}
         @yield('before_footer_scripts')
@@ -58,9 +61,7 @@
         {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/jquery.bxslider.js') !!}
         {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/jquery.bxslider.min.js') !!}
         @yield('footer_scripts_part2')
-        @yield('footer_scripts_part3')
-        @yield('footer_scripts_part4')
-        @yield('footer_scripts_part5')
+     
         {{-- End footer scripts --}}
     </body>
 </html>
