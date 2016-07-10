@@ -46,7 +46,7 @@
         {{-- Start footer scripts --}}
         @yield('before_footer_scripts')
 
-        {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/jquery-1.11.1.min.js') !!}
+        {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/jquery.min.js') !!}
         {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/bootstrap.min.js') !!}
         {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/jssor.slider.mini.js') !!}
 
