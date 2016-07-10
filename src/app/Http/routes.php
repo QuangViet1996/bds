@@ -1,16 +1,17 @@
 <?php
+
 use Illuminate\Session\TokenMismatchException;
 
 /*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
+  |--------------------------------------------------------------------------
+  | Application Routes
+  |--------------------------------------------------------------------------
+  |
+  | Here is where you can register all of the routes for an application.
+  | It's a breeze. Simply tell Laravel the URIs it should respond to
+  | and give it the controller to call when that URI is requested.
+  |
+ */
 
 
 
@@ -20,17 +21,16 @@ use Illuminate\Session\TokenMismatchException;
 /**
  * User login and logout
  */
-Route::group(['middleware' => ['web']], function ()
-{
+ Route::get('/', 'BdsController@index');
+Route::group(['middleware' => ['web']], function () {
     /*
       |--------------------------------------------------------------------------
       | Admin side (auth required)
       |--------------------------------------------------------------------------
       |
-      */
-    Route::group(['middleware' => ['admin_logged', 'can_see']], function ()
-    {
-        
+     */
+   
+    Route::group(['middleware' => ['admin_logged', 'can_see']], function () {
         
     });
 });
