@@ -3,7 +3,7 @@ if (! class_exists ( 'lessc')) {
    include (public_path() . '/packages/jacopo/laravel-authentication-acl/less/lessc.inc.php');
 }
 $less = new lessc;
-$less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/less/CT_BDS.less', public_path() . '/packages/jacopo/laravel-authentication-acl/_css/CT_BDS.css');
+$less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/less/CT.less', public_path() . '/packages/jacopo/laravel-authentication-acl/_css/CT.css');
 ?>
 
 <section class="section  general-row">

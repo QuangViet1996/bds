@@ -8,4 +8,6 @@ Admin area: BDS
         @include('laravel-authentication-acl::client.bds.index.slideshow')
         @include('laravel-authentication-acl::client.bds.index.aboutproperty')
         @include('laravel-authentication-acl::client.bds.index.property_details')
+        @include('laravel-authentication-acl::client.bds.index.properties')
+        @include('laravel-authentication-acl::client.bds.index.CT')
 @stop

@@ -19,6 +19,8 @@
     {!! HTML::style('packages/jacopo/laravel-authentication-acl/_css/slideshow.css') !!}
     {!! HTML::style('packages/jacopo/laravel-authentication-acl/_css/aboutproperty.css') !!}
     {!! HTML::style('packages/jacopo/laravel-authentication-acl/_css/property_details.css') !!}
+    {!! HTML::style('packages/jacopo/laravel-authentication-acl/_css/properties.css') !!}
+    {!! HTML::style('packages/jacopo/laravel-authentication-acl/_css/CT.css') !!}
 
     @yield('head_css')
     {{-- End head css --}}
@@ -44,6 +46,7 @@
 
         {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/jquery-1.11.1.min.js') !!}
         {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/bootstrap.min.js') !!}
+        {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/jssor.slider.mini.js') !!}
         {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/jssor.slider.mini.js') !!}
 
         @yield('footer_scripts')
