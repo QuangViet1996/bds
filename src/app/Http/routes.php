@@ -13,22 +13,8 @@
 
 Route::get('/', 'BdsController@index');
 
-Route::get('/admin/houses', [
-    'as' => 'houses.list',
-    'uses' => '\App\Http\Controllers\HousesController@getHouses'
+Route::get('/view', [
+    'as' => 'bds.view',
+    'uses' => '\App\Http\Controllers\BdsController@bdsView'
 ]);
 
-Route::get('/admin/houses', [
-    'as' => 'houses.list',
-    'uses' => '\App\Http\Controllers\HousesController@getHouses'
-]);
-
-Route::get('/admin/houses', [
-    'as' => 'houses.list',
-    'uses' => '\App\Http\Controllers\HousesController@getHouses'
-]);
-
-Route::get('/admin/houses', [
-    'as' => 'houses.list',
-    'uses' => '\App\Http\Controllers\HousesController@getHouses'
-]);

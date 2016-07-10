@@ -25,6 +25,7 @@
         {!! HTML::style('packages/jacopo/laravel-authentication-acl/_css/client_say.css') !!}
         {!! HTML::style('packages/jacopo/laravel-authentication-acl/_css/FAQ.css') !!}
         {!! HTML::style('packages/jacopo/laravel-authentication-acl/_css/footer.css') !!}
+        {!! HTML::style('packages/jacopo/laravel-authentication-acl/_css/detail.css') !!}
 
         @yield('head_css')
         {{-- End head css --}}

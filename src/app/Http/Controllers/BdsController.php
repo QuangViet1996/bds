@@ -98,9 +98,7 @@ class BdsController extends Controller {
      */
 
     public function bdsView(Request $request) {
-
-        var_dump(2312312);
-        die();
+        return view('laravel-authentication-acl::client.bds.detail.view');
     }
 
 }
