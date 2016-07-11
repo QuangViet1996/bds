@@ -12,7 +12,7 @@
     <div class="realestatemanager1 container">
         
         <div class="basictable-1 basictable row"> 
-            <div class="tab-content col-md-12 col-sm-6 col-xs-12">
+            <div class="tab-content col-md-12 col-sm-12 col-xs-12">
                 <!-- All -->
                 <div class="featured_houses tab-pane fade in active" id="All">
                     <div class="featured_houses_block col-md-4 col-sm-6 col-xs-12">
