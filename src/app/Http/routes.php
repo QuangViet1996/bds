@@ -32,3 +32,8 @@ Route::get('/cat/detail', [
     'as' => 'bds.cat_detail',
     'uses' => '\App\Http\Controllers\BdsController@bdsCatDetail'
 ]);
+
+Route::get('/contact', [
+    'as' => 'bds.contact',
+    'uses' => '\App\Http\Controllers\BdsController@bdsContact'
+]);

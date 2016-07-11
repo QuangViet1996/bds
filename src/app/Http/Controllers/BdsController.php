@@ -128,5 +128,9 @@ class BdsController extends Controller {
     public function bdsCatDetail(Request $request) {
         return view('laravel-authentication-acl::client.bds.category.cat_detail');
     }
+    
+     public function bdsContact(Request $request) {
+        return view('laravel-authentication-acl::client.bds.contact.contact');
+    }
 
 }
