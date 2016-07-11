@@ -106,4 +106,5 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
     </div>
 
 </header>
+<div class="scroll-to-top" style="display: block;"><span class="fa fa-arrow-up"></span></div>
 

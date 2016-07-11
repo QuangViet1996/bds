@@ -43,12 +43,18 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                             <li><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/h_hill_fence.jpg') !!}" style="width: 100%"/></li>
                             <li><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/h_hill_fence.jpg') !!}" style="width: 100%"/></li>
                             <li><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/h_hill_fence.jpg') !!}" style="width: 100%"/></li>
+                            <li><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/h_hill_fence.jpg') !!}" style="width: 100%"/></li>
+                            <li><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/h_hill_fence.jpg') !!}" style="width: 100%"/></li>
+                            <li><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/h_hill_fence.jpg') !!}" style="width: 100%"/></li>
                         </ul>
 
                         <div id="bx-pager" class="bx" style="text-align: center">
                             <a data-slide-index="0" href=""><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/hill_fence.jpg') !!}" /></a>
                             <a data-slide-index="1" href=""><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/hill_fence.jpg') !!}" /></a>
                             <a data-slide-index="2" href=""><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/hill_fence.jpg') !!}" /></a>
+                            <a data-slide-index="3" href=""><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/hill_fence.jpg') !!}" /></a>
+                            <a data-slide-index="4" href=""><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/hill_fence.jpg') !!}" /></a>
+                            <a data-slide-index="5" href=""><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/hill_fence.jpg') !!}" /></a>
                         </div>
                     </div>
                     <div style="clear:both"></div>
