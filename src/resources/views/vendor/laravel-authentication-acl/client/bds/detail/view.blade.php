@@ -5,5 +5,5 @@ Trang chi tiết
 @stop
 
 @section('section')
-    @include('laravel-authentication-acl::client.bds.list.List')
+    @include('laravel-authentication-acl::client.bds.detail.detail')
 @stop

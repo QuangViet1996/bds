@@ -200,7 +200,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                     <div id="rem_house_titlebox">
                         Contact agent        </div>    
 
-                    <span class="col_02">Thdsadsadsa<br>pykun6@gmail.com</span>
+                    <span class="col_02">Tsasa<br>pykun6@gmail.com</span>
 
                 </div>
                 <div class="rem_buying_house">
@@ -210,7 +210,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                     <div id="show_buying">
 
 
-                        <div class="row">
+                        <div class="row" style="margin: 0!important">
                             <div class="col-md-12 col">
                                 <div id="customer_name_warning"></div>
                                 <span class="col-md-12"><input id="alert_name_buy" class="inputbox" type="text" name="customer_name" maxlength="80" placeholder="Name*"></span>
