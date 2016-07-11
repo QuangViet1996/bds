@@ -21,7 +21,7 @@
                         <div class="blog-post wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;">
                             <article class="inner-box">
                                 <figure class="image-box">
-                                    <a href="#"><img width="625" height="301" src="images/blog-image-6.jpg" class="img-responsive wp-post-image" alt="blog-image-6" sizes="(max-width: 625px) 100vw, 625px"></a>
+                                    <a href="#"><img width="100%" height="301" src="images/blog-image-6.jpg" class="img-responsive wp-post-image" alt="blog-image-6" sizes="(max-width: 625px) 100vw, 625px"></a>
                                     <div class="post-options">
                                         <a href="#" class="heart-icon img-circle jolly_like_it" data-id="270"><span class="icon fa fa-heart"></span></a>
                                     </div>

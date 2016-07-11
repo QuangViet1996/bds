@@ -3,23 +3,25 @@
 		<div class="content-box">
 			<h1>Show Cata</h1>
 			<div class="bread-crumb">
-				<ul class="breadcrumb pull-right"><li><a href="http://wp1.themexlab.com/wp/dreamland/">Home</a></li><li><a href="http://wp1.themexlab.com/wp/dreamland/?m=201601">Archive for January, 2016</a></li></ul>			</div>
+				<ul class="breadcrumb pull-right"><li><a href="#">Home</a></li><li><a href="#">Archive for January, 2016</a>
+                                    </li>
+                                </ul>			
+                        </div>
 		</div>
 	</div>
 </section>
 <section class="gallery-section full-width sidebar-page">
     <div class="realestatemanager1 container">
         <div class="basictable-1 basictable row"> 
-            <div class="tab-content col-md-9">
+            <div class="tab-content col-md-9 col-sm-8 col-xs-12">
                 <section class="blog-container">
-
                     <!--Blog Post-->
                     <div id="post-270" class="post-270 post type-post status-publish format-standard has-post-thumbnail hentry category-residential">
                         <!--Blog Post-->
                         <div class="blog-post wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;">
                             <article class="inner-box">
                                 <!--Image-->
-                                <figure class="image-box">
+                                <figure class="image">
                                     <a href="#">
                                         <img width="625" height="401" src="images/blog-image-6.jpg" class="img-responsive wp-post-image" alt="blog-image-6" sizes="(max-width: 625px) 100vw, 625px">            </a>
                                     <div class="post-options">
@@ -42,14 +44,15 @@
 
                                 </div>
                             </article>
-                        </div>                        </div>
+                        </div>                       
+                    </div>
                     <!--Blog Post-->
                     <div id="post-269" class="post-269 post type-post status-publish format-standard has-post-thumbnail hentry category-residential">
                         <!--Blog Post-->
                         <div class="blog-post wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;">
                             <article class="inner-box">
                                 <!--Image-->
-                                <figure class="image-box">
+                                <figure class="image">
                                     <a href="#">
                                         <img width="625" height="401" src="images/blog-image-6.jpg" class="img-responsive wp-post-image" alt="blog-image-5" sizes="(max-width: 625px) 100vw, 625px">            </a>
                                     <div class="post-options">
@@ -72,10 +75,9 @@
 
                                 </div>
                             </article>
-                        </div>                        </div>
+                        </div>                        
+                    </div>
                     
-                    
-
                 </section> 
 
                 <div class="pager-outer">
@@ -89,7 +91,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-5 col-xs-12">
+            <div class="col-md-3 col-sm-4 col-xs-12">
                 <aside class="side">
                     <div id="search-2" class="widget sidebar_widget widget_search"><form action="#" method="get" class="search-form">
                             <div class="form-group">

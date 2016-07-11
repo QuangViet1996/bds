@@ -1,5 +1,14 @@
-<section class="section  general-row">
 
+<section class="page-title">
+    <div class="auto-container">
+        <div class="content-box">
+            <h1>Detail BDS</h1>
+            <div class="bread-crumb">
+                <ul class="breadcrumb pull-right"><li><a href="http://wp1.themexlab.com/wp/dreamland/">Home</a></li><li><a href="http://wp1.themexlab.com/wp/dreamland/?m=201601">Archive for January, 2016</a></li></ul>			</div>
+        </div>
+    </div>
+</section>
+<section class="section general-row sidebar-page">
     <div class="container">
         <div class="row" jstcache="0">
             <div class="col-md-9" jstcache="0">
@@ -21,28 +30,17 @@
                         <span class="col_02">USA, Avenel</span>.
 
                     </div>
-                    <div class="image-row">
-                        <div class="image-set row">
-                            <div class="col-md-3">
-                                <a class="example-image-link" href="images/cau3.jpg" data-lightbox="cau3" data-title="Click the right half of the image to move forward.">
-                                    <img class="example-image" src="images/cau3.jpg" alt="Golden Gate Bridge with San Francisco in distance" style="width: 100%">
-                                </a>
-                            </div>
-                            <div class="col-md-3">
-                                <a class="example-image-link" href="images/cau3.jpg" data-lightbox="cau3" data-title="Or press the right arrow on your keyboard.">
-                                    <img class="example-image" src="images/cau3.jpg" alt="Forest with mountains behind" style="width: 100%">
-                                </a>
-                            </div>
-                            <div class="col-md-3">
-                                <a class="example-image-link" href="images/cau3.jpg" data-lightbox="cau3" data-title="The next image in the set is preloaded as you're viewing.">
-                                    <img class="example-image" src="images/cau3.jpg" alt="Bicyclist looking out over hill at ocean" style="width: 100%">
-                                </a>
-                            </div>
-                            <div class="col-md-3">
-                                <a class="example-image-link" href="images/cau3.jpg" data-lightbox="cau3" data-title="Click anywhere outside the image or the X to the right to close.">
-                                    <img class="example-image" src="images/cau3.jpg" alt="Small lighthouse at bottom with ocean behind" style="width: 100%">
-                                </a>
-                            </div>
+                    <div class="image-row col-md-12">
+                        <ul class="bxslider">
+                            <li><img src="images/h_hill_fence.jpg" style="width: 100%"/></li>
+                            <li><img src="images/h_hill_fence.jpg" style="width: 100%"/></li>
+                            <li><img src="images/h_hill_fence.jpg" style="width: 100%"/></li>
+                        </ul>
+
+                        <div id="bx-pager" class="bx" style="text-align: center">
+                            <a data-slide-index="0" href=""><img src="images/hill_fence.jpg" /></a>
+                            <a data-slide-index="1" href=""><img src="images/hill_fence.jpg" /></a>
+                            <a data-slide-index="2" href=""><img src="images/hill_fence.jpg" /></a>
                         </div>
                     </div>
                     <div style="clear:both"></div>
@@ -248,8 +246,7 @@
 
 
 <script>
-    lightbox.option({
-        'resizeDuration': 200,
-        'wrapAround': true
-    })
+    $('.bxslider').bxSlider({
+        pagerCustom: '#bx-pager'
+    });
 </script>
