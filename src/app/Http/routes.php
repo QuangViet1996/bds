@@ -18,3 +18,17 @@ Route::get('/view', [
     'uses' => '\App\Http\Controllers\BdsController@bdsView'
 ]);
 
+Route::get('/list', [
+    'as' => 'bds.list',
+    'uses' => '\App\Http\Controllers\BdsController@bdsList'
+]);
+
+Route::get('/cat', [
+    'as' => 'bds.cat',
+    'uses' => '\App\Http\Controllers\BdsController@bdsCat'
+]);
+
+Route::get('/cat/detail', [
+    'as' => 'bds.cat_detail',
+    'uses' => '\App\Http\Controllers\BdsController@bdsCatDetail'
+]);

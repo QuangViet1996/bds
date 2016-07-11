@@ -1,7 +1,7 @@
 @extends('laravel-authentication-acl::client.bds.layouts.base')
 
 @section('title')
-Trang chi tiết
+Danh sách nhà cho thuê
 @stop
 
 @section('section')

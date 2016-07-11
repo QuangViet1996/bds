@@ -66,9 +66,8 @@ class BdsController extends Controller {
      */
 
     public function bdsList(Request $request) {
+        return view('laravel-authentication-acl::client.bds.list.list_houses');
 
-        var_dump(2312312);
-        die();
     }
 
     /*     * ********************************************
@@ -99,6 +98,35 @@ class BdsController extends Controller {
 
     public function bdsView(Request $request) {
         return view('laravel-authentication-acl::client.bds.detail.view');
+    }
+    
+    
+    /*     * ********************************************
+     * bdsCat
+     * 
+     * @author: Kang
+     * @web: http://tailieuweb.com
+     * @date: 26/6/2016
+     * 
+     * @status: REVIEWED
+     */
+
+    public function bdsCat(Request $request) {
+        return view('laravel-authentication-acl::client.bds.category.cat_list');
+    }
+    
+     /*     * ********************************************
+     * bdsCatDetail
+     * 
+     * @author: Kang
+     * @web: http://tailieuweb.com
+     * @date: 26/6/2016
+     * 
+     * @status: REVIEWED
+     */
+
+    public function bdsCatDetail(Request $request) {
+        return view('laravel-authentication-acl::client.bds.category.cat_detail');
     }
 
 }

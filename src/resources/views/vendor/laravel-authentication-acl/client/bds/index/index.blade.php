@@ -1,7 +1,7 @@
 @extends('laravel-authentication-acl::client.bds.layouts.base')
 
 @section('title')
-Admin area: BDS
+Trang chủ
 @stop
 
 @section('section')

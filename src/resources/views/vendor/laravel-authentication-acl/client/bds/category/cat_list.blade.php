@@ -1,9 +1,9 @@
 @extends('laravel-authentication-acl::client.bds.layouts.base')
 
 @section('title')
-Trang chi tiết
+Danh mục
 @stop
 
 @section('section')
-    @include('laravel-authentication-acl::client.bds.list.List')
+    @include('laravel-authentication-acl::client.bds.category.list')
 @stop

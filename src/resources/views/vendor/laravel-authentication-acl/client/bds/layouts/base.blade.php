@@ -26,6 +26,8 @@
         {!! HTML::style('packages/jacopo/laravel-authentication-acl/_css/FAQ.css') !!}
         {!! HTML::style('packages/jacopo/laravel-authentication-acl/_css/footer.css') !!}
         {!! HTML::style('packages/jacopo/laravel-authentication-acl/_css/detail.css') !!}
+        {!! HTML::style('packages/jacopo/laravel-authentication-acl/_css/contactIndex.css') !!}
+        {!! HTML::style('packages/jacopo/laravel-authentication-acl/_css/cat.css') !!}
 
         @yield('head_css')
         {{-- End head css --}}
@@ -38,12 +40,14 @@
     </head>
 
     <body>
-        {{-- navbar --}}
+        {{-- menu --}}
         @include('laravel-authentication-acl::client.bds.layouts.menu')
 
         {{-- content --}}
         @yield('section')
-
+        
+         {{-- footer --}}
+        @include('laravel-authentication-acl::client.bds.layouts.footer')
 
         {{-- Start footer scripts --}}
         @yield('before_footer_scripts')
