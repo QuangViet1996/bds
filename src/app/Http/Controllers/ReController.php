@@ -36,7 +36,7 @@ use Validator;
 use Response;
 use Illuminate\Support\MessageBag as MessageBag;
 
-class BdsController extends Controller {
+class ReController extends Controller {
 
     public $data = array(
     );
@@ -52,11 +52,11 @@ class BdsController extends Controller {
      */
 
     public function index(Request $request) {
-        return view('laravel-authentication-acl::client.bds.index.index');
+        return view('laravel-authentication-acl::client.re.index.index');
     }
 
     /*     * ********************************************
-     * bdsList
+     * reList
      * 
      * @author: Kang
      * @web: http://tailieuweb.com
@@ -65,13 +65,12 @@ class BdsController extends Controller {
      * @status: REVIEWED
      */
 
-    public function bdsList(Request $request) {
-        return view('laravel-authentication-acl::client.bds.list.list_houses');
-
+    public function reList(Request $request) {
+        return view('laravel-authentication-acl::client.re.list.list_houses');
     }
 
     /*     * ********************************************
-     * bdsSearch
+     * reSearch
      * 
      * @author: Kang
      * @web: http://tailieuweb.com
@@ -80,14 +79,14 @@ class BdsController extends Controller {
      * @status: REVIEWED
      */
 
-    public function bdsSearch(Request $request) {
+    public function reSearch(Request $request) {
 
         var_dump(2312312);
         die();
     }
 
     /*     * ********************************************
-     * bdsView
+     * reView
      * 
      * @author: Kang
      * @web: http://tailieuweb.com
@@ -96,13 +95,12 @@ class BdsController extends Controller {
      * @status: REVIEWED
      */
 
-    public function bdsView(Request $request) {
-        return view('laravel-authentication-acl::client.bds.detail.view');
+    public function reView(Request $request) {
+        return view('laravel-authentication-acl::client.re.detail.view');
     }
-    
-    
+
     /*     * ********************************************
-     * bdsCat
+     * reCat
      * 
      * @author: Kang
      * @web: http://tailieuweb.com
@@ -111,12 +109,12 @@ class BdsController extends Controller {
      * @status: REVIEWED
      */
 
-    public function bdsCat(Request $request) {
-        return view('laravel-authentication-acl::client.bds.category.cat_list');
+    public function reCategory(Request $request) {
+        return view('laravel-authentication-acl::client.re.category.cat_list');
     }
-    
-     /*     * ********************************************
-     * bdsCatDetail
+
+    /*     * ********************************************
+     * reContact
      * 
      * @author: Kang
      * @web: http://tailieuweb.com
@@ -125,12 +123,8 @@ class BdsController extends Controller {
      * @status: REVIEWED
      */
 
-    public function bdsCatDetail(Request $request) {
-        return view('laravel-authentication-acl::client.bds.category.cat_detail');
-    }
-    
-     public function bdsContact(Request $request) {
-        return view('laravel-authentication-acl::client.bds.contact.contact');
+    public function reContact(Request $request) {
+        return view('laravel-authentication-acl::client.re.contact.contact');
     }
 
 }

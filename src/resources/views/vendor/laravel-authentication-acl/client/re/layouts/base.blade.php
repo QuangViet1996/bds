@@ -42,13 +42,13 @@
 
     <body>
         {{-- menu --}}
-        @include('laravel-authentication-acl::client.bds.layouts.menu')
+        @include('laravel-authentication-acl::client.re.layouts.menu')
 
         {{-- content --}}
         @yield('section')
         
          {{-- footer --}}
-        @include('laravel-authentication-acl::client.bds.layouts.footer')
+        @include('laravel-authentication-acl::client.re.layouts.footer')
 
         {{-- Start footer scripts --}}
         @yield('before_footer_scripts')

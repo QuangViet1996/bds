@@ -11,29 +11,24 @@
   |
  */
 
-Route::get('/', 'BdsController@index');
+Route::get('/', 'ReController@index');
 
 Route::get('/view', [
-    'as' => 'bds.view',
-    'uses' => '\App\Http\Controllers\BdsController@bdsView'
+    'as' => 're.view',
+    'uses' => '\App\Http\Controllers\ReController@reView'
 ]);
 
 Route::get('/list', [
-    'as' => 'bds.list',
-    'uses' => '\App\Http\Controllers\BdsController@bdsList'
+    'as' => 're.list',
+    'uses' => '\App\Http\Controllers\ReController@reList'
 ]);
 
-Route::get('/cat', [
-    'as' => 'bds.cat',
-    'uses' => '\App\Http\Controllers\BdsController@bdsCat'
-]);
-
-Route::get('/cat/detail', [
-    'as' => 'bds.cat_detail',
-    'uses' => '\App\Http\Controllers\BdsController@bdsCatDetail'
+Route::get('/category', [
+    'as' => 're.category',
+    'uses' => '\App\Http\Controllers\ReController@reCategory'
 ]);
 
 Route::get('/contact', [
-    'as' => 'bds.contact',
-    'uses' => '\App\Http\Controllers\BdsController@bdsContact'
+    'as' => 're.contact',
+    'uses' => '\App\Http\Controllers\ReController@reContact'
 ]);

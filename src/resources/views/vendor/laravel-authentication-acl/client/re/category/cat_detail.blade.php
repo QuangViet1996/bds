@@ -1,4 +1,4 @@
-@extends('laravel-authentication-acl::client.bds.layouts.base')
+@extends('laravel-authentication-acl::client.re.layouts.base')
 
 @section('title')
 Chi tiết danh mục
