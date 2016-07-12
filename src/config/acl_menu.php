@@ -77,7 +77,7 @@ return [
         [
             "name" => "Testimonials",
             "route" => "testimonials",
-            "link" => '/admin/testimonials',
+            "link" => '/admin/testimonials/list',
             "permissions" => ["_superadmin", "_real-estate-admin"]
         ],
     ]
