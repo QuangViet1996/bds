@@ -27,7 +27,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                             <p class="designation">Co- Founder at Houzz</p>
                                         </div>
                                         <div class="slide-text">
-                                            <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.�?/p>
+                                            <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.�?/p>
                                         </div>
                                     </article>
                                 </div>
@@ -41,7 +41,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                             <p class="designation">Co- Founder at Houzz</p>
                                         </div>         
                                         <div class="slide-text">
-                                            <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.�?/p>
+                                            <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.�?/p>
                                         </div>
                                     </article>
                                 </div>
@@ -54,7 +54,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                             <p class="designation">Co- Founder at Houzz</p>
                                         </div>              
                                         <div class="slide-text">
-                                            <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.�?/p>
+                                            <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.�?/p>
                                         </div>
                                     </article>
                                 </div>
@@ -67,7 +67,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                             <p class="designation">Co- Founder at Houzz</p>
                                         </div>
                                         <div class="slide-text">
-                                            <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.�?/p>
+                                            <p>“We know that sometimes it’s difficult to get to the phone if you are in the middle of something and you don’t want to miss.�?/p>
                                         </div>
                                     </article>
                                 </div>

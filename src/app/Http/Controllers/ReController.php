@@ -52,7 +52,12 @@ class ReController extends Controller {
      */
 
     public function index(Request $request) {
-        return view('laravel-authentication-acl::client.re.index.index');
+        
+        $data = array_merge($this->data, array(
+            'test' => 'test'
+        ));
+        
+        return view('laravel-authentication-acl::client.re.index.index')->with(['data' => $data]);
     }
 
     /*     * ********************************************
