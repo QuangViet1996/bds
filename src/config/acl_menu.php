@@ -70,15 +70,6 @@ return [
                 "link"        => '/admin/users/profile/self',
                 "permissions" => []
             ],
-        
-        /**
-         * Real Estates
-         */
-        [
-            "name" => "Testimonials",
-            "route" => "testimonials",
-            "link" => '/admin/testimonials/list',
-            "permissions" => ["_superadmin", "_real-estate-admin"]
-        ],
+
     ]
 ];
