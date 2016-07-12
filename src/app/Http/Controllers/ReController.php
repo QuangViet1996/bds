@@ -17,8 +17,8 @@ use \LaravelAcl\Authentication\Controllers\Controller;
 /**
  * Models
  */
-use App\Models\PayrollSupport;
-use App\Models\PayrollSupportCat;
+use App\Models\Testimonial;
+use App\Models\RealEstates;
 /**
  * Validator
  */
@@ -52,11 +52,17 @@ class ReController extends Controller {
      */
 
     public function index(Request $request) {
+        $obj_testimonial = new Testimonial();
+        $obj_real_estates = new RealEstates();
         
+        $testimonial = $obj_testimonial->listTestimonial();
+        $real_estates = $obj_real_estates->listRealEstate();
+
         $data = array_merge($this->data, array(
-            'test' => 'test'
+            'testimonial' => $testimonial,
+            'real_estates' => $real_estates
         ));
-        
+
         return view('laravel-authentication-acl::client.re.index.index')->with(['data' => $data]);
     }
 

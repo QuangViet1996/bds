@@ -61,7 +61,7 @@ $testimanial->real_estate_testimonial_author_name = '';
                     {!! Form::text('author_name',$testimanial->real_estate_testimonial_author_name, ['class' => 'form-control', 'placeholder' => trans('front.testimonials.author_name')]) !!}
                 </div>
                 <span class="text-danger">{!! $errors->first('permission') !!}</span>
-                {!! Form::hidden('id') !!}
+                  {!! Form::hidden('id', $testimanial->real_estate_testimonial_id) !!}
                 <a href="{!! URL::route('testimonials.delete',['id' => $testimanial->real_estate_testimonial_id, '_token' => csrf_token()]) !!}" class="btn btn-danger pull-right margin-left-5 delete">{!!trans("front.testimonials.delete")!!}</a>
                 {!! Form::submit('Save', array("class"=>"btn btn-info pull-right ")) !!}
                 {!! Form::close() !!}

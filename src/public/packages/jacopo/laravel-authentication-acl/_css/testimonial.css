@@ -61,6 +61,10 @@
 .testimonials-section .testimonials-slider {
   position: relative;
 }
+.testimonials-section .testimonials-slider .bx-viewport {
+  background: none !important;
+  border: none !important;
+}
 .testimonials-section .testimonials-slider .slide-item {
   position: relative;
   margin: 50px 0px 0px 0px;

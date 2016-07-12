@@ -11,7 +11,7 @@ Trang chủ
     @include('laravel-authentication-acl::client.re.index.properties')
     @include('laravel-authentication-acl::client.re.index.CT')
     @include('laravel-authentication-acl::client.re.index.aboutagent')
-    @include('laravel-authentication-acl::client.re.index.client_say')
+    @include('laravel-authentication-acl::client.re.index.testimonial')
     @include('laravel-authentication-acl::client.re.index.FAQ')
     @include('laravel-authentication-acl::client.re.index.contactIndex')
 

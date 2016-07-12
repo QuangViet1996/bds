@@ -36,7 +36,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
             <div class="lower-outer clearfix">
                 <!--Logo-->
                 <div class="logo">
-                    <a href="#"><img src="http://wp1.themexlab.com/wp/dreamland/wp-content/uploads/2015/12/logo-3.png" alt="Bulldozer" title="Dream Land"></a>
+                    <a href="#"><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/cotienxanh.png') !!}" alt="Bulldozer" title="Dream Land"></a>
                 </div>
 
                 <!--Right Container-->

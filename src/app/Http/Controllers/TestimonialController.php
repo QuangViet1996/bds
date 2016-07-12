@@ -56,6 +56,7 @@ class TestimonialController extends Controller {
 
         $data = array_merge($this->data, array(
             'list' => $list,
+            'request' => $request,
         ));
         return view('laravel-authentication-acl::admin.testimonial.list')->with(['data' => $data]);
     }
@@ -76,7 +77,6 @@ class TestimonialController extends Controller {
 
         $input = $request->all();
         $real_estate_testimonial_id = $request->get('id');
-
         $testimanial = NULL;
 
         if ($validator->validate($input)) {
@@ -142,7 +142,8 @@ class TestimonialController extends Controller {
         $testimanial = $obj_testimonial->find($real_estate_testimonial_id);
         if (!empty($testimanial)) {
             $data = array_merge($this->data, array(
-                'testimanial' => $testimanial
+                'testimanial' => $testimanial,
+                'request' => $request,
             ));
 
             return View::make('laravel-authentication-acl::admin.testimonial.edit')->with(['data' => $data]);
