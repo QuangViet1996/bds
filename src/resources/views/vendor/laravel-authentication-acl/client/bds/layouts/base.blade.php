@@ -59,6 +59,7 @@
         {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/submenu_BDS.js') !!}
         {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/animate_agent.js') !!}
         {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/slugit.js') !!}
+        {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/detail.js') !!}
 
         @yield('footer_scripts_part1')
 

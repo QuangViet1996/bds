@@ -6,16 +6,47 @@ $less = new lessc;
 $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/less/detail.less', public_path() . '/packages/jacopo/laravel-authentication-acl/_css/detail.css');
 ?>
 
-
-<section class="page-title">
+<section class="page-title page">
     <div class="auto-container">
         <div class="content-box">
             <h1>Detail BDS</h1>
             <div class="bread-crumb">
-                <ul class="breadcrumb pull-right"><li><a href="http://wp1.themexlab.com/wp/dreamland/">Home</a></li><li><a href="http://wp1.themexlab.com/wp/dreamland/?m=201601">Archive for January, 2016</a></li></ul>			</div>
+                <ul class="breadcrumb pull-right"><li><a href="#">Home</a></li><li><a href="#">Archive for January, 2016</a></li></ul>			</div>
         </div>
     </div>
 </section>
+<div class="section navv-bar" style="top: 0px;">
+    <div class="nav-bar-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <ul class="detail-nav list-unstyled">
+                        <li class="nav-item on-top-btn active">
+                            <figure><i class="fa fa-home icon"></i>
+                                <figcaption>On Top</figcaption>
+                            </figure>
+                        </li>
+                        <li class="nav-item condition-btn">
+                            <figure><i class="fa fa-file-text-o icon"></i>
+                                <figcaption>Condition</figcaption>
+                            </figure>
+                        </li>
+                        <li class="nav-item description-btn">
+                            <figure><i class="fa fa-comment-o icon"></i>
+                                <figcaption>Description</figcaption>
+                            </figure>
+                        </li>
+                        <li class="nav-item location-btn">
+                            <figure><i class="fa fa-map-marker icon"></i>
+                                <figcaption>Location</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <section class="section general-row sidebar-page">
     <div class="container">
         <div class="row" jstcache="0">
@@ -40,8 +71,8 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                     </div>
                     <div class="image-row col-md-12">
                         <ul class="bxslider">
-                            <li><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/h_hill_fence.jpg') !!}" style="width: 100%"/></li>
-                            <li><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/h_hill_fence.jpg') !!}" style="width: 100%"/></li>
+                            <li><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/c-slide-3.png') !!}" style="width: 100%"/></li>
+                            <li><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/c-slide-3.png') !!}" style="width: 100%"/></li>
                             <li><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/h_hill_fence.jpg') !!}" style="width: 100%"/></li>
                             <li><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/h_hill_fence.jpg') !!}" style="width: 100%"/></li>
                             <li><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/h_hill_fence.jpg') !!}" style="width: 100%"/></li>
@@ -204,18 +235,33 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
             </div>
 
-            <div class="col-md-3">
-                <div class="rem_house_contacts">
-                    <div id="rem_house_titlebox">
-                        Contact agent        </div>    
-
-                    <span class="col_02">Thế Lộc<br>pykun6@gmail.com</span>
-
+            <div class="col-md-3 margin-top-2">
+                <div class="contact-agent-widget">
+                    <div class="title">contact agent</div>
+                    <div class="media contact-agent-content">
+                        <div class="media-left media-middle"><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/avatar-7.jpg') !!}" alt="" class="agent-image"></div>
+                        <div class="media-body media-middle">
+                            <div class="media-heading agent-name">miles hatfield</div>
+                            <span class="agent-pos">expert agent</span></div>
+                    </div>
+                    <div class="agent-info">
+                        <div class="contact-info">
+                            <div class="info">
+                                <div class="phone"><i class="fa fa-mobile"></i><span>904-621-5632</span></div>
+                            </div>
+                            <div class="info">
+                                <div class="email"><i class="fa fa-envelope-o"></i><span>miles@sunhouse.com</span></div>
+                            </div>
+                            <div class="info">
+                                <div class="skype"><i class="fa fa-skype"></i><span>miles.sunhouse</span></div>
+                            </div>
+                        </div>
+                        <div class="social-info"><a href="#" class="link"><i class="fa fa-facebook"></i></a><a href="#" class="link"><i class="fa fa-twitter"></i></a><a href="#" class="link"><i class="fa fa-google-plus"></i></a><a href="#" class="link"><i class="fa fa-linkedin"></i></a></div>
+                    </div>
                 </div>
+                <div class="clearfix"></div>
+
                 <div class="rem_buying_house">
-
-
-
 
                     <div id="rem_house_titlebox">
                         Send message    </div>
@@ -259,10 +305,11 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 </section>
 
 @section('footer_scripts_part2')
+
 <script>
     $('.bxslider').bxSlider({
         pagerCustom: '#bx-pager'
     });
 </script>
-@stop
 
+@stop

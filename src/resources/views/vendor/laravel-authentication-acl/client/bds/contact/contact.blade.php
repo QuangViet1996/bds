@@ -114,14 +114,24 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 </style>
 <div id="map"></div>
 <script>
+
+
+
     function initMap() {
-        var mapDiv = document.getElementById('map');
-        var map = new google.maps.Map(mapDiv, {
-            center: {lat:10.851235, lng: 106.758409},
-            zoom: 17
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 17,
+            center: {lat: 10.851235, lng: 106.758409},
         });
-         
+
+        var image = '{!! URL::asset("/packages/jacopo/laravel-authentication-acl/images/marker.jpg") !!}';
+        var beachMarker = new google.maps.Marker({
+            position: {lat: 10.851235, lng: 106.758409},
+            map: map,
+            icon: image
+        });
     }
+
+
 </script>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJYfhex947Oo_2BAo7a5vWmc68dfvTIF0&callback=initMap">
