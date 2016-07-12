@@ -1,10 +1,26 @@
 @extends('laravel-authentication-acl::admin.layouts.base-2cols')
 
 @section('title')
-Admin area: edit permission
+{!!trans('front.page_testimonial')!!}
 @stop
 
 @section('content')
+@if( isset($data['testimanial']) )
+
+<?php $testimanial = $data['testimanial'] ?>
+
+
+@else
+
+<?php
+$testimanial = new stdClass();
+$testimanial->real_estate_testimonial_id = null;
+$testimanial->real_estate_testimonial_title = '';
+$testimanial->real_estate_testimonial_description = '';
+$testimanial->real_estate_testimonial_author_name = '';
+?>
+
+@endif
 
 <div class="row">
     <div class="col-md-12">
@@ -14,30 +30,38 @@ Admin area: edit permission
         @endif
 
         {{-- successful message --}}
-        <?php $message = Session::get('message'); ?>
+<?php $message = Session::get('message'); ?>
         @if( isset($message) )
         <div class="alert alert-success">{{$message}}</div>
         @endif
         <div class="panel panel-info">
             <div class="panel-heading">
-                <h3 class="panel-title bariol-thin">{!! isset($permission->id) ? '<i class="fa fa-pencil"></i> Edit' : '<i class="fa fa-lock"></i> Create' !!} permission</h3>
+                <h3 class="panel-title bariol-thin">
+                    {!! isset($testimanial->real_estate_testimonial_id) ? '<i class="fa fa-pencil"></i> '.trans("front.testimonials.edit") : '<i class="fa fa-plus"></i> '.trans("front.testimonials.add") !!}
+                </h3>
             </div>
             <div class="panel-body">
-                {!! Form::model($permission, [ 'url' => [URL::route('permission.edit'), $permission->id], 'method' => 'post'] )  !!}
-                <!-- description text field -->
+                {!! Form::open(['route'=>['testimonials.edit'],'method' => 'post'])  !!}
+                <!-- title text field -->
                 <div class="form-group">
-                    {!! Form::label('description','Description: *') !!}
-                    {!! Form::text('description', null, ['class' => 'form-control', 'placeholder' => 'permission description', 'id' => 'slugme']) !!}
+                    {!! Form::label('title',trans('front.testimonials.title').': *') !!}
+                    {!! Form::text('title',$testimanial->real_estate_testimonial_title, ['class' => 'form-control', 'placeholder' => trans('front.testimonials.title')]) !!}
                 </div>
                 <span class="text-danger">{!! $errors->first('description') !!}</span>
-                <!-- permission text field -->
+                <!-- description text field -->
                 <div class="form-group">
-                    {!! Form::label('permission','Permission: *') !!}
-                    {!! Form::text('permission', null, ['class' => 'form-control', 'placeholder' => 'permission description', 'id' => 'slug']) !!}
+                    {!! Form::label('description',trans('front.testimonials.description').': *') !!}
+                    {!! Form::text('description',$testimanial->real_estate_testimonial_description, ['class' => 'form-control', 'placeholder' => trans('front.testimonials.description')]) !!}
+                </div>
+                <span class="text-danger">{!! $errors->first('permission') !!}</span>
+                <!-- author_name text field -->
+                <div class="form-group">
+                    {!! Form::label('author_name',trans('front.testimonials.author_name').': *') !!}
+                    {!! Form::text('author_name',$testimanial->real_estate_testimonial_author_name, ['class' => 'form-control', 'placeholder' => trans('front.testimonials.author_name')]) !!}
                 </div>
                 <span class="text-danger">{!! $errors->first('permission') !!}</span>
                 {!! Form::hidden('id') !!}
-                <a href="{!! URL::route('permission.delete',['id' => $permission->id, '_token' => csrf_token()]) !!}" class="btn btn-danger pull-right margin-left-5 delete">Delete</a>
+                <a href="{!! URL::route('testimonials.delete',['id' => $testimanial->real_estate_testimonial_id, '_token' => csrf_token()]) !!}" class="btn btn-danger pull-right margin-left-5 delete">{!!trans("front.testimonials.delete")!!}</a>
                 {!! Form::submit('Save', array("class"=>"btn btn-info pull-right ")) !!}
                 {!! Form::close() !!}
             </div>
@@ -49,10 +73,10 @@ Admin area: edit permission
 @section('footer_scripts')
 {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/slugit.js') !!}
 <script>
-    $(".delete").click(function(){
+    $(".delete").click(function () {
         return confirm("Are you sure to delete this item?");
     });
-    $(function(){
+    $(function () {
         $('#slugme').slugIt();
     });
 </script>

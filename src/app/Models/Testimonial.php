@@ -1,4 +1,6 @@
-<?php namespace App\Models;
+<?php
+
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use App;
@@ -26,12 +28,86 @@ class Testimonial extends Model {
      */
 
     public function listTestimonial($params = array()) {
+        $this->config_reader = App::make('config');
+        $results_per_page = $this->config_reader->get('acl_base.testimonial_page');
 
         $testimanial = self::orderBy('real_estate_testimonial_id', 'DESC')
-                ->get();
-        var_dump($testimanial->toArray());
-        die();
+                ->paginate($results_per_page);
         return $testimanial;
+    }
+
+    /*     * ********************************************
+     * findTestimonialId
+     * 
+     * @author: Kang
+     * @web: http://tailieuweb.com
+     * @date: 26/6/2016
+     * 
+     * @status: REVIEWED
+     */
+
+    public function findTestimonialId($id) {
+        $testimanial = self::where('real_estate_testimonial_id', $id)
+                ->first();
+
+        return $testimanial;
+    }
+
+    /*     * ********************************************
+     * updateTestimonial
+     * 
+     * @author: Kang
+     * @web: http://tailieuweb.com
+     * @date: 26/6/2016
+     * 
+     * @status: REVIEWED
+     */
+
+    public function updateTestimonial($input) {
+        $testimanial = self::find($input['id']);
+        if (!empty($testimanial)) {
+            $testimanial->real_estate_testimonial_title = $input['title'];
+            $testimanial->real_estate_testimonial_description = $input['description'];
+            $testimanial->real_estate_testimonial_author_name = $input['author_name'];
+            $testimanial->save();
+        } else {
+            
+        }
+    }
+
+    /*     * ********************************************
+     * addTestimonial
+     * 
+     * @author: Kang
+     * @web: http://tailieuweb.com
+     * @date: 26/6/2016
+     * 
+     * @status: REVIEWED
+     */
+
+    public function addTestimonial($input) {
+
+        $testimanial = self::create([
+                    'real_estate_testimonial_title' => $input['title'],
+                    'real_estate_testimonial_description' => $input['description'],
+                    'real_estate_testimonial_author_name' => $input['author_name'],
+        ]);
+        return $testimanial;
+    }
+
+    /*     * ********************************************
+     * deleteTestimonial
+     * 
+     * @author: Kang
+     * @web: http://tailieuweb.com
+     * @date: 26/6/2016
+     * 
+     * @status: REVIEWED
+     */
+
+    public function deleteTestimonial($input) {
+        $testimanial = self::find($input['id']);
+        return $testimanial->delete();
     }
 
 }

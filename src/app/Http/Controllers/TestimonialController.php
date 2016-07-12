@@ -21,7 +21,7 @@ use App\Models\Testimonial;
 /**
  * Validator
  */
-use App\Http\Requests\PayrollSupportCatValidator;
+use App\Http\Requests\TestimonialValidator;
 /**
  * Lib of vendor
  */
@@ -52,8 +52,8 @@ class TestimonialController extends Controller {
 
     public function getList(Request $request) {
         $obj_testimonial = new Testimonial();
-        $list = $obj_testimonial->listTestimonial($request->all());
-        
+        $list = $obj_testimonial->listTestimonial();
+
         $data = array_merge($this->data, array(
             'list' => $list,
         ));
@@ -71,11 +71,61 @@ class TestimonialController extends Controller {
      */
 
     public function postTestimonial(Request $request) {
-        
+        $obj_testimonial = new Testimonial();
+        $validator = new TestimonialValidator();
+
+        $input = $request->all();
+        $real_estate_testimonial_id = $request->get('id');
+
+        $testimanial = NULL;
+
+        if ($validator->validate($input)) {
+            if (!empty($real_estate_testimonial_id)) {
+                $testimanial = $obj_testimonial->find($real_estate_testimonial_id);
+            }
+
+            //Update existing 
+            if (!empty($testimanial)) {
+
+                $testimanial = $obj_testimonial->updateTestimonial($input);
+
+                return Redirect::route("testimonials.list")->withMessage(trans('front.testimonial.edit_successfull'));
+
+                //Add new 
+            } elseif (empty($real_estate_testimonial_id)) {
+
+                $testimanial = $obj_testimonial->addTestimonial($input);
+
+                return Redirect::route("testimonials.list")->withMessage(trans('front.testimonial.add_successfull'));
+            }
+        } else {
+            $errors = $validator->getErrors();
+            if (!empty($payroll_report_id)) {
+                return Redirect::route("testimonials.edit", ["id" => $real_estate_testimonial_id])->withInput()->withErrors($errors);
+            } else {
+                return Redirect::route("testimonials.edit")->withInput()->withErrors($errors);
+            }
+        }
     }
 
     /*     * ********************************************
-     * reSearch
+     * addTestimonial
+     * 
+     * @author: Kang
+     * @web: http://tailieuweb.com
+     * @date: 26/6/2016
+     * 
+     * @status: REVIEWED
+     */
+
+    public function addTestimonial(Request $request) {
+        $data = array_merge($this->data, array(
+        ));
+        return View::make('laravel-authentication-acl::admin.testimonial.edit')->with(['data' => $data]);
+    }
+
+    /*     * ********************************************
+     * editTestimonial
      * 
      * @author: Kang
      * @web: http://tailieuweb.com
@@ -85,13 +135,24 @@ class TestimonialController extends Controller {
      */
 
     public function editTestimonial(Request $request) {
+        $obj_testimonial = new Testimonial();
 
-        var_dump(2312312);
-        die();
+        $real_estate_testimonial_id = $request->get('id');
+        
+        $testimanial = $obj_testimonial->find($real_estate_testimonial_id);
+        if (!empty($testimanial)) {
+            $data = array_merge($this->data, array(
+                'testimanial' => $testimanial
+            ));
+
+            return View::make('laravel-authentication-acl::admin.testimonial.edit')->with(['data' => $data]);
+        } else {
+            return Redirect::route("testimonials.list")->withMessage(trans('front.testimonial.not_table'));
+        }
     }
 
     /*     * ********************************************
-     * reView
+     * deleteTestimonial
      * 
      * @author: Kang
      * @web: http://tailieuweb.com
@@ -101,7 +162,13 @@ class TestimonialController extends Controller {
      */
 
     public function deleteTestimonial(Request $request) {
-        
+        try {
+            $obj_testimonial = new Testimonial();
+            $obj_testimonial->deleteTestimonial($request->all());
+        } catch (JacopoExceptionsInterface $e) {
+            return Redirect::route('testimonials.list')->withErrors($e);
+        }
+        return Redirect::route('testimonials.list')->withMessage(trans('front.testimonial.delete_successful'));
     }
 
 }
