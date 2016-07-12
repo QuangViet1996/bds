@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4c4b9ac0a9be6829191a3e555b68abd2",
-    "content-hash": "4c103ac23d55ce6306c9e883ceb17755",
+    "hash": "b9f155cfe7611d7ee796e44d79884bae",
+    "content-hash": "d4ac4dc080c23ec118b8a8f825891028",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -628,6 +628,49 @@
                 "tokenizer"
             ],
             "time": "2015-12-05 17:17:57"
+        },
+        {
+            "name": "ktquez/laravel-tinymce",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ktquez/laravel-tinymce.git",
+                "reference": "dbe1d70d3e4d6f22f02b84436ef51f8bdc9d7092"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ktquez/laravel-tinymce/zipball/dbe1d70d3e4d6f22f02b84436ef51f8bdc9d7092",
+                "reference": "dbe1d70d3e4d6f22f02b84436ef51f8bdc9d7092",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ktquez\\Tinymce\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alan Albuquerque: ktquez",
+                    "email": "ktquez@gmail.com"
+                }
+            ],
+            "description": "TinyMCE editor for Laravel and Lumen Framework",
+            "homepage": "https://github.com/ktquez/laravel-tinymce",
+            "keywords": [
+                "CKEditor",
+                "editor",
+                "laravel",
+                "lumen",
+                "textarea",
+                "tinymce",
+                "wysiwyg"
+            ],
+            "time": "2016-06-11 22:51:19"
         },
         {
             "name": "laravel/framework",

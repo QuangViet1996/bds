@@ -49,9 +49,10 @@ $testimanial->real_estate_testimonial_author_name = '';
                 </div>
                 <span class="text-danger">{!! $errors->first('description') !!}</span>
                 <!-- description text field -->
+                @include('tinymce::tpl')
                 <div class="form-group">
                     {!! Form::label('description',trans('front.testimonials.description').': *') !!}
-                    {!! Form::text('description',$testimanial->real_estate_testimonial_description, ['class' => 'form-control', 'placeholder' => trans('front.testimonials.description')]) !!}
+                    {!! Form::text('description',$testimanial->real_estate_testimonial_description, ['class' => 'form-control tinymce', 'placeholder' => trans('front.testimonials.description')]) !!}
                 </div>
                 <span class="text-danger">{!! $errors->first('permission') !!}</span>
                 <!-- author_name text field -->

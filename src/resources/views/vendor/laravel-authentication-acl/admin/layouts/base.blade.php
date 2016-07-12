@@ -40,6 +40,8 @@
 
         {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/jquery.min.js') !!}
         {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/bootstrap.min.js') !!}
+        {!! HTML::script('packages/jacopo/tinymce/js/tinymce/tinymce.min.js') !!}
+  
 
         @yield('footer_scripts')
         {{-- End footer scripts --}}
