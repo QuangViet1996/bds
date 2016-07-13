@@ -1,23 +1,26 @@
 @extends('laravel-authentication-acl::admin.layouts.base-2cols')
 
 @section('title')
-{!!trans('front.page_testimonial')!!}
+{!!trans('front.page_houses')!!}
 @stop
 
 @section('content')
-@if( isset($data['testimanial']) )
+@if( isset($data['houses']) )
 
-<?php $testimanial = $data['testimanial'] ?>
+<?php $houses = $data['houses'] ?>
 
 
 @else
 
 <?php
-$testimanial = new stdClass();
-$testimanial->real_estate_testimonial_id = null;
-$testimanial->real_estate_testimonial_title = '';
-$testimanial->real_estate_testimonial_description = '';
-$testimanial->real_estate_testimonial_author_name = '';
+$houses = new stdClass();
+$houses->real_estate_id = null;
+$houses->real_estate_title = '';
+$houses->real_estate_description = '';
+$houses->real_estate_bedroom = '';
+$houses->real_estate_bathroom = '';
+$houses->real_estate_sq = '';
+$houses->real_estate_year_build = '';
 ?>
 
 @endif
@@ -37,7 +40,7 @@ $testimanial->real_estate_testimonial_author_name = '';
         <div class="panel panel-info">
             <div class="panel-heading">
                 <h3 class="panel-title bariol-thin">
-                    {!! isset($testimanial->real_estate_testimonial_id) ? '<i class="fa fa-pencil"></i> '.trans("front.testimonials.edit") : '<i class="fa fa-plus"></i> '.trans("front.testimonials.add") !!}
+                    {!! isset($houses->real_estate_id) ? '<i class="fa fa-pencil"></i> '.trans("front.house.edit") : '<i class="fa fa-plus"></i> '.trans("front.houses.add") !!}
                 </h3>
             </div>
             
@@ -46,35 +49,45 @@ $testimanial->real_estate_testimonial_author_name = '';
                 
                 <!-- title text field -->
                 <div class="form-group">
-                    {!! Form::label('title',trans('front.testimonials.title').': *') !!}
-                    {!! Form::text('title',$testimanial->real_estate_testimonial_title, ['class' => 'form-control', 'placeholder' => trans('front.testimonials.title')]) !!}
-                    <span class="text-danger">{!! $errors->first('description') !!}</span>
-                </div>
-                
-                <div class="form-group">
-                    <div class="controls">
-
-                        {!! Form::label('image',trans('front.payrolls.attachment'),': *') !!}
-                        {!! Form::file('image') !!}
-
-                        <span class="text-danger">{!! $errors->first('image') !!}</span>
-
-                    </div>
+                    {!! Form::label('title',trans('front.house.title').': *') !!}
+                    {!! Form::text('title',$houses->real_estate_title, ['class' => 'form-control', 'placeholder' => trans('front.houses.title')]) !!}
+                    <span class="text-danger">{!! $errors->first('title') !!}</span>
                 </div>
                 
                 <!-- description text field -->
                 @include('tinymce::tpl')
                 <div class="form-group">
-                    {!! Form::label('description',trans('front.testimonials.description').': *') !!}
-                    {!! Form::text('description',$testimanial->real_estate_testimonial_description, ['class' => 'form-control tinymce', 'placeholder' => trans('front.testimonials.description')]) !!}
-                    <span class="text-danger">{!! $errors->first('permission') !!}</span>
+                    {!! Form::label('description',trans('front.houses.description').': *') !!}
+                    {!! Form::text('description',$houses->real_estate_description, ['class' => 'form-control tinymce', 'placeholder' => trans('front.houses.description')]) !!}
+                    <span class="text-danger">{!! $errors->first('description') !!}</span>
                 </div>
                 
-                <!-- author_name text field -->
+                <!-- bedroome text field -->
                 <div class="form-group">
-                    {!! Form::label('author_name',trans('front.testimonials.author_name').': *') !!}
-                    {!! Form::text('author_name',$testimanial->real_estate_testimonial_author_name, ['class' => 'form-control', 'placeholder' => trans('front.testimonials.author_name')]) !!}
-                    <span class="text-danger">{!! $errors->first('permission') !!}</span>
+                    {!! Form::label('bedroom's',trans('front.houses.bedroom').': *') !!}
+                    {!! Form::munber('bedroom',$houses->real_estate_bedroom, ['class' => 'form-control', 'placeholder' => trans('front.houses.bedroom')]) !!}
+                    <span class="text-danger">{!! $errors->first('bedroom') !!}</span>
+                </div>
+                
+                <!-- bathroom text field -->
+                <div class="form-group">
+                    {!! Form::label('bathroom's',trans('front.houses.bathroom').': *') !!}
+                    {!! Form::munber('bathroom',$houses->real_estate_bathroom, ['class' => 'form-control', 'placeholder' => trans('front.houses.bedroom')]) !!}
+                    <span class="text-danger">{!! $errors->first('bathroom') !!}</span>
+                </div>
+                
+                 <!-- bathroom text field -->
+                <div class="form-group">
+                    {!! Form::label('sq's',trans('front.houses.sq').': *') !!}
+                    {!! Form::munber('sq',$houses->real_estate_sq, ['class' => 'form-control', 'placeholder' => trans('front.houses.sq')]) !!}
+                    <span class="text-danger">{!! $errors->first('sq') !!}</span>
+                </div>
+                 
+                  <!-- bathroom text field -->
+                <div class="form-group">
+                    {!! Form::label('build_year's',trans('front.houses.build_year').': *') !!}
+                    {!! Form::munber('build_year',$houses->real_estate_year_build, ['class' => 'form-control', 'placeholder' => trans('front.houses.build_year')]) !!}
+                    <span class="text-danger">{!! $errors->first('build_year') !!}</span>
                 </div>
                
                 {!! Form::hidden('id', $testimanial->real_estate_testimonial_id) !!}
