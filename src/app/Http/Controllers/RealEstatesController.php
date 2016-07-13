@@ -120,7 +120,8 @@ class   RealEstatesController extends Controller {
      * @status: REVIEWED
      */
 
-    public function addHousesl(Request $request) {
+    public function addHouses(Request $request) {
+      
         $data = array_merge($this->data, array(
         ));
         return View::make('laravel-authentication-acl::admin.houses.edit')->with(['data' => $data]);
