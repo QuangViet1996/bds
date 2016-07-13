@@ -80,6 +80,11 @@ class TestimonialController extends Controller {
         $real_estate_testimonial_id = $request->get('id');
         $testimonial = NULL;
         if ($validator->validate($input)) {
+            
+            /**
+             * Upload file image
+             * @Check: extension, size
+             */
             $fileinfo = array();
             if (!empty($input['image'])) {
                 $configs = config('app.libfiles');
@@ -87,9 +92,9 @@ class TestimonialController extends Controller {
                 $fileinfo = $libFiles->upload($configs['testimonial'], $file);
                 
             }
+            //TODO: check
+            $input = array_merge($input, $fileinfo);
             
-            var_dump($fileinfo);
-            die();
             if (!empty($real_estate_testimonial_id)) {
                 $testimonial = $obj_testimonial->find($real_estate_testimonial_id);
             }
@@ -108,12 +113,18 @@ class TestimonialController extends Controller {
 
                 return Redirect::route("testimonials.list")->withMessage(trans('front.testimonial.add_successfull'));
             }
+            
         } else {
+            
             $errors = $validator->getErrors();
             if (!empty($payroll_report_id)) {
+                
                 return Redirect::route("testimonials.edit", ["id" => $real_estate_testimonial_id])->withInput()->withErrors($errors);
+                
             } else {
+                
                 return Redirect::route("testimonials.edit")->withInput()->withErrors($errors);
+                
             }
         }
     }

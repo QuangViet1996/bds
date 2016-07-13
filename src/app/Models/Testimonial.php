@@ -9,15 +9,20 @@ use DB;
 class Testimonial extends Model {
 
     protected $table = 'real_estate_testimonials';
+    
     protected $primaryKey = 'real_estate_testimonial_id';
+    
     public $timestamps = false;
-    protected $fillable = [ "real_estate_testimonial_title",
-        "real_estate_testimonial_description",
-        "real_estate_testimonial_author_name",
-    ];
+    
+    protected $fillable = [ 
+                            "real_estate_testimonial_title",
+                            "real_estate_testimonial_description",
+                            "real_estate_testimonial_author_name",
+                        ];
+    
     protected $guarded = ["real_estate_testimonial_id"];
 
-    /*     * ********************************************
+    /*********************************************
      * listTestimonial
      * 
      * @author: Kang
@@ -53,7 +58,7 @@ class Testimonial extends Model {
         return $testimanial;
     }
 
-    /*     * ********************************************
+    /***********************************************
      * updateTestimonial
      * 
      * @author: Kang
@@ -64,12 +69,14 @@ class Testimonial extends Model {
      */
 
     public function updateTestimonial($input) {
-        $testimanial = self::find($input['id']);
-        if (!empty($testimanial)) {
-            $testimanial->real_estate_testimonial_title = $input['title'];
-            $testimanial->real_estate_testimonial_description = $input['description'];
-            $testimanial->real_estate_testimonial_author_name = $input['author_name'];
-            $testimanial->save();
+        
+        $testimonial = self::find($input['id']);
+        
+        if (!empty($testimonial)) {
+            $testimonial->real_estate_testimonial_title = $input['title'];
+            $testimonial->real_estate_testimonial_description = $input['description'];
+            $testimonial->real_estate_testimonial_author_name = $input['author_name'];
+            $testimonial->save();
         } else {
             
         }
