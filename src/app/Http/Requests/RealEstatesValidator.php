@@ -3,7 +3,7 @@
 use Event;
 use \LaravelAcl\Library\Validators\AbstractValidator;
 
-class TestimonialValidator extends AbstractValidator
+class RealEstatesValidator extends AbstractValidator
 {
     protected static $rules = array(
         'title' => 'required',
