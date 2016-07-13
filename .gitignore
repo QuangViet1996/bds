@@ -8,3 +8,4 @@ src/public/packages/jacopo/laravel-authentication-acl/_css/aboutagent.css
 src/public/packages/jacopo/laravel-authentication-acl/_css/aboutagent.css
 src/src.zip
 src/public/packages/jacopo/laravel-authentication-acl/_css/testimonial.css
+src/app/Http/Controllers/TestimonialController.php
