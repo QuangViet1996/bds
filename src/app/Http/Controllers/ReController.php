@@ -60,7 +60,9 @@ class ReController extends Controller {
 
         $data = array_merge($this->data, array(
             'testimonial' => $testimonial,
-            'real_estates' => $real_estates
+            'real_estates' => $real_estates,
+             'request' => $request
+                
         ));
 
         return view('laravel-authentication-acl::client.re.index.index')->with(['data' => $data]);

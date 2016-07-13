@@ -168,7 +168,7 @@ class   RealEstatesController extends Controller {
             $obj_re = new RealEstates();
             
              $real_estate_id = $request->get('id');
-             
+            
             $obj_re->deleteRealEstate($request->all());
          
         } catch (JacopoExceptionsInterface $e) {
