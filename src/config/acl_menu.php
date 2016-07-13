@@ -79,14 +79,13 @@ return [
             "link" => '/admin/testimonials/list',
             "permissions" => ["_superadmin", "_real-estate-admin"]
         ],
-        /**
-         * Real Estates
-         */
+     
         [
             "name" => "Real Estates",
-            "route" => "testimonials",
-            "link" => '/admin/testimonials/list',
+            "route" => "real_estates",
+            "link" => '/admin/houses/list',
             "permissions" => ["_superadmin", "_real-estate-admin"]
         ],
+       
     ]
 ];

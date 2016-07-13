@@ -53,8 +53,7 @@ class TestimonialController extends Controller {
      */
 
     public function getList(Request $request) {
-        var_dump(realpath(base_path('public/packages/media/testimonials')));
-        die();
+        
         $obj_testimonial = new Testimonial();
         $list = $obj_testimonial->listTestimonial();
 
@@ -107,7 +106,7 @@ class TestimonialController extends Controller {
             }
         } else {
             $errors = $validator->getErrors();
-            if (!empty($payroll_report_id)) {
+            if (!empty($real_estate_testimonial_id)) {
                 return Redirect::route("testimonials.edit", ["id" => $real_estate_testimonial_id])->withInput()->withErrors($errors);
             } else {
                 return Redirect::route("testimonials.edit")->withInput()->withErrors($errors);
