@@ -1,6 +1,4 @@
-<?php
-
-namespace App\Models;
+<?php namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use App;
@@ -52,7 +50,7 @@ class RealEstates extends Model {
     public function findRealEstateId($id) {
         $real_estate = self::where('real_estate_id', $id)
                 ->first();
-       
+
         return $real_estate;
     }
 
@@ -67,8 +65,9 @@ class RealEstates extends Model {
      */
 
     public function updateRealEstate($input) {
+        
         $real_estate = self::find($input['id']);
-        if (!empty($testimanial)) {
+        if (!empty($real_estate)) {
             $real_estate->real_estate_title = $input['title'];
             $real_estate->real_estate_description = $input['description'];
             $real_estate->real_estate_bedroom = $input['bedroom'];
@@ -117,7 +116,6 @@ class RealEstates extends Model {
     public function deleteRealEstate($input) {
         
         $real_estate = self::find($input['id']);
-      
         return $real_estate->delete();
     }
 
