@@ -73,16 +73,19 @@ class Testimonial extends Model {
         $testimonial = self::find($input['id']);
         
         if (!empty($testimonial)) {
+            
             $testimonial->real_estate_testimonial_title = $input['title'];
             $testimonial->real_estate_testimonial_description = $input['description'];
             $testimonial->real_estate_testimonial_author_name = $input['author_name'];
+            $testimonial->real_estate_testimonial_image = $input['filename'];
             $testimonial->save();
+            
         } else {
             
         }
     }
 
-    /*     * ********************************************
+    /*********************************************
      * addTestimonial
      * 
      * @author: Kang
@@ -94,15 +97,17 @@ class Testimonial extends Model {
 
     public function addTestimonial($input) {
 
-        $testimanial = self::create([
+        $testimonial = self::create([
                     'real_estate_testimonial_title' => $input['title'],
                     'real_estate_testimonial_description' => $input['description'],
                     'real_estate_testimonial_author_name' => $input['author_name'],
+                    'real_estate_testimonial_image' => $input['filename']
         ]);
-        return $testimanial;
+        
+        return $testimonial;
     }
 
-    /*     * ********************************************
+    /*********************************************
      * deleteTestimonial
      * 
      * @author: Kang

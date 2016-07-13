@@ -117,7 +117,8 @@ class TestimonialController extends Controller {
         } else {
             
             $errors = $validator->getErrors();
-            if (!empty($payroll_report_id)) {
+
+            if (!empty($real_estate_testimonial_id)) {
                 
                 return Redirect::route("testimonials.edit", ["id" => $real_estate_testimonial_id])->withInput()->withErrors($errors);
                 
