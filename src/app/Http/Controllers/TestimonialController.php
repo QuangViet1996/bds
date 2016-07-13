@@ -35,6 +35,8 @@ use Validator;
 use Response;
 use Illuminate\Support\MessageBag as MessageBag;
 
+use App\Libraries\LibFiles as LibFiles;
+
 class TestimonialController extends Controller {
 
     public $data = array(
@@ -51,6 +53,8 @@ class TestimonialController extends Controller {
      */
 
     public function getList(Request $request) {
+        var_dump(realpath(base_path('public/packages/media/testimonials')));
+        die();
         $obj_testimonial = new Testimonial();
         $list = $obj_testimonial->listTestimonial();
 
@@ -62,7 +66,7 @@ class TestimonialController extends Controller {
     }
 
     /*     * ********************************************
-     * reList
+     * postTestimonial
      * 
      * @author: Kang
      * @web: http://tailieuweb.com
@@ -72,6 +76,9 @@ class TestimonialController extends Controller {
      */
 
     public function postTestimonial(Request $request) {
+        
+        $libFiles = new LibFiles();
+        
         $obj_testimonial = new Testimonial();
         $validator = new TestimonialValidator();
 

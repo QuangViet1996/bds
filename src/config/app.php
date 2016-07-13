@@ -187,4 +187,16 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'tinymce' => Ktquez\Tinymce\TinymceServiceProvider::class,
     ],
+    'libfiles' => [
+        'testimonial' => [
+            'filetype' => [
+                'jpg', 'png', 'gif'
+            ],
+            'filesize' => [
+                'max' => 3
+            ],
+            'filepath' => 'public/packages/media/testimonials',
+            'prename' => 't'
+        ]
+    ]
 ];

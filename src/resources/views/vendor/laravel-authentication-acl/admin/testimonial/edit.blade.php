@@ -40,32 +40,51 @@ $testimanial->real_estate_testimonial_author_name = '';
                     {!! isset($testimanial->real_estate_testimonial_id) ? '<i class="fa fa-pencil"></i> '.trans("front.testimonials.edit") : '<i class="fa fa-plus"></i> '.trans("front.testimonials.add") !!}
                 </h3>
             </div>
+            
             <div class="panel-body">
                 {!! Form::open(['route'=>['testimonials.edit'],'method' => 'post'])  !!}
+                
                 <!-- title text field -->
                 <div class="form-group">
                     {!! Form::label('title',trans('front.testimonials.title').': *') !!}
                     {!! Form::text('title',$testimanial->real_estate_testimonial_title, ['class' => 'form-control', 'placeholder' => trans('front.testimonials.title')]) !!}
+                    <span class="text-danger">{!! $errors->first('description') !!}</span>
                 </div>
-                <span class="text-danger">{!! $errors->first('description') !!}</span>
+                
+                <div class="form-group">
+                    <div class="controls">
+
+                        {!! Form::label('image',trans('front.payrolls.attachment'),': *') !!}
+                        {!! Form::file('image') !!}
+
+                        <span class="text-danger">{!! $errors->first('image') !!}</span>
+
+                    </div>
+                </div>
+                
                 <!-- description text field -->
                 @include('tinymce::tpl')
                 <div class="form-group">
                     {!! Form::label('description',trans('front.testimonials.description').': *') !!}
                     {!! Form::text('description',$testimanial->real_estate_testimonial_description, ['class' => 'form-control tinymce', 'placeholder' => trans('front.testimonials.description')]) !!}
+                    <span class="text-danger">{!! $errors->first('permission') !!}</span>
                 </div>
-                <span class="text-danger">{!! $errors->first('permission') !!}</span>
+                
                 <!-- author_name text field -->
                 <div class="form-group">
                     {!! Form::label('author_name',trans('front.testimonials.author_name').': *') !!}
                     {!! Form::text('author_name',$testimanial->real_estate_testimonial_author_name, ['class' => 'form-control', 'placeholder' => trans('front.testimonials.author_name')]) !!}
+                    <span class="text-danger">{!! $errors->first('permission') !!}</span>
                 </div>
-                <span class="text-danger">{!! $errors->first('permission') !!}</span>
-                  {!! Form::hidden('id', $testimanial->real_estate_testimonial_id) !!}
+               
+                {!! Form::hidden('id', $testimanial->real_estate_testimonial_id) !!}
+                  
                 <a href="{!! URL::route('testimonials.delete',['id' => $testimanial->real_estate_testimonial_id, '_token' => csrf_token()]) !!}" class="btn btn-danger pull-right margin-left-5 delete">{!!trans("front.testimonials.delete")!!}</a>
                 {!! Form::submit('Save', array("class"=>"btn btn-info pull-right ")) !!}
+                
                 {!! Form::close() !!}
             </div>
+            
         </div>
     </div>
 </div>
