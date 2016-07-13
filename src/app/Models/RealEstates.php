@@ -52,7 +52,7 @@ class RealEstates extends Model {
     public function findRealEstateId($id) {
         $real_estate = self::where('real_estate_id', $id)
                 ->first();
-
+       
         return $real_estate;
     }
 

@@ -1,6 +1,4 @@
-<?php
-
-namespace App\Http\Controllers;
+<?php namespace App\Http\Controllers;
 
 /**
  * Lib Core
@@ -27,13 +25,12 @@ use App\Http\Requests\RealEstatesValidator;
  */
 use \LaravelAcl\Library\Exceptions\ValidationException;
 use \LaravelAcl\Library\Exceptions\JacopoExceptionsInterface;
-use App\Http\Requests\HrmPayrollFormRequest;
-use Excel;
-use Maatwebsite\Excel\Writers\CellWriter;
 use App\Http\Requests\ApplyFormRequest;
 use Validator;
 use Response;
 use Illuminate\Support\MessageBag as MessageBag;
+
+use App\Libraries\LibFiles as LibFiles;
 
 class   RealEstatesController extends Controller {
 
@@ -141,8 +138,9 @@ class   RealEstatesController extends Controller {
         $obj_re = new RealEstates();
 
         $real_estate_id = $request->get('id');
-
-        $houses = $obj_re->find($real_estate_id);
+        
+        $houses = $obj_re->findRealEstateId($real_estate_id);
+         
         if (!empty($houses)) {
             $data = array_merge($this->data, array(
                 'houses' => $houses,
@@ -168,8 +166,11 @@ class   RealEstatesController extends Controller {
     public function deleteHouses(Request $request) {
         try {
             $obj_re = new RealEstates();
-
+            
+             $real_estate_id = $request->get('id');
+             
             $obj_re->deleteRealEstate($request->all());
+         
         } catch (JacopoExceptionsInterface $e) {
             return Redirect::route('houses.list')->withErrors($e);
         }
