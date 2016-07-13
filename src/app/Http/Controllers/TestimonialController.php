@@ -1,6 +1,4 @@
-<?php
-
-namespace App\Http\Controllers;
+<?php namespace App\Http\Controllers;
 
 /**
  * Lib Core
@@ -27,9 +25,6 @@ use App\Http\Requests\TestimonialValidator;
  */
 use \LaravelAcl\Library\Exceptions\ValidationException;
 use \LaravelAcl\Library\Exceptions\JacopoExceptionsInterface;
-use App\Http\Requests\HrmPayrollFormRequest;
-use Excel;
-use Maatwebsite\Excel\Writers\CellWriter;
 use App\Http\Requests\ApplyFormRequest;
 use Validator;
 use Response;
@@ -53,8 +48,7 @@ class TestimonialController extends Controller {
      */
 
     public function getList(Request $request) {
-        var_dump(realpath(base_path('public/packages/media/testimonials')));
-        die();
+
         $obj_testimonial = new Testimonial();
         $list = $obj_testimonial->listTestimonial();
 
@@ -84,24 +78,33 @@ class TestimonialController extends Controller {
 
         $input = $request->all();
         $real_estate_testimonial_id = $request->get('id');
-        $testimanial = NULL;
-
+        $testimonial = NULL;
         if ($validator->validate($input)) {
+            $fileinfo = array();
+            if (!empty($input['image'])) {
+                $configs = config('app.libfiles');
+                $file = $request->file('image');
+                $fileinfo = $libFiles->upload($configs['testimonial'], $file);
+                
+            }
+            
+            var_dump($fileinfo);
+            die();
             if (!empty($real_estate_testimonial_id)) {
-                $testimanial = $obj_testimonial->find($real_estate_testimonial_id);
+                $testimonial = $obj_testimonial->find($real_estate_testimonial_id);
             }
 
             //Update existing 
-            if (!empty($testimanial)) {
+            if (!empty($testimonial)) {
 
-                $testimanial = $obj_testimonial->updateTestimonial($input);
+                $testimonial = $obj_testimonial->updateTestimonial($input);
 
                 return Redirect::route("testimonials.list")->withMessage(trans('front.testimonial.edit_successfull'));
 
                 //Add new 
             } elseif (empty($real_estate_testimonial_id)) {
 
-                $testimanial = $obj_testimonial->addTestimonial($input);
+                $testimonial = $obj_testimonial->addTestimonial($input);
 
                 return Redirect::route("testimonials.list")->withMessage(trans('front.testimonial.add_successfull'));
             }

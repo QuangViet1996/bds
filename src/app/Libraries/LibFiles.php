@@ -12,18 +12,18 @@ class LibFiles {
      * @param array $file
      */
     public function upload($configs, $file){
-        
+
         //destination path
-        $$filepath = realpath(base_path($configs['filepath'])); // upload path
+        $filepath = realpath(base_path($configs['filepath'])); // upload path
 
         $extension = $file->getClientOriginalExtension(); // getting image extension
         
         $filename = $configs['prename'].time() . '.' . $extension; // renameing image
         
-        $file->move($$filepath, $filename); // uploading file to given path
+        $file->move($filepath, $filename); // uploading file to given path
         //
         // sending back with message
-        $fullpath = $$filepath . '/' . $filename;
+        $fullpath = realpath($filepath . '/' . $filename);
         
         $fileinfo = array(
             'filename' => $filename,

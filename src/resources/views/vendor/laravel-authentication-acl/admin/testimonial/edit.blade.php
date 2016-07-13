@@ -42,7 +42,7 @@ $testimanial->real_estate_testimonial_author_name = '';
             </div>
             
             <div class="panel-body">
-                {!! Form::open(['route'=>['testimonials.edit'],'method' => 'post'])  !!}
+                {!! Form::open(['route'=>['testimonials.edit'], 'files'=>true, 'method' => 'post'])  !!}
                 
                 <!-- title text field -->
                 <div class="form-group">
