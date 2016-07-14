@@ -23,7 +23,7 @@
                 <h3 class="panel-title bariol-thin"><i class="fa fa-lock"></i> {!!trans('front.houses.name_table')!!}</h3>
             </div>
             <div class="panel-body">
-                @include('laravel-authentication-acl::admin.houses.house-table')
+                @include('laravel-authentication-acl::admin.realestates.realestates-table')
             </div>
         </div>
     </div>

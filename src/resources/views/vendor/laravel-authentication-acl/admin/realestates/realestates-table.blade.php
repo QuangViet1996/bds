@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-12 margin-bottom-12">
-        <a href="{!! URL::route('houses.add') !!}" class="btn btn-info pull-right"><i class="fa fa-plus"></i>{!!trans('front.houses.add_new')!!}</a>
+        <a href="{!! URL::route('realestates.add') !!}" class="btn btn-info pull-right"><i class="fa fa-plus"></i>{!!trans('front.houses.add_new')!!}</a>
     </div>
 </div>
 @if( ! $data['list']->isEmpty() )
@@ -22,10 +22,10 @@
             <td style="width:10%">{!! $houses->real_estate_sq !!}</td>
             <td style="width:15%">{!! $houses->real_estate_year_build !!}</td>
             <td style="witdh:10%">
-                 <a href="{!! URL::route('houses.edit', ['id' => $houses->real_estate_id]) !!}" title='{{ trans('front.houses.edit') }}' class="margin-left-5">
+                 <a href="{!! URL::route('realestates.edit', ['id' => $houses->real_estate_id]) !!}" title='{{ trans('front.houses.edit') }}' class="margin-left-5">
                      <i class="fa fa-pencil-square-o fa-2x"></i>
                  </a>
-                 <a href="{!! URL::route('houses.delete',['id' =>$houses->real_estate_id, '_token' => csrf_token()]) !!}"  title='{{ trans('front.houses.delete') }} ' class="margin-left-5">
+                 <a href="{!! URL::route('realestates.delete',['id' =>$houses->real_estate_id, '_token' => csrf_token()]) !!}"  title='{{ trans('front.houses.delete') }} ' class="margin-left-5">
                      <i class="fa fa-trash-o delete fa-2x"></i>
                  </a>
             </td>

@@ -13,15 +13,15 @@
 @else
 
 <?php
-$houses = new stdClass();
-$houses->real_estate_id = null;
-$houses->real_estate_title = '';
-$houses->real_estate_category_id = '';
-$houses->real_estate_description = '';
-$houses->real_estate_bedroom = '';
-$houses->real_estate_bathroom = '';
-$houses->real_estate_sq = '';
-$houses->real_estate_year_build = '';
+    $houses = new stdClass();
+    $houses->real_estate_id = null;
+    $houses->real_estate_title = '';
+    $houses->real_estate_category_id = '';
+    $houses->real_estate_description = '';
+    $houses->real_estate_bedroom = '';
+    $houses->real_estate_bathroom = '';
+    $houses->real_estate_sq = '';
+    $houses->real_estate_year_build = '';
 ?>
 
 @endif
@@ -46,7 +46,7 @@ $houses->real_estate_year_build = '';
             </div>
 
             <div class="panel-body">
-                {!! Form::open(['route'=>['houses.edit'],'method' => 'post'])  !!}
+                {!! Form::open(['route'=>['realestates.edit'],'method' => 'post'])  !!}
 
                 <!-- title text field -->
                 <div class="form-group">
@@ -105,7 +105,7 @@ $houses->real_estate_year_build = '';
 
                 {!! Form::hidden('id', $houses->real_estate_id) !!}
 
-                <a href="{!! URL::route('houses.delete',['id' => $houses->real_estate_id, '_token' => csrf_token()]) !!}" class="btn btn-danger pull-right margin-left-5 delete">{!!trans("front.testimonials.delete")!!}</a>
+                <a href="{!! URL::route('realestates.delete',['id' => $houses->real_estate_id, '_token' => csrf_token()]) !!}" class="btn btn-danger pull-right margin-left-5 delete">{!!trans("front.testimonials.delete")!!}</a>
                 {!! Form::submit('Save', array("class"=>"btn btn-info pull-right ")) !!}
 
                 {!! Form::close() !!}

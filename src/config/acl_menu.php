@@ -71,7 +71,7 @@ return [
             "permissions" => []
         ],
         /**
-         * Real Estates
+         * Testimonials
          */
         [
             "name" => "Testimonials",
@@ -79,13 +79,14 @@ return [
             "link" => '/admin/testimonials/list',
             "permissions" => ["_superadmin", "_real-estate-admin"]
         ],
+        
         /**
          * Real Estates
          */
         [
             "name" => "Real Estates",
-            "route" => "real_estates",
-            "link" => '/admin/houses/list',
+            "route" => "realestates",
+            "link" => '/admin/realestates/list',
             "permissions" => ["_superadmin", "_real-estate-admin"]
         ],
         
@@ -94,7 +95,7 @@ return [
          */
         [
             "name" => "Category",
-            "route" => "category",
+            "route" => "categories",
             "link" => '/admin/categories',
             "permissions" => ["_superadmin", "_real-estate-admin"]
         ],

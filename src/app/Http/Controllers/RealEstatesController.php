@@ -60,7 +60,7 @@ class RealEstatesController extends Controller {
             'request' => $request,
         ));
 
-        return view('laravel-authentication-acl::admin.houses.list')->with(['data' => $data]);
+        return view('laravel-authentication-acl::admin.realestates.list')->with(['data' => $data]);
     }
 
     /*     * ********************************************
@@ -91,21 +91,21 @@ class RealEstatesController extends Controller {
 
                 $houses = $obj_re->updateRealEstate($input);
 
-                return Redirect::route("houses.list")->withMessage(trans('front.houses.edit_successfull'));
+                return Redirect::route("realestates.list")->withMessage(trans('front.houses.edit_successfull'));
 
                 //Add new 
             } elseif (empty($real_estate_id)) {
 
                 $houses = $obj_re->addRealEstate($input);
 
-                return Redirect::route("houses.list")->withMessage(trans('front.houses.add_successfull'));
+                return Redirect::route("realestates.list")->withMessage(trans('front.houses.add_successfull'));
             }
         } else {
             $errors = $validator->getErrors();
             if (!empty($real_estate_id)) {
-                return Redirect::route("houses.edit", ["id" => $real_estate_id])->withInput()->withErrors($errors);
+                return Redirect::route("realestates.edit", ["id" => $real_estate_id])->withInput()->withErrors($errors);
             } else {
-                return Redirect::route("houses.edit")->withInput()->withErrors($errors);
+                return Redirect::route("realestates.edit")->withInput()->withErrors($errors);
             }
         }
     }
@@ -128,7 +128,7 @@ class RealEstatesController extends Controller {
         $data = array_merge($this->data, array(
             'cat' => $cat,
         ));
-        return View::make('laravel-authentication-acl::admin.houses.edit')->with(['data' => $data]);
+        return View::make('laravel-authentication-acl::admin.realestates.edit')->with(['data' => $data]);
     }
 
     /*     * ********************************************
@@ -157,9 +157,9 @@ class RealEstatesController extends Controller {
                 'request' => $request,
             ));
 
-            return View::make('laravel-authentication-acl::admin.houses.edit')->with(['data' => $data]);
+            return View::make('laravel-authentication-acl::admin.realestates.edit')->with(['data' => $data]);
         } else {
-            return Redirect::route("houses.list")->withMessage(trans('front.houses.not_table'));
+            return Redirect::route("realestates.list")->withMessage(trans('front.houses.not_table'));
         }
     }
 
@@ -181,9 +181,9 @@ class RealEstatesController extends Controller {
             $real_estate_id = $request->get('id');
             $obj_re->deleteRealEstate($request->all());
         } catch (JacopoExceptionsInterface $e) {
-            return Redirect::route('houses.list')->withErrors($e);
+            return Redirect::route('realestates.list')->withErrors($e);
         }
-        return Redirect::route('houses.list')->withMessage(trans('front.houses.delete_successful'));
+        return Redirect::route('realestates.list')->withMessage(trans('front.houses.delete_successful'));
     }
 
 }
