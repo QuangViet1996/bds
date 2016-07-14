@@ -108,5 +108,15 @@ return [
             "link" => '/admin/contact',
             "permissions" => ["_superadmin", "_real-estate-admin"]
         ],
+          
+          /**
+         * Custom Html
+         */
+        [
+            "name" => "Custom Html",
+            "route" => "custom",
+            "link" => '/admin/custom',
+            "permissions" => ["_superadmin", "_real-estate-admin"]
+        ],
     ]
 ];
