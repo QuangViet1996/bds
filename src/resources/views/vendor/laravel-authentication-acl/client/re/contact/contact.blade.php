@@ -35,6 +35,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
 <section class="section  general-row">
     <div class="wpb_column col-md-12">
+        
         <!--Info Section-->
 
         <section class="info-section contact-section">
@@ -147,34 +148,33 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
             <div class="text"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknownto </p></div>
 
         </div>
-
+        
+       
         <!--Contact Form-->
 
-        <div class="column contact-form">
 
             <div role="form" class="wpcf7" id="wpcf7-f153-p22-o1" lang="en-US" dir="ltr">
                 <div class="screen-reader-response"></div>
-                {!! Form::open(['route'=>['contact.edit'], 'files'=>true, 'method' => 'post'])  !!}
-                <div style="display: none;">
-                    <input type="hidden" name="_wpcf7" value="153">
-                    <input type="hidden" name="_wpcf7_version" value="4.4">
-                    <input type="hidden" name="_wpcf7_locale" value="en_US">
-                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f153-p22-o1">
-                    <input type="hidden" name="_wpnonce" value="f783a50988">
-                </div
-                >
+                {!! Form::open(['route'=>['usercontact.edit'], 'method' => 'post'])  !!}
+
                 <div class="row clearfix">
 
                     <div class="col-md-6 col-sm-6 col-xs-12 form-group">
                         <span class="wpcf7-form-control-wrap text-355">
                             {!! Form::text('author_name',null, ['class' => 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required', 'placeholder' => 'Name']) !!}
+                            <span class="text-danger">{!! $errors->first('author_name') !!}</span>
+
                         </span>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-12 form-group">
                         {!! Form::text('title',null, ['class' => 'wpcf7-form-control-wrap text-356', 'placeholder' => 'Title']) !!}
+                        <span class="text-danger">{!! $errors->first('title') !!}</span>
+
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                         {!! Form::textarea('description',null, ['class' => 'wpcf7-form-control wpcf7-textarea', 'placeholder' => 'Mesenger']) !!}
+                        <span class="text-danger">{!! $errors->first('description') !!}</span>
+
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12 form-group text-center">
                         {!! Form::submit('Save', array("class"=>"btn btn-info pull-right wpcf7-form-control wpcf7-submit")) !!}
