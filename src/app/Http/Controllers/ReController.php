@@ -17,6 +17,8 @@ use \LaravelAcl\Authentication\Controllers\Controller;
 /**
  * Models
  */
+use App\Models\Testimonial;
+use App\Models\RealEstates;
 use App\Models\Contact;
 /**
  * Validator
