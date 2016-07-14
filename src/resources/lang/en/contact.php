@@ -14,14 +14,17 @@ return [
     /*
      * Real Estates admin page
      */
-    'page_categories' => 'Categories',
-    'list' => 'List categories',
-    'add' => 'Add new',
+    'page_contact' => 'Contact',
+    'name_table' => 'List Contact',
+    'add_new' => 'Add new',
     'title' => 'Title',
     'description' => 'Description',
+    'author' => 'Author',
     'operations' => 'Operations',
     'edit' => 'Edit',
     'delete' => 'Delete',
     'cancel' => 'Cancel',
     'save' => 'Save',
+    'not_found_table' => 'Not found table',
+    
 ];

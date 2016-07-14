@@ -2,7 +2,7 @@
 
 
 @section('title')
-                       {!!trans('front.page_categories')!!}
+                       {!!trans('categories.page_categories')!!}
 
 @stop
 
@@ -39,7 +39,7 @@
                 
                 <div class="panel-heading">
                     <h3 class="panel-title bariol-thin">
-                        {!! isset($cat->real_estate_category_id) ? '<i class="fa fa-pencil"></i> '.trans("front.categories.edit_support") : '<i class="fa fa-plus"></i> '.trans("front.categories.add_support") !!}
+                        {!! isset($cat->real_estate_category_id) ? '<i class="fa fa-pencil"></i> '.trans("categories.edit_support") : '<i class="fa fa-plus"></i> '.trans("categories.add_support") !!}
                     </h3>
                 </div>
                 
@@ -49,8 +49,8 @@
                     <!-- title text field -->
                     <div class="form-group">
                         
-                        {!! Form::label('title',trans('front.categories.edit_title'),': *') !!}
-                        {!! Form::text('title',  $cat->real_estate_category_title, ['class' => 'form-control', 'placeholder' =>trans('front.categories.edit_title')]) !!}
+                        {!! Form::label('title',trans('categories.title'),': *') !!}
+                        {!! Form::text('title',  $cat->real_estate_category_title, ['class' => 'form-control', 'placeholder' =>trans('categories.title')]) !!}
                        
                         <span class="text-danger">{!! $errors->first('title') !!}</span>
                         
@@ -60,8 +60,8 @@
                     @include('tinymce::tpl')  
                     <div class="form-group">
                         
-                        {!! Form::label('description',trans('front.categories.edit_description'),': *') !!}
-                        {!! Form::text('description', $cat->real_estate_category_description , ['class' => 'form-control tinymce', 'placeholder' => trans('front.categories.edit_description')]) !!}
+                        {!! Form::label('description',trans('categories.description'),': *') !!}
+                        {!! Form::text('description', $cat->real_estate_category_description , ['class' => 'form-control tinymce', 'placeholder' => trans('categories.description')]) !!}
                        
                         <span class="text-danger">{!! $errors->first('description') !!}</span>
 
@@ -71,18 +71,18 @@
                     @if($cat->real_estate_category_id != null)
                     
                         <a href="{!! URL::route('categories.delete',['id' => $cat->real_estate_category_id, '_token' => csrf_token()]) !!}" class="btn btn-danger pull-right margin-left-5 delete">
-                            {!!trans('front.delete')!!}
+                            {!!trans('categories.delete')!!}
                         </a>
                     
                     @else
                     
                         <a href="{!! URL::route('categories.list') !!}" class="btn btn-danger pull-right margin-left-5">
-                            {!!trans('front.cancel')!!}
+                            {!!trans('categories.cancel')!!}
                         </a>
 
                     @endif
                     
-                    {!! Form::submit(trans('front.save'), array("class"=>"btn btn-info pull-right ")) !!}
+                    {!! Form::submit(trans('categories.save'), array("class"=>"btn btn-info pull-right ")) !!}
 
                     {!! Form::close() !!}
                 </div>
@@ -99,7 +99,7 @@
 @section('footer_scripts')
     <script>
         $(".delete").click(function () {
-            return confirm('{!!trans('front.categories.you_want_delete')!!}');
+            return confirm('{!!trans('categories.you_want_delete')!!}');
         });
 
     </script>

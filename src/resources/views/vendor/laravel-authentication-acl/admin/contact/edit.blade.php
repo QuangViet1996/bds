@@ -1,7 +1,7 @@
 @extends('laravel-authentication-acl::admin.layouts.base-2cols')
 
 @section('title')
-{!!trans('front.page_contact')!!}
+{!!trans('page_contact')!!}
 @stop
 
 @section('content')
@@ -37,7 +37,7 @@ $contact->real_estate_contact_author_name = '';
         <div class="panel panel-info">
             <div class="panel-heading">
                 <h3 class="panel-title bariol-thin">
-                    {!! isset($contact->real_estate_contact_id) ? '<i class="fa fa-pencil"></i> '.trans("front.contact.edit") : '<i class="fa fa-plus"></i> '.trans("front.contact.add") !!}
+                    {!! isset($contact->real_estate_contact_id) ? '<i class="fa fa-pencil"></i> '.trans("contact.edit") : '<i class="fa fa-plus"></i> '.trans("contact.add") !!}
                 </h3>
             </div>
             
@@ -46,8 +46,8 @@ $contact->real_estate_contact_author_name = '';
                 
                 <!-- title text field -->
                 <div class="form-group">
-                    {!! Form::label('title',trans('front.contact.title').': *') !!}
-                    {!! Form::text('title',$contact->real_estate_contact_title, ['class' => 'form-control', 'placeholder' => trans('front.contact.title')]) !!}
+                    {!! Form::label('title',trans('contact.title').': *') !!}
+                    {!! Form::text('title',$contact->real_estate_contact_title, ['class' => 'form-control', 'placeholder' => trans('contact.title')]) !!}
                     <span class="text-danger">{!! $errors->first('title') !!}</span>
                 </div>
                 
@@ -55,21 +55,21 @@ $contact->real_estate_contact_author_name = '';
                 <!-- description text field -->
                 @include('tinymce::tpl')
                 <div class="form-group">
-                    {!! Form::label('description',trans('front.contact.description').': *') !!}
-                    {!! Form::text('description',$contact->real_estate_contact_description, ['class' => 'form-control tinymce', 'placeholder' => trans('front.contact.description')]) !!}
+                    {!! Form::label('description',trans('contact.description').': *') !!}
+                    {!! Form::text('description',$contact->real_estate_contact_description, ['class' => 'form-control tinymce', 'placeholder' => trans('contact.description')]) !!}
                     <span class="text-danger">{!! $errors->first('description') !!}</span>
                 </div>
                 
                 <!-- author_name text field -->
                 <div class="form-group">
-                    {!! Form::label('author_name',trans('front.contact.author_name').': *') !!}
-                    {!! Form::text('author_name',$contact->real_estate_contact_author_name, ['class' => 'form-control', 'placeholder' => trans('front.contact.author_name')]) !!}
+                    {!! Form::label('author_name',trans('contact.author').': *') !!}
+                    {!! Form::text('author_name',$contact->real_estate_contact_author_name, ['class' => 'form-control', 'placeholder' => trans('contact.author')]) !!}
                     <span class="text-danger">{!! $errors->first('author_name') !!}</span>
                 </div>
                
                 {!! Form::hidden('id', $contact->real_estate_contact_id) !!}
                   
-                <a href="{!! URL::route('contact.delete',['id' => $contact->real_estate_contact_id, '_token' => csrf_token()]) !!}" class="btn btn-danger pull-right margin-left-5 delete">{!!trans("front.contact.delete")!!}</a>
+                <a href="{!! URL::route('contact.delete',['id' => $contact->real_estate_contact_id, '_token' => csrf_token()]) !!}" class="btn btn-danger pull-right margin-left-5 delete">{!!trans("contact.delete")!!}</a>
                 {!! Form::submit('Save', array("class"=>"btn btn-info pull-right ")) !!}
                 
                 {!! Form::close() !!}

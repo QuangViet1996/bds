@@ -2,7 +2,7 @@
 
     <div class="col-md-12 margin-bottom-12">
         <a href="{!! URL::route('categories.add') !!}" class="btn btn-info pull-right">
-            <i class="fa fa-plus"></i> {!!trans('categories.category.add_support')!!}
+            <i class="fa fa-plus"></i> {!!trans('categories.add')!!}
         </a>
     </div>
 
@@ -15,9 +15,9 @@
             <thead>
                 <tr>
                     <th >STT</th>
-                    <th >{!!trans('front.categories.title')!!}</th>
-                    <th>{!!trans('front.categories.description')!!}</th>
-                    <th>{!!trans('front.payrolls.operations')!!}</th>
+                    <th >{!!trans('categories.title')!!}</th>
+                    <th>{!!trans('categories.description')!!}</th>
+                    <th>{!!trans('categories.operations')!!}</th>
                 </tr>
             </thead>
 
@@ -40,9 +40,8 @@
                     <td  style="witdh:40%">{!! $cat->real_estate_category_description !!}</td>
 
                     <td  style="witdh:23%">
-                        <a href="{!! URL::route('categories.view', ['id' => $cat->real_estate_category_id]) !!}" title='{{ trans('categories.category.view_support') }}'><i class="fa fa-eye fa-2x"></i></a>
-                        <a href="{!! URL::route('categories.edit', ['id' => $cat->real_estate_category_id]) !!}" title='{{ trans('categories.category.edit_support') }}' class="margin-left-5"><i class="fa fa-pencil-square-o fa-2x"></i></a>
-                        <a href="{!! URL::route('categories.delete',['id' =>$cat->real_estate_category_id, '_token' => csrf_token()]) !!}"  title='{{ trans('categories.category.delete_support') }} ' class="margin-left-5"><i class="fa fa-trash-o delete fa-2x"></i></a>
+                        <a href="{!! URL::route('categories.edit', ['id' => $cat->real_estate_category_id]) !!}" title='{{ trans('categories.edit') }}' class="margin-left-5"><i class="fa fa-pencil-square-o fa-2x"></i></a>
+                        <a href="{!! URL::route('categories.delete',['id' =>$cat->real_estate_category_id, '_token' => csrf_token()]) !!}"  title='{{ trans('categories.delete') }} ' class="margin-left-5"><i class="fa fa-trash-o delete fa-2x"></i></a>
 
                     </td>
 

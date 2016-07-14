@@ -1,7 +1,7 @@
 @extends('laravel-authentication-acl::admin.layouts.base-2cols')
 
 @section('title')
-     {!!trans('front.page_contactl')!!}
+     {!!trans('contact.page_contact')!!}
 @stop
 
 @section('content')
@@ -20,7 +20,7 @@
         @endif
         <div class="panel panel-info">
             <div class="panel-heading">
-                <h3 class="panel-title bariol-thin"><i class="fa fa-lock"></i> {!!trans('front.contact.name_table')!!}</h3>
+                <h3 class="panel-title bariol-thin"><i class="fa fa-lock"></i> {!!trans('contact.name_table')!!}</h3>
             </div>
             <div class="panel-body">
                 @include('laravel-authentication-acl::admin.contact.contact-table')
