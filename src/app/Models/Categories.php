@@ -49,7 +49,6 @@ class Categories extends Model {
 
             $category->real_estate_category_title = $input['title'];
             $category->real_estate_category_description = $input['description'];
-            $category->real_estate_category_image = $input['filename'];
 
             $category->save();
         } else {
@@ -72,7 +71,6 @@ class Categories extends Model {
         $category = self::create([
                     'real_estate_category_title' => $input['title'],
                     'real_estate_category_description' => $input['description'],
-                    'real_estate_category_image' => $input['filename'],
         ]);
         return $category;
     }
@@ -145,11 +143,11 @@ class Categories extends Model {
      * @status: REVIEWED
      */
 
-    public function getPayrollCat($params = array()) {
+    public function getCategories($params = array()) {
 
-        $payroll_support_cat = self::orderBy('payroll_support_category_title', 'ASC')
-                ->pluck('payroll_support_category_title', 'payroll_support_category_id');
-        return $payroll_support_cat;
+        $category = self::orderBy('real_estate_category_title', 'ASC')
+                ->pluck('real_estate_category_title', 'real_estate_category_id');
+        return $category;
     }
 
 }

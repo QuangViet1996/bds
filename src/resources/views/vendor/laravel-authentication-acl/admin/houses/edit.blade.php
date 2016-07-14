@@ -16,6 +16,7 @@
 $houses = new stdClass();
 $houses->real_estate_id = null;
 $houses->real_estate_title = '';
+$houses->real_estate_category_id = '';
 $houses->real_estate_description = '';
 $houses->real_estate_bedroom = '';
 $houses->real_estate_bathroom = '';
@@ -61,6 +62,18 @@ $houses->real_estate_year_build = '';
                     {!! Form::text('description',$houses->real_estate_description, ['class' => 'form-control tinymce', 'placeholder' => trans('front.houses.description')]) !!}
                     <span class="text-danger">{!! $errors->first('description') !!}</span>
                 </div>
+                
+                <!-- List categories -->
+                    <div class="form-group">
+                        <div class="controls">
+
+                            {!! Form::label('datacat',trans('houses.house.get_supports_edit_category'),': *') !!}
+                            {!! Form::select('datacat',$data['cat'], $houses->real_estate_category_id, ['class' => 'form-control']) !!}
+
+                            <span class="text-danger">{!! $errors->first('datacat') !!}</span>
+
+                        </div>
+                    </div>
 
                 <!-- bedroome text field -->
                 <div class="form-group">

@@ -53,7 +53,7 @@ class CategoryController extends Controller {
     public function getCategory(Request $request) {
 
         $cat = new Categories();
-        $categories = $cat->getPayrollSupportListCat($request->all());
+        $categories = $cat->getList($request->all());
 
         $data = array_merge($this->data, array(
             'categories' => $categories,
@@ -76,7 +76,7 @@ class CategoryController extends Controller {
     public function editCategory(Request $request) {
 
         $cat_id = $request->get('id');
-        $obj_cat = new PayrollSupportCat();
+        $obj_cat = new Categories();
 
         $cat = $obj_cat->find($cat_id);
         if (!empty($cat)) {
@@ -85,12 +85,12 @@ class CategoryController extends Controller {
             ));
             return View::make('laravel-authentication-acl::admin.categories.edit')->with(['data' => $data]);
         } else {
-            return Redirect::route("categories.list")->withMessage(trans('categories.category.list_not_found'));
+            return Redirect::route("categories.list")->withMessage(trans('front.categories.list_not_found'));
         }
     }
 
     /*     * ********************************************
-     * postSupport
+     * postCategory
      * 
      * @author: Kang
      * @web: http://tailieuweb.com
@@ -101,8 +101,8 @@ class CategoryController extends Controller {
 
     public function postCategory(Request $request) {
 
-        $obj_cat = new PayrollSupportCat();
-        $validator = new PayrollSupportCatValidator();
+        $obj_cat = new Categories();
+        $validator = new CategoriesValidator();
 
         $input = $request->all();
         $cat_id = $request->get('id');
@@ -117,16 +117,16 @@ class CategoryController extends Controller {
             //Update existing category
             if (!empty($cat_id)) {
 
-                $cat = $obj_cat->updatePayrollSupportCat($input);
+                $cat = $obj_cat->updateCategories($input);
 
-                return Redirect::route("categories.view", ["id" => $cat_id])->withMessage(trans('categories.category.from_edit_successful'));
+                return Redirect::route("categories.list")->withMessage(trans('front.categories.edit_successful'));
 
                 //Add new category
             } elseif (empty($cat_id)) {
 
-                $cat = $obj_cat->addPayrollSupportCat($input);
+                $cat = $obj_cat->addCategories($input);
 
-                return Redirect::route("categories.view", ["id" => $cat->payroll_support_category_id])->withMessage(trans('categories.category.from_add_successful'));
+                return Redirect::route("categories.list")->withMessage(trans('front.categories.add_successful'));
             }
         } else {
             $errors = $validator->getErrors();
@@ -154,14 +154,14 @@ class CategoryController extends Controller {
 
         try {
 
-            $obj_cat = new PayrollSupportCat();
+            $obj_cat = new Categories();
             $cat_id = $request->get('id');
-            $obj_cat->deletePayrollSupportCat($cat_id);
+            $obj_cat->deleteCategories($cat_id);
         } catch (JacopoExceptionsInterface $e) {
 
             return Redirect::route('categories.list')->withErrors($e);
         }
-        return Redirect::route('categories.list')->withMessage(trans('categories.category.from_delete_successfull'));
+        return Redirect::route('categories.list')->withMessage(trans('front.categories.delete_successfull'));
     }
 
     /*     * ********************************************
@@ -176,13 +176,13 @@ class CategoryController extends Controller {
 
     public function viewCategory(Request $request) {
 
-        $obj_cat = new PayrollSupportCat();
+        $obj_cat = new Categories();
 
         $params = array(
-            'payroll_support_category_id' => $request->get('id')
+            'real_estate_category_id' => $request->get('id')
         );
 
-        $cat = $obj_cat->viewPayrollSupportCat($params);
+        $cat = $obj_cat->viewCategories($params);
 
         if (!empty($cat)) {
 

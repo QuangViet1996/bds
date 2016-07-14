@@ -1,4 +1,6 @@
-<?php namespace App\Http\Controllers;
+<?php
+
+namespace App\Http\Controllers;
 
 /**
  * Lib Core
@@ -17,6 +19,7 @@ use \LaravelAcl\Authentication\Controllers\Controller;
  */
 use App\Models\RealEstates;
 use App\Models\Testimonial;
+use App\Models\Categories;
 /**
  * Validator
  */
@@ -30,10 +33,9 @@ use App\Http\Requests\ApplyFormRequest;
 use Validator;
 use Response;
 use Illuminate\Support\MessageBag as MessageBag;
-
 use App\Libraries\LibFiles as LibFiles;
 
-class   RealEstatesController extends Controller {
+class RealEstatesController extends Controller {
 
     public $data = array(
     );
@@ -49,15 +51,15 @@ class   RealEstatesController extends Controller {
      */
 
     public function getList(Request $request) {
-        
+
         $obj_re = new RealEstates();
         $list = $obj_re->listRealEstate();
-       
+
         $data = array_merge($this->data, array(
             'list' => $list,
             'request' => $request,
         ));
-       
+
         return view('laravel-authentication-acl::admin.houses.list')->with(['data' => $data]);
     }
 
@@ -119,8 +121,12 @@ class   RealEstatesController extends Controller {
      */
 
     public function addHouses(Request $request) {
-      
+        $obj_cat = new Categories();
+        $cat = $obj_cat->getCategories();
+
+
         $data = array_merge($this->data, array(
+            'cat' => $cat,
         ));
         return View::make('laravel-authentication-acl::admin.houses.edit')->with(['data' => $data]);
     }
@@ -137,14 +143,17 @@ class   RealEstatesController extends Controller {
 
     public function editHouses(Request $request) {
         $obj_re = new RealEstates();
-
+        $obj_cat = new Categories();
         $real_estate_id = $request->get('id');
-        
+
         $houses = $obj_re->findRealEstateId($real_estate_id);
-         
+
         if (!empty($houses)) {
+            $cat = $obj_cat->getCategories();
+
             $data = array_merge($this->data, array(
                 'houses' => $houses,
+                'cat' => $cat,
                 'request' => $request,
             ));
 
@@ -168,11 +177,9 @@ class   RealEstatesController extends Controller {
         try {
             $obj_re = new RealEstates();
             $obj = new Testimonial();
-           
-             $real_estate_id = $request->get('id');
+
+            $real_estate_id = $request->get('id');
             $obj_re->deleteRealEstate($request->all());
-            
-         
         } catch (JacopoExceptionsInterface $e) {
             return Redirect::route('houses.list')->withErrors($e);
         }

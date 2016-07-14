@@ -11,6 +11,7 @@ class RealEstates extends Model {
     public $timestamps = false;
     protected $fillable = [ "real_estate_title",
         "real_estate_description",
+        "real_estate_category_id",
         "real_estate_bedroom",
         "real_estate_bathroom",
         "real_estate_sq",
@@ -69,6 +70,7 @@ class RealEstates extends Model {
         $real_estate = self::find($input['id']);
         if (!empty($real_estate)) {
             $real_estate->real_estate_title = $input['title'];
+            $real_estate->real_estate_category_id = $input['datacat'];
             $real_estate->real_estate_description = $input['description'];
             $real_estate->real_estate_bedroom = $input['bedroom'];
             $real_estate->real_estate_bathroom = $input['bathroom'];
@@ -94,6 +96,7 @@ class RealEstates extends Model {
 
         $real_estate = self::create([
                     'real_estate_title' => $input['title'],
+                    'real_estate_category_id' => $input['datacat'],
                     'real_estate_description' => $input['description'],
                     'real_estate_bedroom' => $input['bedroom'],
                     'real_estate_bathroom' => $input['bathroom'],

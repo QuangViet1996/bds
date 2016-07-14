@@ -88,5 +88,15 @@ return [
             "link" => '/admin/houses/list',
             "permissions" => ["_superadmin", "_real-estate-admin"]
         ],
+        
+          /**
+         * Category
+         */
+        [
+            "name" => "Category",
+            "route" => "category",
+            "link" => '/admin/categories',
+            "permissions" => ["_superadmin", "_real-estate-admin"]
+        ],
     ]
 ];
