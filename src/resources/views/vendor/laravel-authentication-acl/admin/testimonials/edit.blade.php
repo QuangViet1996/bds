@@ -13,11 +13,12 @@
 @else
 
 <?php
-$testimonial = new stdClass();
-$testimonial->real_estate_testimonial_id = null;
-$testimonial->real_estate_testimonial_title = '';
-$testimonial->real_estate_testimonial_description = '';
-$testimonial->real_estate_testimonial_author_name = '';
+    $testimonial = new stdClass();
+    $testimonial->real_estate_testimonial_id = null;
+    $testimonial->real_estate_testimonial_title = '';
+    $testimonial->real_estate_testimonial_description = '';
+    $testimonial->real_estate_testimonial_author_name = '';
+    $testimonial->real_estate_testimonial_image = '';
 ?>
 
 @endif

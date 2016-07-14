@@ -142,6 +142,7 @@ return [
          */
         LaravelAcl\Authentication\AuthenticationServiceProvider::class,
         Ktquez\Tinymce\TinymceServiceProvider::class,
+        App\Http\ViewComposers\RealEstatesServiceProvider::class,
     ],
     /*
       |--------------------------------------------------------------------------

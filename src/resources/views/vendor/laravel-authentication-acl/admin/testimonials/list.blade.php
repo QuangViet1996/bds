@@ -23,7 +23,7 @@
                 <h3 class="panel-title bariol-thin"><i class="fa fa-list"></i> <b>{!!trans('testimonials.name_table')!!}</b></h3>
             </div>
             <div class="panel-body">
-                @include('laravel-authentication-acl::admin.testimonial.testimonial-table')
+                @include('laravel-authentication-acl::admin.testimonials.testimonial-table')
             </div>
         </div>
     </div>
