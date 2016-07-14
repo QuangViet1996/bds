@@ -73,6 +73,51 @@ class RealEstatesServiceProvider extends ServiceProvider {
                 ],
             ]);
         });
+        
+        //Contact
+        View::composer(['laravel-authentication-acl::admin.contact.*'], function ($view) {
+            $view->with('sidebar_items', [
+                "List" => [
+                    "url" => URL::route('contact.list'),
+                    "icon" => '<i class="fa fa-tachometer"></i>'
+                ],
+                "Add contact" => [
+                    "url" => URL::route('contact.add'),
+                    "icon" => '<i class="fa fa-tachometer"></i>'
+                ],
+                
+            ]);
+        });
+        
+        //Custom HTML
+        View::composer(['laravel-authentication-acl::admin.custom.*'], function ($view) {
+            $view->with('sidebar_items', [
+                "List" => [
+                    "url" => URL::route('custom.list'),
+                    "icon" => '<i class="fa fa-tachometer"></i>'
+                ],
+                "Add custom html" => [
+                    "url" => URL::route('custom.add'),
+                    "icon" => '<i class="fa fa-tachometer"></i>'
+                ],
+                
+            ]);
+        });
+        
+        //Custom HTML
+        View::composer(['laravel-authentication-acl::admin.comments.*'], function ($view) {
+            $view->with('sidebar_items', [
+                "List" => [
+                    "url" => URL::route('comments.list'),
+                    "icon" => '<i class="fa fa-tachometer"></i>'
+                ],
+                "Add comment" => [
+                    "url" => URL::route('comments.add'),
+                    "icon" => '<i class="fa fa-tachometer"></i>'
+                ],
+                
+            ]);
+        });
     }
 
 }
