@@ -52,10 +52,9 @@ $custom->real_estate_custom_html_content = '';
                 </div>
                 
                 <!-- description text field -->
-                @include('tinymce::tpl')
                 <div class="form-group">
                     {!! Form::label('slug',trans('custom.slug').': *') !!}
-                    {!! Form::text('slug',$custom->real_estate_custom_html_slug, ['class' => 'form-control tinymce', 'placeholder' => trans('custom.slug')]) !!}
+                    {!! Form::text('slug',$custom->real_estate_custom_html_slug, ['class' => 'form-control', 'placeholder' => trans('custom.slug')]) !!}
                     <span class="text-danger">{!! $errors->first('slug') !!}</span>
                 </div>
                 
