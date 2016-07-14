@@ -1,7 +1,7 @@
 @extends('laravel-authentication-acl::admin.layouts.base-2cols')
 
 @section('title')
-     {!!trans('front.page_re')!!}
+     {!!trans('re.page')!!}
 @stop
 
 @section('content')
@@ -20,7 +20,7 @@
         @endif
         <div class="panel panel-info">
             <div class="panel-heading">
-                <h3 class="panel-title bariol-thin"><i class="fa fa-lock"></i> {!!trans('front.houses.name_table')!!}</h3>
+                <h3 class="panel-title bariol-thin"><i class="fa fa-list"></i> {!!trans('re.name_table')!!}</h3>
             </div>
             <div class="panel-body">
                 @include('laravel-authentication-acl::admin.realestates.realestates-table')

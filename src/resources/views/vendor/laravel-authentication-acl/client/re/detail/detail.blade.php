@@ -5,6 +5,7 @@ if (!class_exists('lessc')) {
 $less = new lessc;
 $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/less/detail.less', public_path() . '/packages/jacopo/laravel-authentication-acl/_css/detail.css');
 ?>
+
 <section class="page-title page">
     <div class="auto-container">
         <div class="content-box">
@@ -46,6 +47,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
         </div>
     </div>
 </div>
+@if( !empty($data['re']) )
 <section class="section general-row sidebar-page">
     <div class="container">
         <div class="row" jstcache="0">
@@ -54,7 +56,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
                     <div class="componentheading ">
 
-                        <span class="col_text_2">Avenel House</span>
+                        <span class="col_text_2">{!! $data['re']->real_estate_title !!}</span>
 
                         <div class="rem_house_price">
                             <div class="pricemoney">
@@ -103,7 +105,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
                     <div class="row_text">
                         <span class="col_text_1">Property ID:</span>
-                        <span class="col_text_2">6</span>
+                        <span class="col_text_2">{!! $data['re']->real_estate_id !!}</span>
                     </div>
                     <div class="row_text">
                         <span class="col_text_icon"></span>
@@ -134,17 +136,17 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                 <div class="row_text col-md-4 col-sm-6 col-xs-12">
                                     <i class="fa fa-tint"></i>
                                     <span class="col_text_1">Bathrooms:</span>
-                                    <span class="col_text_2">2</span>
+                                    <span class="col_text_2">{!! $data['re']->real_estate_bathroom !!}</span>
                                 </div>
                                 <div class="row_text col-md-4 col-sm-6 col-xs-12">
                                     <i class="fa fa-inbox"></i>
                                     <span class="col_text_1">Bedrooms:</span>
-                                    <span class="col_text_2">2</span>
+                                    <span class="col_text_2">{!! $data['re']->real_estate_bedroom !!}</span>
                                 </div>
                                 <div class="row_text col-md-4 col-sm-6 col-xs-12">
                                     <i class="fa fa-calendar"></i>
                                     <span class="col_text_1">Built year:</span>
-                                    <span class="col_text_2">2004</span>
+                                    <span class="col_text_2">{!! $data['re']->real_estate_year_build !!}</span>
                                 </div>
                                 <div class="row_text col-md-4 col-sm-6  col-xs-12">
                                     <i class="fa fa-truck"></i>
@@ -155,7 +157,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                     <i class="fa fa-arrows-alt"></i>
                                     <span class="col_text_1">Lot size:</span>
                                     <span class="col_text_2">
-                                        6000 Sqrt                    </span>
+                                        {!! $data['re']->real_estate_sq !!} Sqrt                    </span>
                                 </div>
                                 <div class="row_text col-md-4 col-sm-6 col-xs-12">
                                     <i class="fa fa-expand"></i>
@@ -164,7 +166,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                         3500 Sqrt                    </span>
                                 </div>
                                 <div class="clear" style="clear: both"></div>
-                                <div class="rem_house_desciption"><p>Situated on an expansive property in Central Victoria, the design of this four-bedroom house has been inspired by the dynamic landscape elements apparent at this exposed rural setting. These ecological conditions have been used to generate formal and spatial qualities of the design. The modeling of these dynamic forces—wind and sun - on the skin of the building has produced a performance envelope. The Avenel house combines a lightweight metal skin with a more grounded stone and concrete base. Strathbogie granite has been quarried from the site, cut and laid to form a strong relationship between the house and the landscape.</p></div>
+                                <div class="rem_house_desciption"> {!! $data['re']->real_estate_description !!}</div>
                             </div>
 
                         </div>
@@ -271,7 +273,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
         </div>
     </div>
 </section>
-
+@endif
 @section('footer_scripts_part2')
 
 <script>

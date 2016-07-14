@@ -123,5 +123,23 @@ class RealEstates extends Model {
         return $real_estate->delete();
     }
     
+     /*     * ********************************************
+     * viewRe
+     * 
+     * @author: Kang
+     * @web: http://tailieuweb.com
+     * @date: 26/6/2016
+     * 
+     * @status: REVIEWED
+     */
+
+    public function viewRe($params = array()) {
+
+        $real_estate = self::where('real_estate_id', $params['real_estate_id'])
+                ->first();
+
+        return $real_estate;
+    }
+    
 
 }
