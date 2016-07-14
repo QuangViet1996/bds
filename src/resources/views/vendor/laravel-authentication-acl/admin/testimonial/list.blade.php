@@ -1,7 +1,7 @@
 @extends('laravel-authentication-acl::admin.layouts.base-2cols')
 
 @section('title')
-     {!!trans('front.page_testimonial')!!}
+     {!!trans('testimonials.page_testimorial')!!}
 @stop
 
 @section('content')
@@ -20,7 +20,7 @@
         @endif
         <div class="panel panel-info">
             <div class="panel-heading">
-                <h3 class="panel-title bariol-thin"><i class="fa fa-lock"></i> {!!trans('front.testimonials.name_table')!!}</h3>
+                <h3 class="panel-title bariol-thin"><i class="fa fa-list"></i> <b>{!!trans('testimonials.name_table')!!}</b></h3>
             </div>
             <div class="panel-body">
                 @include('laravel-authentication-acl::admin.testimonial.testimonial-table')
