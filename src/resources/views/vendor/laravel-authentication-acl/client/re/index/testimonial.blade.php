@@ -22,7 +22,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                             @foreach($data['testimonial'] as $testimonial)
                             <div class="slide">
                                 <div class="owl-item cloned"><article class="slide-item">
-                                        <figure class="image-box"><img width="90" height="90" src="http://wp1.themexlab.com/wp/dreamland/wp-content/uploads/2015/12/testi-image-1.jpg" class="img-responsive wp-post-image" alt="testi-image-1" srcset="" sizes="(max-width: 90px) 100vw, 90px"></figure>
+                                        <figure class="image-box"><img width="90" height="90" src="{!! url($data['config_testimonial']['urlpath'].'/'.$testimonial->real_estate_testimonial_image) !!}" class="img-responsive wp-post-image" alt="testi-image-1" srcset="" sizes="(max-width: 90px) 100vw, 90px"></figure>
                                         <div class="info-box">
                                             <h3>{!!$testimonial->real_estate_testimonial_author_name!!}</h3>
                                             <p class="designation">{!!$testimonial->real_estate_testimonial_title!!}</p>

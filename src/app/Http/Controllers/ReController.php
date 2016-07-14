@@ -55,16 +55,19 @@ class ReController extends Controller {
     public function index(Request $request) {
         $obj_testimonial = new Testimonial();
         $obj_real_estates = new RealEstates();
-
+        
         $testimonial = $obj_testimonial->listTestimonial();
         $real_estates = $obj_real_estates->listRealEstate();
 
+        $configs = config('app.libfiles');
+        
         $data = array_merge($this->data, array(
             'testimonial' => $testimonial,
+            'config_testimonial' => $configs['testimonial'],
             'real_estates' => $real_estates,
             'request' => $request
         ));
-
+        
         return view('laravel-authentication-acl::client.re.index.index')->with(['data' => $data]);
     }
 
