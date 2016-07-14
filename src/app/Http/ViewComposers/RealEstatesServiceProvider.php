@@ -37,6 +37,42 @@ class RealEstatesServiceProvider extends ServiceProvider {
                 ]
             ]);
         });
+        
+        //Real Estates
+        View::composer(['laravel-authentication-acl::admin.realestates.*'], function ($view) {
+            $view->with('sidebar_items', [
+                "List" => [
+                    "url" => URL::route('realestates.list'),
+                    "icon" => '<i class="fa fa-tachometer"></i>'
+                ],
+                "Add real estates" => [
+                    "url" => URL::route('realestates.add'),
+                    "icon" => '<i class="fa fa-tachometer"></i>'
+                ],
+                "Categories" => [
+                    "url" => URL::route('categories.list'),
+                    "icon" => '<i class="fa fa-tachometer"></i>'
+                ],
+            ]);
+        });
+        
+        //Real Estates
+        View::composer(['laravel-authentication-acl::admin.categories.*'], function ($view) {
+            $view->with('sidebar_items', [
+                "List" => [
+                    "url" => URL::route('realestates.list'),
+                    "icon" => '<i class="fa fa-tachometer"></i>'
+                ],
+                "Add real estates" => [
+                    "url" => URL::route('realestates.add'),
+                    "icon" => '<i class="fa fa-tachometer"></i>'
+                ],
+                "Categories" => [
+                    "url" => URL::route('categories.list'),
+                    "icon" => '<i class="fa fa-tachometer"></i>'
+                ],
+            ]);
+        });
     }
 
 }

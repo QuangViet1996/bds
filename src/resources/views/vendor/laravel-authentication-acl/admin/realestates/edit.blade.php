@@ -38,6 +38,7 @@
         @if( isset($message) )
         <div class="alert alert-success">{{$message}}</div>
         @endif
+        
         <div class="panel panel-info">
             <div class="panel-heading">
                 <h3 class="panel-title bariol-thin">
@@ -46,62 +47,39 @@
             </div>
 
             <div class="panel-body">
+                
                 {!! Form::open(['route'=>['realestates.edit'],'method' => 'post'])  !!}
 
-                <!-- title text field -->
-                <div class="form-group">
-                    {!! Form::label('title',trans('front.houses.title').': *') !!}
-                    {!! Form::text('title',$houses->real_estate_title, ['class' => 'form-control', 'placeholder' => trans('front.houses.title')]) !!}
-                    <span class="text-danger">{!! $errors->first('title') !!}</span>
-                </div>
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#home">{!! trans('admin.realesates.overview') !!}</a></li>
+                    <li><a data-toggle="tab" href="#menu1">{!! trans('admin.realesates.attributes') !!}</a></li>
+                    <li><a data-toggle="tab" href="#menu2">{!! trans('admin.realesates.images') !!}</a></li>
+                    <li><a data-toggle="tab" href="#menu3">{!! trans('admin.realesates.map') !!}</a></li>
+                </ul>
 
-                <!-- description text field -->
-                @include('tinymce::tpl')
-                <div class="form-group">
-                    {!! Form::label('description',trans('front.houses.description').': *') !!}
-                    {!! Form::text('description',$houses->real_estate_description, ['class' => 'form-control tinymce', 'placeholder' => trans('front.houses.description')]) !!}
-                    <span class="text-danger">{!! $errors->first('description') !!}</span>
+                <div class="tab-content">
+                    
+                    <!--config-overview-->
+                    <div id="home" class="tab-pane fade in active">
+                        @include('laravel-authentication-acl::admin.realestates.config-overview')
+                    </div>
+                    
+                    <!--config-attributes-->
+                    <div id="menu1" class="tab-pane fade">
+                        @include('laravel-authentication-acl::admin.realestates.config-attributes')
+                    </div>
+                    
+                    <!--config-images--->
+                    <div id="menu2" class="tab-pane fade">
+                        @include('laravel-authentication-acl::admin.realestates.config-images')
+                    </div>
+                    
+                    <!--config-map-->
+                    <div id="menu3" class="tab-pane fade">
+                        @include('laravel-authentication-acl::admin.realestates.config-map')
+                    </div>
                 </div>
                 
-                <!-- List categories -->
-                    <div class="form-group">
-                        <div class="controls">
-
-                            {!! Form::label('datacat',trans('houses.house.get_supports_edit_category'),': *') !!}
-                            {!! Form::select('datacat',$data['cat'], $houses->real_estate_category_id, ['class' => 'form-control']) !!}
-
-                            <span class="text-danger">{!! $errors->first('datacat') !!}</span>
-
-                        </div>
-                    </div>
-
-                <!-- bedroome text field -->
-                <div class="form-group">
-                    {!! Form::label('bedroom',trans('front.houses.bedroom').': *') !!}
-                    {!! Form::number('bedroom',$houses->real_estate_bedroom, ['class' => 'form-control', 'placeholder' => trans('front.houses.bedroom')]) !!}
-                    <span class="text-danger">{!! $errors->first('bedroom') !!}</span>
-                </div>
-
-                <!-- bathroom text field -->
-                <div class="form-group">
-                    {!! Form::label('bathroom',trans('front.houses.bathroom').': *') !!}
-                    {!! Form::number('bathroom',$houses->real_estate_bathroom, ['class' => 'form-control', 'placeholder' => trans('front.houses.bedroom')]) !!}
-                    <span class="text-danger">{!! $errors->first('bathroom') !!}</span>
-                </div>
-
-                <!-- bathroom text field -->
-                <div class="form-group">
-                    {!! Form::label('sq',trans('front.houses.sq').': *') !!}
-                    {!! Form::number('sq',$houses->real_estate_sq, ['class' => 'form-control', 'placeholder' => trans('front.houses.sq')]) !!}
-                    <span class="text-danger">{!! $errors->first('sq') !!}</span>
-                </div>
-
-                <!-- bathroom text field -->
-                <div class="form-group">
-                    {!! Form::label('build_year',trans('front.houses.build_year').': *') !!}
-                    {!! Form::number('build_year',$houses->real_estate_year_build, ['class' => 'form-control', 'placeholder' => trans('front.houses.build_year')]) !!}
-                    <span class="text-danger">{!! $errors->first('build_year') !!}</span>
-                </div>
 
                 {!! Form::hidden('id', $houses->real_estate_id) !!}
 

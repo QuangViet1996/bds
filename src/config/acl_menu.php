@@ -91,16 +91,6 @@ return [
         ],
         
           /**
-         * Category
-         */
-        [
-            "name" => "Category",
-            "route" => "categories",
-            "link" => '/admin/categories',
-            "permissions" => ["_superadmin", "_real-estate-admin"]
-        ],
-         
-          /**
          * Contact
          */
         [
