@@ -32,3 +32,8 @@ Route::get('/contact', [
     'as' => 're.contact',
     'uses' => '\App\Http\Controllers\ReController@reContact'
 ]);
+Route::post('/contact', [
+    'as' => 'contact.edit',
+    'uses' => '\App\Http\Controllers\ReController@postContact'
+]);
+

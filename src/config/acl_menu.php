@@ -98,5 +98,15 @@ return [
             "link" => '/admin/categories',
             "permissions" => ["_superadmin", "_real-estate-admin"]
         ],
+         
+          /**
+         * Contact
+         */
+        [
+            "name" => "Contact",
+            "route" => "contact",
+            "link" => '/admin/contact',
+            "permissions" => ["_superadmin", "_real-estate-admin"]
+        ],
     ]
 ];

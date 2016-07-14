@@ -17,12 +17,11 @@ use \LaravelAcl\Authentication\Controllers\Controller;
 /**
  * Models
  */
-use App\Models\Testimonial;
-use App\Models\RealEstates;
+use App\Models\Contact;
 /**
  * Validator
  */
-use App\Http\Requests\PayrollSupportCatValidator;
+use App\Http\Requests\ContactValidator;
 /**
  * Lib of vendor
  */
@@ -54,15 +53,14 @@ class ReController extends Controller {
     public function index(Request $request) {
         $obj_testimonial = new Testimonial();
         $obj_real_estates = new RealEstates();
-        
+
         $testimonial = $obj_testimonial->listTestimonial();
         $real_estates = $obj_real_estates->listRealEstate();
 
         $data = array_merge($this->data, array(
             'testimonial' => $testimonial,
             'real_estates' => $real_estates,
-             'request' => $request
-                
+            'request' => $request
         ));
 
         return view('laravel-authentication-acl::client.re.index.index')->with(['data' => $data]);
@@ -138,6 +136,47 @@ class ReController extends Controller {
 
     public function reContact(Request $request) {
         return view('laravel-authentication-acl::client.re.contact.contact');
+    }
+
+    /*     * ********************************************
+     * postContact
+     * 
+     * @author: Kang
+     * @web: http://tailieuweb.com
+     * @date: 26/6/2016
+     * 
+     * @status: REVIEWED
+     */
+
+    public function postContact(Request $request) {
+
+        $obj_contact = new Contact();
+        $validator = new ContactValidator();
+
+        $input = $request->all();
+        $real_estate_contact_id = $request->get('id');
+        $contact = NULL;
+        if ($validator->validate($input)) {
+
+            if (empty($real_estate_contact_id)) {
+
+                $contact = $obj_contact->addContact($input);
+
+                return view('laravel-authentication-acl::client.re.contact.contact')->withMessage(trans('front.contact.add_successfull'));
+
+            }
+        } else {
+
+            $errors = $validator->getErrors();
+
+            if (!empty($real_estate_contact_id)) {
+
+                return Redirect::route("re.contact")->withInput()->withErrors($errors);
+            } else {
+
+                return Redirect::route("re.contact")->withInput()->withErrors($errors);
+            }
+        }
     }
 
 }

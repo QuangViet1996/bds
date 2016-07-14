@@ -154,32 +154,36 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
             <div role="form" class="wpcf7" id="wpcf7-f153-p22-o1" lang="en-US" dir="ltr">
                 <div class="screen-reader-response"></div>
-                <form action="/wp/dreamland/?page_id=22#wpcf7-f153-p22-o1" method="post" class="wpcf7-form" novalidate="novalidate">
-                    <div style="display: none;">
-                        <input type="hidden" name="_wpcf7" value="153">
-                        <input type="hidden" name="_wpcf7_version" value="4.4">
-                        <input type="hidden" name="_wpcf7_locale" value="en_US">
-                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f153-p22-o1">
-                        <input type="hidden" name="_wpnonce" value="f783a50988">
+                {!! Form::open(['route'=>['contact.edit'], 'files'=>true, 'method' => 'post'])  !!}
+                <div style="display: none;">
+                    <input type="hidden" name="_wpcf7" value="153">
+                    <input type="hidden" name="_wpcf7_version" value="4.4">
+                    <input type="hidden" name="_wpcf7_locale" value="en_US">
+                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f153-p22-o1">
+                    <input type="hidden" name="_wpnonce" value="f783a50988">
+                </div
+                >
+                <div class="row clearfix">
+
+                    <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                        <span class="wpcf7-form-control-wrap text-355">
+                            {!! Form::text('author_name',null, ['class' => 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required', 'placeholder' => 'Name']) !!}
+                        </span>
                     </div>
-                    <div class="row clearfix">
-                        <div class="col-md-4 col-sm-6 col-xs-12 form-group">
-                            <span class="wpcf7-form-control-wrap text-355"><input type="text" name="text-355" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name"></span>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-xs-12 form-group">
-                            <span class="wpcf7-form-control-wrap email-856"><input type="email" name="email-856" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email"></span>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-xs-12 form-group">
-                            <span class="wpcf7-form-control-wrap text-356"><input type="text" name="text-356" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Subject"></span>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                            <span class="wpcf7-form-control-wrap textarea-483"><textarea name="textarea-483" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Message"></textarea></span>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12 form-group text-center">
-                            <input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit"><img class="ajax-loader" src="http://wp1.themexlab.com/wp/dreamland/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..." style="visibility: hidden;">
-                        </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                        {!! Form::text('title',null, ['class' => 'wpcf7-form-control-wrap text-356', 'placeholder' => 'Title']) !!}
                     </div>
-                    <div class="wpcf7-response-output wpcf7-display-none"></div></form></div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                        {!! Form::textarea('description',null, ['class' => 'wpcf7-form-control wpcf7-textarea', 'placeholder' => 'Mesenger']) !!}
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 form-group text-center">
+                        {!! Form::submit('Save', array("class"=>"btn btn-info pull-right wpcf7-form-control wpcf7-submit")) !!}
+                    </div>
+
+                </div>
+                <div class="wpcf7-response-output wpcf7-display-none"></div>
+                {!! Form::close() !!}     
+            </div>
         </div>
 
 
