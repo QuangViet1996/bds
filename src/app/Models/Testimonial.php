@@ -18,6 +18,7 @@ class Testimonial extends Model {
                             "real_estate_testimonial_title",
                             "real_estate_testimonial_description",
                             "real_estate_testimonial_author_name",
+                            "real_estate_testimonial_image",
                         ];
     
     protected $guarded = ["real_estate_testimonial_id"];

@@ -57,7 +57,7 @@ class TestimonialController extends Controller {
             'list' => $list,
             'request' => $request,
         ));
-        return view('laravel-authentication-acl::admin.testimonial.list')->with(['data' => $data]);
+        return view('laravel-authentication-acl::admin.testimonials.list')->with(['data' => $data]);
     }
 
     /*     * ********************************************
@@ -80,6 +80,7 @@ class TestimonialController extends Controller {
         $input = $request->all();
         $real_estate_testimonial_id = $request->get('id');
         $testimonial = NULL;
+        
         if ($validator->validate($input)) {
 
             /**
@@ -108,7 +109,7 @@ class TestimonialController extends Controller {
 
                 //Add new 
             } elseif (empty($real_estate_testimonial_id)) {
-
+                
                 $testimonial = $obj_testimonial->addTestimonial($input);
 
                 return Redirect::route("testimonials.list")->withMessage(trans('front.testimonial.add_successfull'));
@@ -140,7 +141,7 @@ class TestimonialController extends Controller {
     public function addTestimonial(Request $request) {
         $data = array_merge($this->data, array(
         ));
-        return View::make('laravel-authentication-acl::admin.testimonial.edit')->with(['data' => $data]);
+        return View::make('laravel-authentication-acl::admin.testimonials.edit')->with(['data' => $data]);
     }
 
     /*     * ********************************************
@@ -172,7 +173,7 @@ class TestimonialController extends Controller {
                 'configs' => $configs['testimonial']
             ));
 
-            return View::make('laravel-authentication-acl::admin.testimonial.edit')->with(['data' => $data]);
+            return View::make('laravel-authentication-acl::admin.testimonials.edit')->with(['data' => $data]);
             
         } else {
             
