@@ -9,7 +9,7 @@
         <tr>
             <th style="witdh:10%">{!!trans('testimonials.author')!!} </th>
             <th style="width:30%">{!!trans('testimonials.title')!!} </th>
-            <th style="width:30%">{!!trans('testimonials.description')!!}</th>
+            <th style="width:50%">{!!trans('testimonials.description')!!}</th>
             <th style="witdh:10%">{!!trans('testimonials.operations')!!}</th>
         </tr>
     </thead>
