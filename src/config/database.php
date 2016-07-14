@@ -64,12 +64,6 @@ return [
             'prefix' => '',
             'strict' => false,
             'engine' => null,
-            'read' => [
-                'host' => '192.168.1.7'
-            ],
-             'write' => [
-                'host' => '192.168.1.7'
-            ]
         ],
 
         'pgsql' => [
