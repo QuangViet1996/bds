@@ -161,6 +161,7 @@
                                 <h4>Leave a Comment:</h4>
                                 <form role="form">
                                     <div class="form-group">
+                                        <input id="alert_name_buy" class="input" type="text" name="customer_name" maxlength="80" placeholder="Name*" style="margin-bottom: 10px;">
                                         <textarea class="form-control" rows="3"></textarea>
                                     </div>
                                     <button type="submit" class="btn btn-comment">Submit</button>
