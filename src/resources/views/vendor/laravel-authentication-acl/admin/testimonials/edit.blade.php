@@ -45,6 +45,13 @@
             <div class="panel-body">
                 {!! Form::open(['route'=>['testimonials.edit'], 'files'=>true, 'method' => 'post'])  !!}
                 
+                <!-- author_name text field -->
+                <div class="form-group">
+                    {!! Form::label('author_name',trans('front.testimonials.author_name').': *') !!}
+                    {!! Form::text('author_name',$testimonial->real_estate_testimonial_author_name, ['class' => 'form-control', 'placeholder' => trans('front.testimonials.author_name')]) !!}
+                    <span class="text-danger">{!! $errors->first('permission') !!}</span>
+                </div>
+                
                 <!-- title text field -->
                 <div class="form-group">
                     {!! Form::label('title',trans('front.testimonials.title').': *') !!}
@@ -77,13 +84,6 @@
                     <span class="text-danger">{!! $errors->first('permission') !!}</span>
                 </div>
                 
-                <!-- author_name text field -->
-                <div class="form-group">
-                    {!! Form::label('author_name',trans('front.testimonials.author_name').': *') !!}
-                    {!! Form::text('author_name',$testimonial->real_estate_testimonial_author_name, ['class' => 'form-control', 'placeholder' => trans('front.testimonials.author_name')]) !!}
-                    <span class="text-danger">{!! $errors->first('permission') !!}</span>
-                </div>
-               
                 {!! Form::hidden('id', $testimonial->real_estate_testimonial_id) !!}
                   
                 <a href="{!! URL::route('testimonials.delete',['id' => $testimonial->real_estate_testimonial_id, '_token' => csrf_token()]) !!}" class="btn btn-danger pull-right margin-left-5 delete">{!!trans("front.testimonials.delete")!!}</a>

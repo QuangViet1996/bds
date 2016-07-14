@@ -7,25 +7,25 @@
 <table class="table table-hover">
     <thead>
         <tr>
-            <th>{!!trans('testimonials.title')!!} </th>
-            <th>{!!trans('testimonials.description')!!}</th>
-            <th>{!!trans('testimonials.author')!!} </th>
-            <th>{!!trans('testimonials.operations')!!}</th>
+            <th style="witdh:10%">{!!trans('testimonials.author')!!} </th>
+            <th style="width:30%">{!!trans('testimonials.title')!!} </th>
+            <th style="width:30%">{!!trans('testimonials.description')!!}</th>
+            <th style="witdh:10%">{!!trans('testimonials.operations')!!}</th>
         </tr>
     </thead>
     <tbody>
         @foreach($data['list'] as $testimonial)
         <tr>
-            <td style="width:30%">{!! $testimonial->real_estate_testimonial_title !!}</td>
-            <td style="width:45%">{!! $testimonial->real_estate_testimonial_description !!}</td>
-            <td style="width:20%">{!! $testimonial->real_estate_testimonial_author_name !!}</td>
-            <td style="witdh:10%">
-                 <a href="{!! URL::route('testimonials.edit', ['id' => $testimonial->real_estate_testimonial_id]) !!}" title='{{ trans('testimonials.edit') }}' class="margin-left-5">
-                     <i class="fa fa-pencil-square-o fa-2x"></i>
-                 </a>
-                 <a href="{!! URL::route('testimonials.delete',['id' =>$testimonial->real_estate_testimonial_id, '_token' => csrf_token()]) !!}"  title='{{ trans('testimonials.delete') }} ' class="margin-left-5">
-                     <i class="fa fa-trash-o delete fa-2x"></i>
-                 </a>
+            <td >{!! $testimonial->real_estate_testimonial_author_name !!}</td>
+            <td>{!! $testimonial->real_estate_testimonial_title !!}</td>
+            <td>{!! $testimonial->real_estate_testimonial_description !!}</td>
+            <td>
+                <a href="{!! URL::route('testimonials.edit', ['id' => $testimonial->real_estate_testimonial_id]) !!}" title='{{ trans('testimonials.edit') }}' class="margin-left-5">
+                    <i class="fa fa-pencil-square-o fa-2x"></i>
+                </a>
+                <a href="{!! URL::route('testimonials.delete',['id' =>$testimonial->real_estate_testimonial_id, '_token' => csrf_token()]) !!}"  title='{{ trans('testimonials.delete') }} ' class="margin-left-5">
+                    <i class="fa fa-trash-o delete fa-2x"></i>
+                </a>
             </td>
         </tr>
         @endforeach

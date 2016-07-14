@@ -30,6 +30,10 @@ class RealEstatesServiceProvider extends ServiceProvider {
                 "List" => [
                     "url" => URL::route('testimonials.list'),
                     "icon" => '<i class="fa fa-tachometer"></i>'
+                ],
+                "Add testimonial" => [
+                    "url" => URL::route('testimonials.add'),
+                    "icon" => '<i class="fa fa-tachometer"></i>'
                 ]
             ]);
         });
