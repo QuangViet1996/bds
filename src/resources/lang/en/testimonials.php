@@ -14,6 +14,7 @@ return [
     /*
      * Testimonial admin page
      */
+    /*******Page list********/
      'page_testimorial' => 'Testimonial',
      'name_table' => 'List testimonial',
      'add_new' => 'Add new',
@@ -23,5 +24,6 @@ return [
      'operations' => 'Operation',
      'edit' => 'Edit',
      'delete' => 'Delete',
+    /*******Page edit********/
     
 ];
