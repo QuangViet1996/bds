@@ -16,6 +16,7 @@ class RealEstates extends Model {
         "real_estate_bathroom",
         "real_estate_sq",
         "real_estate_year_build",
+        "real_estate_images",
     ];
     protected $guarded = ["real_estate_id"];
 
@@ -76,6 +77,7 @@ class RealEstates extends Model {
             $real_estate->real_estate_bathroom = $input['bathroom'];
             $real_estate->real_estate_sq = $input['sq'];
             $real_estate->real_estate_year_build = $input['build_year'];
+            $real_estate->real_estate_images = $input['filename'];
             $real_estate->save();
         } else {
             
@@ -102,6 +104,7 @@ class RealEstates extends Model {
                     'real_estate_bathroom' => $input['bathroom'],
                     'real_estate_sq' => $input['sq'],
                     'real_estate_year_build' => $input['build_year'],
+                    'real_estate_images' => $input['filename'],
         ]);
         return $real_estate;
     }

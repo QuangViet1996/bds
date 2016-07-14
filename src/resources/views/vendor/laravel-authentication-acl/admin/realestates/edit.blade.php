@@ -5,23 +5,23 @@
 @stop
 
 @section('content')
-@if( isset($data['houses']) )
+@if( isset($data['realestate']) )
 
-<?php $houses = $data['houses'] ?>
+<?php $realestate = $data['realestate'] ?>
 
 
 @else
 
 <?php
-    $houses = new stdClass();
-    $houses->real_estate_id = null;
-    $houses->real_estate_title = '';
-    $houses->real_estate_category_id = '';
-    $houses->real_estate_description = '';
-    $houses->real_estate_bedroom = '';
-    $houses->real_estate_bathroom = '';
-    $houses->real_estate_sq = '';
-    $houses->real_estate_year_build = '';
+    $realestate = new stdClass();
+    $realestate->real_estate_id = null;
+    $realestate->real_estate_title = '';
+    $realestate->real_estate_category_id = '';
+    $realestate->real_estate_description = '';
+    $realestate->real_estate_bedroom = '';
+    $realestate->real_estate_bathroom = '';
+    $realestate->real_estate_sq = '';
+    $realestate->real_estate_year_build = '';
 ?>
 
 @endif
@@ -42,13 +42,13 @@
         <div class="panel panel-info">
             <div class="panel-heading">
                 <h3 class="panel-title bariol-thin">
-                    {!! isset($houses->real_estate_id) ? '<i class="fa fa-pencil"></i> '.trans("front.houses.edit") : '<i class="fa fa-plus"></i> '.trans("front.houses.add") !!}
+                    {!! isset($realestate->real_estate_id) ? '<i class="fa fa-pencil"></i> '.trans("front.houses.edit") : '<i class="fa fa-plus"></i> '.trans("front.houses.add") !!}
                 </h3>
             </div>
 
             <div class="panel-body">
                 
-                {!! Form::open(['route'=>['realestates.edit'],'method' => 'post'])  !!}
+                {!! Form::open(['route'=>['realestates.edit'],  'files'=>true, 'method' => 'post'])  !!}
 
                 <ul class="nav nav-tabs">
                     <li class="active"><a data-toggle="tab" href="#home">{!! trans('admin.realesates.overview') !!}</a></li>
@@ -81,9 +81,9 @@
                 </div>
                 
 
-                {!! Form::hidden('id', $houses->real_estate_id) !!}
+                {!! Form::hidden('id', $realestate->real_estate_id) !!}
 
-                <a href="{!! URL::route('realestates.delete',['id' => $houses->real_estate_id, '_token' => csrf_token()]) !!}" class="btn btn-danger pull-right margin-left-5 delete">{!!trans("front.testimonials.delete")!!}</a>
+                <a href="{!! URL::route('realestates.delete',['id' => $realestate->real_estate_id, '_token' => csrf_token()]) !!}" class="btn btn-danger pull-right margin-left-5 delete">{!!trans("front.testimonials.delete")!!}</a>
                 {!! Form::submit('Save', array("class"=>"btn btn-info pull-right ")) !!}
 
                 {!! Form::close() !!}

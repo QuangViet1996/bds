@@ -76,27 +76,43 @@ class RealEstatesController extends Controller {
     public function postHouses(Request $request) {
         $obj_re = new RealEstates();
         $validator = new RealEstatesValidator();
+        $libFiles = new LibFiles();
 
         $input = $request->all();
         $real_estate_id = $request->get('id');
-        $houses = NULL;
+        $realestate = NULL;
 
         if ($validator->validate($input)) {
+            
+            /**
+             * Upload file image
+             * @Check: extension, size
+             */
+            $fileinfo = array();
+            if (!empty($input['image'])) {
+                $configs = config('app.libfiles');
+                $file = $request->file('image');
+                $fileinfo = $libFiles->upload($configs['realestate'], $file);
+            }
+            //TODO: check
+            $input = array_merge($input, $fileinfo);
+            
+            
             if (!empty($real_estate_id)) {
-                $houses = $obj_re->find($real_estate_id);
+                $realestate = $obj_re->find($real_estate_id);
             }
 
             //Update existing 
-            if (!empty($houses)) {
+            if (!empty($realestate)) {
 
-                $houses = $obj_re->updateRealEstate($input);
+                $realestate = $obj_re->updateRealEstate($input);
 
                 return Redirect::route("realestates.list")->withMessage(trans('front.houses.edit_successfull'));
 
                 //Add new 
             } elseif (empty($real_estate_id)) {
 
-                $houses = $obj_re->addRealEstate($input);
+                $realestate = $obj_re->addRealEstate($input);
 
                 return Redirect::route("realestates.list")->withMessage(trans('front.houses.add_successfull'));
             }
@@ -146,14 +162,18 @@ class RealEstatesController extends Controller {
         $obj_cat = new Categories();
         $real_estate_id = $request->get('id');
 
-        $houses = $obj_re->findRealEstateId($real_estate_id);
+        $realestate = $obj_re->findRealEstateId($real_estate_id);
 
-        if (!empty($houses)) {
-            $cat = $obj_cat->getCategories();
-
+        if (!empty($realestate)) {
+            $categories = $obj_cat->getCategories();
+            
+            $libFiles = new LibFiles();
+            $configs = config('app.libfiles');
+            
             $data = array_merge($this->data, array(
-                'houses' => $houses,
-                'cat' => $cat,
+                'realestate' => $realestate,
+                'configs' => $configs['realestate'],
+                'cat' => $categories,
                 'request' => $request,
             ));
 

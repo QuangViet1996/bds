@@ -199,6 +199,17 @@ return [
             'filepath' => 'public/packages/media/testimonials',
             'urlpath' => 'packages/media/testimonials',
             'prename' => 't'
+        ],
+        'realestate' => [
+            'filetype' => [
+                'jpg', 'png', 'gif'
+            ],
+            'filesize' => [
+                'max' => 3
+            ],
+            'filepath' => 'public/packages/media/realestates',
+            'urlpath' => 'packages/media/realestates',
+            'prename' => 're'
         ]
     ]
 ];
