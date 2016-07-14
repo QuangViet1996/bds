@@ -118,5 +118,15 @@ return [
             "link" => '/admin/custom',
             "permissions" => ["_superadmin", "_real-estate-admin"]
         ],
+        
+           /**
+         * Comments
+         */
+        [
+            "name" => "Comments",
+            "route" => "comments",
+            "link" => '/admin/comments',
+            "permissions" => ["_superadmin", "_real-estate-admin"]
+        ],
     ]
 ];
