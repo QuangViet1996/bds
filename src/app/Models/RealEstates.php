@@ -7,7 +7,7 @@ use DB;
 class RealEstates extends Model {
 
     protected $table = 'real_estates';
-    protected $primaryKey = 'real_estate_id ';
+    protected $primaryKey = 'real_estate_id';
     public $timestamps = false;
     protected $fillable = [ "real_estate_title",
         "real_estate_description",
@@ -114,9 +114,11 @@ class RealEstates extends Model {
      */
 
     public function deleteRealEstate($input) {
-        
+       
         $real_estate = self::find($input['id']);
+        
         return $real_estate->delete();
     }
+    
 
 }
