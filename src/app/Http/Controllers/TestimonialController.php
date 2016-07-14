@@ -193,6 +193,7 @@ class TestimonialController extends Controller {
 
     public function deleteTestimonial(Request $request) {
         try {
+            
             $obj_testimonial = new Testimonial();
             $obj_testimonial->deleteTestimonial($request->all());
         } catch (JacopoExceptionsInterface $e) {

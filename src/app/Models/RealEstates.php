@@ -114,9 +114,11 @@ class RealEstates extends Model {
      */
 
     public function deleteRealEstate($input) {
-        
+       
         $real_estate = self::find($input['id']);
+        
         return $real_estate->delete();
     }
+    
 
 }

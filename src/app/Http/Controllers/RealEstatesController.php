@@ -16,6 +16,7 @@ use \LaravelAcl\Authentication\Controllers\Controller;
  * Models
  */
 use App\Models\RealEstates;
+use App\Models\Testimonial;
 /**
  * Validator
  */
@@ -166,10 +167,11 @@ class   RealEstatesController extends Controller {
     public function deleteHouses(Request $request) {
         try {
             $obj_re = new RealEstates();
-            
+            $obj = new Testimonial();
+           
              $real_estate_id = $request->get('id');
-            
             $obj_re->deleteRealEstate($request->all());
+            
          
         } catch (JacopoExceptionsInterface $e) {
             return Redirect::route('houses.list')->withErrors($e);
