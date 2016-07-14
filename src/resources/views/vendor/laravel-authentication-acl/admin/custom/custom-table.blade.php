@@ -34,7 +34,6 @@
 @else
 <span class="text-warning"><h5>No permissions found.</h5></span>
 @endif
-@endif
 <div class="paginator">
     {!! $data['list']->appends($data['request']->except(['page']) )->render() !!}
 </div>
