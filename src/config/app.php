@@ -196,6 +196,7 @@ return [
                 'max' => 3
             ],
             'filepath' => 'public/packages/media/testimonials',
+            'urlpath' => 'packages/media/testimonials',
             'prename' => 't'
         ]
     ]

@@ -5,19 +5,19 @@
 @stop
 
 @section('content')
-@if( isset($data['testimanial']) )
+@if( isset($data['testimonial']) )
 
-<?php $testimanial = $data['testimanial'] ?>
+<?php $testimonial = $data['testimonial'] ?>
 
 
 @else
 
 <?php
-$testimanial = new stdClass();
-$testimanial->real_estate_testimonial_id = null;
-$testimanial->real_estate_testimonial_title = '';
-$testimanial->real_estate_testimonial_description = '';
-$testimanial->real_estate_testimonial_author_name = '';
+$testimonial = new stdClass();
+$testimonial->real_estate_testimonial_id = null;
+$testimonial->real_estate_testimonial_title = '';
+$testimonial->real_estate_testimonial_description = '';
+$testimonial->real_estate_testimonial_author_name = '';
 ?>
 
 @endif
@@ -37,7 +37,7 @@ $testimanial->real_estate_testimonial_author_name = '';
         <div class="panel panel-info">
             <div class="panel-heading">
                 <h3 class="panel-title bariol-thin">
-                    {!! isset($testimanial->real_estate_testimonial_id) ? '<i class="fa fa-pencil"></i> '.trans("front.testimonials.edit") : '<i class="fa fa-plus"></i> '.trans("front.testimonials.add") !!}
+                    {!! isset($testimonial->real_estate_testimonial_id) ? '<i class="fa fa-pencil"></i> '.trans("front.testimonials.edit") : '<i class="fa fa-plus"></i> '.trans("front.testimonials.add") !!}
                 </h3>
             </div>
             
@@ -47,10 +47,11 @@ $testimanial->real_estate_testimonial_author_name = '';
                 <!-- title text field -->
                 <div class="form-group">
                     {!! Form::label('title',trans('front.testimonials.title').': *') !!}
-                    {!! Form::text('title',$testimanial->real_estate_testimonial_title, ['class' => 'form-control', 'placeholder' => trans('front.testimonials.title')]) !!}
+                    {!! Form::text('title',$testimonial->real_estate_testimonial_title, ['class' => 'form-control', 'placeholder' => trans('front.testimonials.title')]) !!}
                     <span class="text-danger">{!! $errors->first('description') !!}</span>
                 </div>
                 
+                <!--image-->
                 <div class="form-group">
                     <div class="controls">
 
@@ -60,26 +61,31 @@ $testimanial->real_estate_testimonial_author_name = '';
                         <span class="text-danger">{!! $errors->first('image') !!}</span>
 
                     </div>
+                    @if($testimonial->real_estate_testimonial_image)
+                    <div class="img-thumb">
+                        <img src="{!! url($data['configs']['urlpath'].'/'.$testimonial->real_estate_testimonial_image) !!}">
+                    </div>
+                    @endif
                 </div>
                 
                 <!-- description text field -->
                 @include('tinymce::tpl')
                 <div class="form-group">
                     {!! Form::label('description',trans('front.testimonials.description').': *') !!}
-                    {!! Form::text('description',$testimanial->real_estate_testimonial_description, ['class' => 'form-control tinymce', 'placeholder' => trans('front.testimonials.description')]) !!}
+                    {!! Form::text('description',$testimonial->real_estate_testimonial_description, ['class' => 'form-control tinymce', 'placeholder' => trans('front.testimonials.description')]) !!}
                     <span class="text-danger">{!! $errors->first('permission') !!}</span>
                 </div>
                 
                 <!-- author_name text field -->
                 <div class="form-group">
                     {!! Form::label('author_name',trans('front.testimonials.author_name').': *') !!}
-                    {!! Form::text('author_name',$testimanial->real_estate_testimonial_author_name, ['class' => 'form-control', 'placeholder' => trans('front.testimonials.author_name')]) !!}
+                    {!! Form::text('author_name',$testimonial->real_estate_testimonial_author_name, ['class' => 'form-control', 'placeholder' => trans('front.testimonials.author_name')]) !!}
                     <span class="text-danger">{!! $errors->first('permission') !!}</span>
                 </div>
                
-                {!! Form::hidden('id', $testimanial->real_estate_testimonial_id) !!}
+                {!! Form::hidden('id', $testimonial->real_estate_testimonial_id) !!}
                   
-                <a href="{!! URL::route('testimonials.delete',['id' => $testimanial->real_estate_testimonial_id, '_token' => csrf_token()]) !!}" class="btn btn-danger pull-right margin-left-5 delete">{!!trans("front.testimonials.delete")!!}</a>
+                <a href="{!! URL::route('testimonials.delete',['id' => $testimonial->real_estate_testimonial_id, '_token' => csrf_token()]) !!}" class="btn btn-danger pull-right margin-left-5 delete">{!!trans("front.testimonials.delete")!!}</a>
                 {!! Form::submit('Save', array("class"=>"btn btn-info pull-right ")) !!}
                 
                 {!! Form::close() !!}

@@ -1,4 +1,6 @@
-<?php namespace App\Http\Controllers;
+<?php
+
+namespace App\Http\Controllers;
 
 /**
  * Lib Core
@@ -29,7 +31,6 @@ use App\Http\Requests\ApplyFormRequest;
 use Validator;
 use Response;
 use Illuminate\Support\MessageBag as MessageBag;
-
 use App\Libraries\LibFiles as LibFiles;
 
 class TestimonialController extends Controller {
@@ -70,9 +71,9 @@ class TestimonialController extends Controller {
      */
 
     public function postTestimonial(Request $request) {
-        
+
         $libFiles = new LibFiles();
-        
+
         $obj_testimonial = new Testimonial();
         $validator = new TestimonialValidator();
 
@@ -80,7 +81,7 @@ class TestimonialController extends Controller {
         $real_estate_testimonial_id = $request->get('id');
         $testimonial = NULL;
         if ($validator->validate($input)) {
-            
+
             /**
              * Upload file image
              * @Check: extension, size
@@ -90,11 +91,10 @@ class TestimonialController extends Controller {
                 $configs = config('app.libfiles');
                 $file = $request->file('image');
                 $fileinfo = $libFiles->upload($configs['testimonial'], $file);
-                
             }
             //TODO: check
             $input = array_merge($input, $fileinfo);
-            
+
             if (!empty($real_estate_testimonial_id)) {
                 $testimonial = $obj_testimonial->find($real_estate_testimonial_id);
             }
@@ -113,19 +113,16 @@ class TestimonialController extends Controller {
 
                 return Redirect::route("testimonials.list")->withMessage(trans('front.testimonial.add_successfull'));
             }
-            
         } else {
-            
+
             $errors = $validator->getErrors();
 
             if (!empty($real_estate_testimonial_id)) {
-                
+
                 return Redirect::route("testimonials.edit", ["id" => $real_estate_testimonial_id])->withInput()->withErrors($errors);
-                
             } else {
-                
+
                 return Redirect::route("testimonials.edit")->withInput()->withErrors($errors);
-                
             }
         }
     }
@@ -159,18 +156,28 @@ class TestimonialController extends Controller {
     public function editTestimonial(Request $request) {
         $obj_testimonial = new Testimonial();
 
+
         $real_estate_testimonial_id = $request->get('id');
+
+        $testimonial = $obj_testimonial->find($real_estate_testimonial_id);
         
-        $testimanial = $obj_testimonial->find($real_estate_testimonial_id);
-        if (!empty($testimanial)) {
+        if (!empty($testimonial)) {
+            
+            $libFiles = new LibFiles();
+            $configs = config('app.libfiles');
+            
             $data = array_merge($this->data, array(
-                'testimanial' => $testimanial,
+                'testimonial' => $testimonial,
                 'request' => $request,
+                'configs' => $configs['testimonial']
             ));
 
             return View::make('laravel-authentication-acl::admin.testimonial.edit')->with(['data' => $data]);
+            
         } else {
+            
             return Redirect::route("testimonials.list")->withMessage(trans('front.testimonial.not_table'));
+            
         }
     }
 

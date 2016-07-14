@@ -77,7 +77,10 @@ class Testimonial extends Model {
             $testimonial->real_estate_testimonial_title = $input['title'];
             $testimonial->real_estate_testimonial_description = $input['description'];
             $testimonial->real_estate_testimonial_author_name = $input['author_name'];
-            $testimonial->real_estate_testimonial_image = $input['filename'];
+            
+            if (!empty($input['image'])) {
+                $testimonial->real_estate_testimonial_image = $input['filename'];
+            }
             $testimonial->save();
             
         } else {
@@ -101,7 +104,7 @@ class Testimonial extends Model {
                     'real_estate_testimonial_title' => $input['title'],
                     'real_estate_testimonial_description' => $input['description'],
                     'real_estate_testimonial_author_name' => $input['author_name'],
-                    'real_estate_testimonial_image' => $input['filename']
+                    'real_estate_testimonial_image' => @$input['filename']
         ]);
         
         return $testimonial;
