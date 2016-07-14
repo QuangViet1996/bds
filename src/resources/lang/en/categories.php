@@ -1,7 +1,7 @@
 <?php
 
 return [
-     /*
+    /*
       |--------------------------------------------------------------------------
       | Authentication Language Lines
       |--------------------------------------------------------------------------
@@ -12,21 +12,8 @@ return [
       |
      */
     /*
-     * Testimonial admin page
+     * Real Estates admin page
      */
-    /*******Page list********/
-     'page_testimorial' => 'Testimonial',
-     'name_table' => 'List testimonial',
-     'add_new' => 'Add new',
-     'title' => 'Title',
-     'description' => 'Description',
-     'author' => 'Author',
-     'operations' => 'Operation',
-     'edit' => 'Edit',
-     'add' => 'Add',
-     'delete' => 'Delete',
-     'author_name' => 'Author name',
-     'image' => 'Image',
-     'you_want_delete' => 'Do you want delete?',
-    
+    'page_categories' => 'Categories',
+    'list' => 'List categories',
 ];

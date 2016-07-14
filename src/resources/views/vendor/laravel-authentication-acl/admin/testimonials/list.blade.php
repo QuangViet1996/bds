@@ -33,7 +33,7 @@
 @section('footer_scripts')
     <script>
         $(".delete").click(function(){
-            return confirm("Are you sure to delete this item?");
+            return confirm('{!!trans('testimonials.you_want_delete')!!}');
         });
     </script>
 @stop
