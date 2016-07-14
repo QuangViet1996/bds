@@ -55,19 +55,19 @@ class ReController extends Controller {
     public function index(Request $request) {
         $obj_testimonial = new Testimonial();
         $obj_real_estates = new RealEstates();
-        
+
         $testimonial = $obj_testimonial->listTestimonial();
         $real_estates = $obj_real_estates->listRealEstate();
 
         $configs = config('app.libfiles');
-        
+
         $data = array_merge($this->data, array(
             'testimonial' => $testimonial,
             'config_testimonial' => $configs['testimonial'],
             'real_estates' => $real_estates,
             'request' => $request
         ));
-        
+
         return view('laravel-authentication-acl::client.re.index.index')->with(['data' => $data]);
     }
 
@@ -112,7 +112,24 @@ class ReController extends Controller {
      */
 
     public function reView(Request $request) {
-        return view('laravel-authentication-acl::client.re.detail.view');
+        $obj_re = new RealEstates();
+
+        $params = array(
+            'real_estate_id' => $request->get('id')
+        );
+       
+        $re = $obj_re->viewRe($params);
+        if (!empty($re)) {
+            
+            $data = array_merge($this->data, array(
+                're' => $re,
+                'request' => $request
+            ));
+            return view('laravel-authentication-acl::client.re.detail.view')->with(['data' => $data]);
+        } else {
+
+            return Redirect::route("re.list")->withMessage(trans('categories.category.list_not_found'));
+        }
     }
 
     /*     * ********************************************
@@ -168,7 +185,6 @@ class ReController extends Controller {
                 $contact = $obj_contact->addContact($input);
 
                 return view('laravel-authentication-acl::client.re.contact.contact')->withMessage(trans('front.contact.add_successfull'));
-
             }
         } else {
 
