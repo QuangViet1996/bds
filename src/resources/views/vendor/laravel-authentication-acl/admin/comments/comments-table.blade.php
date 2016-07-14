@@ -2,7 +2,7 @@
 
     <div class="col-md-12 margin-bottom-12">
         <a href="{!! URL::route('comments.add') !!}" class="btn btn-info pull-right">
-            <i class="fa fa-plus"></i> {!!trans('comments.category.add')!!}
+            <i class="fa fa-plus"></i> {!!trans('comments.add')!!}
         </a>
     </div>
 
@@ -16,9 +16,9 @@
             <thead>
                 <tr>
                     <th >STT</th>
-                    <th >{!!trans('front.comments.title')!!}</th>
-                    <th>{!!trans('front.comments.description')!!}</th>
-                    <th>{!!trans('front.payrolls.operations')!!}</th>
+                    <th >{!!trans('comments.title')!!}</th>
+                    <th>{!!trans('comments.description')!!}</th>
+                    <th>{!!trans('comments.operations')!!}</th>
                 </tr>
             </thead>
 
@@ -40,9 +40,8 @@
                     <td  style="witdh:40%">{!! $cmt->real_estate_comment_description !!}</td>
 
                     <td  style="witdh:23%">
-                        <a href="{!! URL::route('comments.view', ['id' => $cmt->real_estate_comment_id]) !!}" title='{{ trans('comments.comment.view') }}'><i class="fa fa-eye fa-2x"></i></a>
-                        <a href="{!! URL::route('comments.edit', ['id' => $cmt->real_estate_comment_id]) !!}" title='{{ trans('comments.comment.edit') }}' class="margin-left-5"><i class="fa fa-pencil-square-o fa-2x"></i></a>
-                        <a href="{!! URL::route('comments.delete',['id' =>$cmt->real_estate_comment_id, '_token' => csrf_token()]) !!}"  title='{{ trans('comments.comment.delete') }} ' class="margin-left-5"><i class="fa fa-trash-o delete fa-2x"></i></a>
+                        <a href="{!! URL::route('comments.edit', ['id' => $cmt->real_estate_comment_id]) !!}" title='{{ trans('comments.edit') }}' class="margin-left-5"><i class="fa fa-pencil-square-o fa-2x"></i></a>
+                        <a href="{!! URL::route('comments.delete',['id' =>$cmt->real_estate_comment_id, '_token' => csrf_token()]) !!}"  title='{{ trans('comments.delete') }} ' class="margin-left-5"><i class="fa fa-trash-o delete fa-2x"></i></a>
 
                     </td>
 
@@ -54,7 +53,7 @@
         </table>
 
 @else
-    <span class="text-warning"><h5>{!! trans('comments.comment.list_not_found')!!}</h5></span>
+    <span class="text-warning"><h5>{!! trans('comments.list_not_found')!!}</h5></span>
 @endif
 @endif
 <div class="paginator">

@@ -1,7 +1,7 @@
 @extends('laravel-authentication-acl::admin.layouts.base-2cols')
 
 @section('title')
-{!!trans('front.page_custom')!!}
+{!!trans('custom.page_custom')!!}
 @stop
 
 @section('content')
@@ -37,7 +37,7 @@ $custom->real_estate_custom_html_content = '';
         <div class="panel panel-info">
             <div class="panel-heading">
                 <h3 class="panel-title bariol-thin">
-                    {!! isset($custom->real_estate_custom_html_id) ? '<i class="fa fa-pencil"></i> '.trans("front.custom.edit") : '<i class="fa fa-plus"></i> '.trans("front.custom.add") !!}
+                    {!! isset($custom->real_estate_custom_html_id) ? '<i class="fa fa-pencil"></i> '.trans("custom.edit") : '<i class="fa fa-plus"></i> '.trans("custom.add") !!}
                 </h3>
             </div>
             
@@ -46,30 +46,30 @@ $custom->real_estate_custom_html_content = '';
                 
                 <!-- title text field -->
                 <div class="form-group">
-                    {!! Form::label('title',trans('front.custom.title').': *') !!}
-                    {!! Form::text('title',$custom->real_estate_custom_html_title, ['class' => 'form-control', 'placeholder' => trans('front.custom.title')]) !!}
+                    {!! Form::label('title',trans('custom.title').': *') !!}
+                    {!! Form::text('title',$custom->real_estate_custom_html_title, ['class' => 'form-control', 'placeholder' => trans('custom.title')]) !!}
                     <span class="text-danger">{!! $errors->first('title') !!}</span>
                 </div>
                 
                 <!-- description text field -->
                 @include('tinymce::tpl')
                 <div class="form-group">
-                    {!! Form::label('slug',trans('front.custom.slug').': *') !!}
-                    {!! Form::text('slug',$custom->real_estate_custom_html_slug, ['class' => 'form-control tinymce', 'placeholder' => trans('front.custom.slug')]) !!}
+                    {!! Form::label('slug',trans('custom.slug').': *') !!}
+                    {!! Form::text('slug',$custom->real_estate_custom_html_slug, ['class' => 'form-control tinymce', 'placeholder' => trans('custom.slug')]) !!}
                     <span class="text-danger">{!! $errors->first('slug') !!}</span>
                 </div>
                 
                  @include('tinymce::tpl')
                 <div class="form-group">
-                    {!! Form::label('content',trans('front.custom.content').': *') !!}
-                    {!! Form::text('content',$custom->real_estate_custom_html_content, ['class' => 'form-control tinymce', 'placeholder' => trans('front.custom.content')]) !!}
+                    {!! Form::label('content',trans('custom.content').': *') !!}
+                    {!! Form::text('content',$custom->real_estate_custom_html_content, ['class' => 'form-control tinymce', 'placeholder' => trans('custom.content')]) !!}
                     <span class="text-danger">{!! $errors->first('content') !!}</span>
                 </div>
                 
                
                 {!! Form::hidden('id', $custom->real_estate_custom_html_id) !!}
                   
-                <a href="{!! URL::route('custom.delete',['id' => $custom->real_estate_custom_html_id, '_token' => csrf_token()]) !!}" class="btn btn-danger pull-right margin-left-5 delete">{!!trans("front.custom.delete")!!}</a>
+                <a href="{!! URL::route('custom.delete',['id' => $custom->real_estate_custom_html_id, '_token' => csrf_token()]) !!}" class="btn btn-danger pull-right margin-left-5 delete">{!!trans("custom.delete")!!}</a>
                 {!! Form::submit('Save', array("class"=>"btn btn-info pull-right ")) !!}
                 
                 {!! Form::close() !!}

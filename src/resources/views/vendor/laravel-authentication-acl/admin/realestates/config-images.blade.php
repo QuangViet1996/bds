@@ -1,3 +1,10 @@
+<?php
+if (!class_exists('lessc')) {
+    include (public_path() . '/packages/jacopo/laravel-authentication-acl/less/lessc.inc.php');
+}
+$less = new lessc;
+$less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/less/admin.less', public_path() . '/packages/jacopo/laravel-authentication-acl/_css/admin.css');
+?>
 <!--image-->
 <div class="form-group">
     <div class="controls">

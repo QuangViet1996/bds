@@ -1,7 +1,7 @@
 @extends('vendor.laravel-authentication-acl.admin.layouts.base-2cols')
 
 @section('title')
-                       {!!trans('front.page_comments')!!}
+                       {!!trans('comments.page_comments')!!}
 @stop
 
 @section('content')
@@ -26,7 +26,7 @@
             
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title bariol-thin"><i class="fa fa-tags"></i> {!! trans('front.comments.list') !!}</h3>
+                    <h3 class="panel-title bariol-thin"><i class="fa fa-tags"></i> {!! trans('comments.list') !!}</h3>
                 </div>
                 
                 <div class="panel-body">
@@ -45,7 +45,7 @@
 @section('footer_scripts')
     <script>
         $(".delete").click(function(){
-            return confirm('{!!trans('front.comment.you_want_delete')!!}');
+            return confirm('{!!trans('comment.you_want_delete')!!}');
         });
     </script>
 @stop

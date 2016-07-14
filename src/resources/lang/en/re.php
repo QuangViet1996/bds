@@ -26,7 +26,7 @@ return [
     'Operations' => 'Operations',
     'edit' => 'Edit',
     'delete' => 'Delete',
-    'not_found' => 'No table',
+    'not_found' => 'Not table',
     /*     * *****Page edit******* */
     'overview' => 'Overview',
     'attributes' => 'Attributes',
@@ -39,4 +39,8 @@ return [
     'bathroom' => 'Bathrooms',
     'sq' => 'Sq',
     'build_year' => 'Build year',
+    
+     'delete_successful' => 'Delete successful',
+     'add_successful' => 'Add successful',
+     'edit_successful' => 'Edit successful',
 ];
