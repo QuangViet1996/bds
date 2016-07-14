@@ -23,7 +23,9 @@ return [
      'author' => 'Author',
      'operations' => 'Operation',
      'edit' => 'Edit',
+     'add' => 'Add',
      'delete' => 'Delete',
-    /*******Page edit********/
+     'author_name' => 'Author name',
+     'image' => 'Image',
     
 ];
