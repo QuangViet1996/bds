@@ -141,8 +141,7 @@
   color: #71b100;
 }
 .featured_houses_inline {
-  display: inline-block;
-  margin: 0 15px 10px 0;
+  margin-bottom: 10px;
   width: 115px;
 }
 .featured_houses_block .rem_house_viewlist {

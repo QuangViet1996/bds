@@ -29,11 +29,11 @@ class RealEstatesServiceProvider extends ServiceProvider {
             $view->with('sidebar_items', [
                 "List" => [
                     "url" => URL::route('testimonials.list'),
-                    "icon" => '<i class="fa fa-tachometer"></i>'
+                    "icon" => '<i class="fa fa-list"></i>'
                 ],
                 "Add testimonial" => [
                     "url" => URL::route('testimonials.add'),
-                    "icon" => '<i class="fa fa-tachometer"></i>'
+                    "icon" => '<i class="fa fa-plus"></i>'
                 ]
             ]);
         });
@@ -43,15 +43,15 @@ class RealEstatesServiceProvider extends ServiceProvider {
             $view->with('sidebar_items', [
                 "List" => [
                     "url" => URL::route('realestates.list'),
-                    "icon" => '<i class="fa fa-tachometer"></i>'
+                    "icon" => '<i class="fa fa-list"></i>'
                 ],
                 "Add real estates" => [
                     "url" => URL::route('realestates.add'),
-                    "icon" => '<i class="fa fa-tachometer"></i>'
+                    "icon" => '<i class="fa fa-plus"></i>'
                 ],
                 "Categories" => [
                     "url" => URL::route('categories.list'),
-                    "icon" => '<i class="fa fa-tachometer"></i>'
+                    "icon" => '<i class="fa fa-tags"></i>'
                 ],
             ]);
         });
@@ -61,15 +61,15 @@ class RealEstatesServiceProvider extends ServiceProvider {
             $view->with('sidebar_items', [
                 "List" => [
                     "url" => URL::route('realestates.list'),
-                    "icon" => '<i class="fa fa-tachometer"></i>'
+                    "icon" => '<i class="fa fa-list"></i>'
                 ],
                 "Add real estates" => [
                     "url" => URL::route('realestates.add'),
-                    "icon" => '<i class="fa fa-tachometer"></i>'
+                    "icon" => '<i class="fa fa-plus"></i>'
                 ],
                 "Categories" => [
                     "url" => URL::route('categories.list'),
-                    "icon" => '<i class="fa fa-tachometer"></i>'
+                    "icon" => '<i class="fa fa-tags"></i>'
                 ],
             ]);
         });

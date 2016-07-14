@@ -12,7 +12,10 @@
  */
 
 Route::get('/', 'ReController@index');
-
+Route::get('/home', [
+    'as' => 're.home',
+    'uses' => '\App\Http\Controllers\ReController@index'
+]);
 Route::get('/view', [
     'as' => 're.view',
     'uses' => '\App\Http\Controllers\ReController@reView'

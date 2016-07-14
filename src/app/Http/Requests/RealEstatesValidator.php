@@ -12,6 +12,7 @@ class RealEstatesValidator extends AbstractValidator
         'bedroom' => 'required',
         'bathroom' => 'required',
         'build_year' => 'required',
+        'cost' => 'required',
         'datacat' => 'required',
     );
     
@@ -44,6 +45,7 @@ class RealEstatesValidator extends AbstractValidator
             'bathroom.required' => 'Required',
             'build_year.required' => 'Required',
             'datacat.required' => 'Required',
+            'cost.required' => 'Required',
             'required' => ':attribute required',
         ];
     }

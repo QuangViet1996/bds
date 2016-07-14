@@ -1,7 +1,7 @@
 @extends('laravel-authentication-acl::admin.layouts.base-2cols')
 
 @section('title')
-{!!trans('front.page_houses')!!}
+{!!trans('re.page')!!}
 @stop
 
 @section('content')
@@ -23,6 +23,7 @@
     $realestate->real_estate_sq = '';
     $realestate->real_estate_year_build = '';
     $realestate->real_estate_images = '';
+    $realestate->real_estate_cost = '';
 ?>
 
 @endif

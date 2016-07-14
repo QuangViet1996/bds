@@ -39,6 +39,7 @@ return [
     'bathroom' => 'Bathrooms',
     'sq' => 'Sq',
     'build_year' => 'Build year',
+    'cost' => 'Cost',
     
      'delete_successful' => 'Delete successful',
      'add_successful' => 'Add successful',

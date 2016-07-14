@@ -17,6 +17,7 @@ class RealEstates extends Model {
         "real_estate_sq",
         "real_estate_year_build",
         "real_estate_images",
+        "real_estate_cost",
     ];
     protected $guarded = ["real_estate_id"];
 
@@ -78,6 +79,7 @@ class RealEstates extends Model {
             $real_estate->real_estate_sq = $input['sq'];
             $real_estate->real_estate_year_build = $input['build_year'];
             $real_estate->real_estate_images = $input['filename'];
+            $real_estate->real_estate_cost = $input['cost'];
             $real_estate->save();
         } else {
             
@@ -105,6 +107,7 @@ class RealEstates extends Model {
                     'real_estate_sq' => $input['sq'],
                     'real_estate_year_build' => $input['build_year'],
                     'real_estate_images' => $input['filename'],
+                    'real_estate_cost' => $input['cost'],
         ]);
         return $real_estate;
     }

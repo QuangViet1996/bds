@@ -24,4 +24,10 @@ return [
     'delete' => 'Delete',
     'cancel' => 'Cancel',
     'save' => 'Save',
+    'save' => 'Save',
+    'list_not_found' => 'Not found table',
+    'edit_successful' => 'Edit successfull',
+    'add_successful' => 'Add successfull',
+    'delete_successful' => 'Delete successfull',
+    
 ];

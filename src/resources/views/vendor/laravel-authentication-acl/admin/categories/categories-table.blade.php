@@ -53,7 +53,7 @@
         </table>
 
 @else
-    <span class="text-warning"><h5>{!! trans('categories.category.list_not_found')!!}</h5></span>
+    <span class="text-warning"><h5>{!! trans('categories.list_not_found')!!}</h5></span>
 @endif
 @endif
 <div class="paginator">

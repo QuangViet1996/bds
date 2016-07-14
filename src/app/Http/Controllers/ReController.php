@@ -143,6 +143,7 @@ class ReController extends Controller {
      */
 
     public function reCategory(Request $request) {
+        
         return view('laravel-authentication-acl::client.re.category.cat_list');
     }
 

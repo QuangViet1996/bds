@@ -85,7 +85,7 @@ class CategoryController extends Controller {
             ));
             return View::make('laravel-authentication-acl::admin.categories.edit')->with(['data' => $data]);
         } else {
-            return Redirect::route("categories.list")->withMessage(trans('front.categories.list_not_found'));
+            return Redirect::route("categories.list")->withMessage(trans('categories.list_not_found'));
         }
     }
 
@@ -119,14 +119,14 @@ class CategoryController extends Controller {
 
                 $cat = $obj_cat->updateCategories($input);
 
-                return Redirect::route("categories.list")->withMessage(trans('front.categories.edit_successful'));
+                return Redirect::route("categories.list")->withMessage(trans('categories.edit_successful'));
 
                 //Add new category
             } elseif (empty($cat_id)) {
 
                 $cat = $obj_cat->addCategories($input);
 
-                return Redirect::route("categories.list")->withMessage(trans('front.categories.add_successful'));
+                return Redirect::route("categories.list")->withMessage(trans('categories.add_successful'));
             }
         } else {
             $errors = $validator->getErrors();
@@ -161,7 +161,7 @@ class CategoryController extends Controller {
 
             return Redirect::route('categories.list')->withErrors($e);
         }
-        return Redirect::route('categories.list')->withMessage(trans('front.categories.delete_successfull'));
+        return Redirect::route('categories.list')->withMessage(trans('categories.delete_successfull'));
     }
 
     /*     * ********************************************
@@ -194,7 +194,7 @@ class CategoryController extends Controller {
             return View::make('laravel-authentication-acl::admin.categories.view')->with(['data' => $data]);
         } else {
 
-            return Redirect::route("categories.list")->withMessage(trans('categories.category.list_not_found'));
+            return Redirect::route("categories.list")->withMessage(trans('categories.list_not_found'));
         }
     }
 

@@ -39,7 +39,7 @@
                 
                 <div class="panel-heading">
                     <h3 class="panel-title bariol-thin">
-                        {!! isset($cat->real_estate_category_id) ? '<i class="fa fa-pencil"></i> '.trans("categories.edit_support") : '<i class="fa fa-plus"></i> '.trans("categories.add_support") !!}
+                        {!! isset($cat->real_estate_category_id) ? '<i class="fa fa-pencil"></i> '.trans("categories.edit") : '<i class="fa fa-plus"></i> '.trans("categories.add") !!}
                     </h3>
                 </div>
                 

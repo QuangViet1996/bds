@@ -26,3 +26,10 @@
     {!! Form::number('build_year',$realestate->real_estate_year_build, ['class' => 'form-control', 'placeholder' => trans('re.build_year')]) !!}
     <span class="text-danger">{!! $errors->first('build_year') !!}</span>
 </div>
+
+<!-- bathroom text field -->
+<div class="form-group">
+    {!! Form::label('cost',trans('re.cost').': *') !!}
+    {!! Form::number('cost',$realestate->real_estate_cost, ['class' => 'form-control', 'placeholder' => trans('re.cost')]) !!}
+    <span class="text-danger">{!! $errors->first('cost') !!}</span>
+</div>
