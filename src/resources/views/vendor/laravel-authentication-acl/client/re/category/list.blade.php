@@ -107,19 +107,13 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                 <button type="submit" name="submit"><span class="fa fa-search"></span></button>
                             </div>
                         </form></div><div id="categories-2" class="widget sidebar_widget widget_categories"><div class="side-title"><h3>Categories</h3></div>		<ul>
-                            <li class="cat-item cat-item-12"><a href="#">Blog</a>
+                            <li class="cat-item cat-item-12"><a href="{!! URL::route('re.list')!!}">Apartment</a>
                             </li>
-                            <li class="cat-item cat-item-32"><a href="#">Commercial</a>
+                            <li class="cat-item cat-item-32"><a href="#">Bedroom</a>
                             </li>
-                            <li class="cat-item cat-item-36"><a href="#">Home</a>
+                            <li class="cat-item cat-item-36"><a href="#">Kitchen</a>
                             </li>
-                            <li class="cat-item cat-item-34"><a href="#">Hostel</a>
-                            </li>
-                            <li class="cat-item cat-item-35"><a href="#">House</a>
-                            </li>
-                            <li class="cat-item cat-item-18"><a href="#">our blog</a>
-                            </li>
-                            <li class="cat-item cat-item-33"><a href="#">Residential</a>
+                            <li class="cat-item cat-item-34"><a href="#">Living Room</a>
                             </li>
                         </ul>
                     </div>                 </aside>

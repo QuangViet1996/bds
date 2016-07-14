@@ -55,11 +55,11 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                     <div class="navbar-collapse clearfix collapse" aria-expanded="false" style="height: 2px;">
                         <ul class="navigation">
 
-                            <li id="menu-item-109" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home current-menu-ancestor current-menu-parent menu-item-has-children menu-item-109 dropdown active"><a title="Home" href="{!! URL::route('re.home')!!}"" class="hvr-underline-from-left1" aria-expanded="false" data-scroll="" data-options="easing: easeOutQuart">Home</a>
+                            <li id="menu-item-109" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home current-menu-ancestor current-menu-parent menu-item-has-children menu-item-109 dropdown active"><a title="Home" href="{!! URL::route('re.home')!!}" class="hvr-underline-from-left1" aria-expanded="false" data-scroll="" data-options="easing: easeOutQuart">Home</a>
                             </li>
                             <li id="menu-item-185" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-185 dropdown"><a title="Pages" href="#" class="hvr-underline-from-left1" aria-expanded="false" data-scroll="" data-options="easing: easeOutQuart">Pages</a>
                                 <ul role="menu" class="submenu" style="display: none;">
-                                    <li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106"><a title="Video Tour" href="#">Video Tour</a></li>
+                                    <li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106"><a title="Video Tour" href="{!! URL::route('re.category')!!}">Category</a></li>
                                     <li id="menu-item-104" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104"><a title="Gallery" href="#">Gallery</a></li>
                                     <li id="menu-item-213" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-213 dropdown"><a title="Sidebar Page" href="#">Sidebar Page</a>
                                     </li>
