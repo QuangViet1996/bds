@@ -12,9 +12,9 @@ return [
       |
      */
     /*
-     * Real Estates admin page
+     * Testimonial admin page
      */
-    'page_categories' => 'Categories',
-    'list' => 'List categories',
-    'list' => 'List categories',
+    /*     * *****Page list******* */
+    'page' => 'Real Estates',
+    'name_table' => 'List Real Estates',
 ];

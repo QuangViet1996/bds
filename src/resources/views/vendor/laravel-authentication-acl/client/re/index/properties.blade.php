@@ -33,12 +33,12 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                     @foreach($data['real_estates'] as $real_estates)
                     <div class="featured_houses_block col-md-4 col-sm-6 col-xs-12">
                         <div style="position:relative">
-                            <a href="#" target="_self"> <img src="http://wp1.themexlab.com/wp/dreamland/wp-content/uploads/2016/01/3.jpg" alt="Avenel House" border="0"></a>    <div class="col_rent">
+                            <a href="{!! URL::route('re.view')!!}" target="_self"> <img src="http://wp1.themexlab.com/wp/dreamland/wp-content/uploads/2016/01/3.jpg" alt="Avenel House" border="0"></a>    <div class="col_rent">
                                 For sale                </div><!-- col_rent -->
                         </div>
                         <div class="feature_texthouse">
                             <h4 class="featured_houses_title">
-                                <a href="#" target="_self">{!!$real_estates->real_estate_title!!}</a>        </h4>
+                                <a href="{!! URL::route('re.view')!!}" target="_self">{!!$real_estates->real_estate_title!!}</a>        </h4>
                             <div class="featured_houses_location"><i class="fa fa-map-marker"></i> USA, Avenel&nbsp;</div>              <div class="featured_houses_category">
                                 <i class="fa fa-tag"></i>
                                 <a href="#" class="category">
@@ -65,12 +65,10 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                 <i class="fa fa-inbox"></i> Bathrooms: {!!$real_estates->real_estate_bathroom!!} &nbsp;
                             </div>
                             
-                            <div class="featured_houses_hits featured_houses_inline">
-                                <i class="fa fa-eye"></i> Hits: 162
-                            </div>    
+                            
                         </div>
                         <div class="rem_house_viewlist">
-                            <a href="#" target="_self" style="display: block">
+                            <a href="{!! URL::route('re.view')!!}" target="_self" style="display: block">
                                 <div class="featured_houses_price ">7.000.000,00&nbsp;USD</div><div class="featured_houses_viewlisting">View listing</div>                </a>
                             <div style="clear: both;"></div>
                         </div>
