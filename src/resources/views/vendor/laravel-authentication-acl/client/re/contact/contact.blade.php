@@ -35,7 +35,6 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
 <section class="section  general-row">
     <div class="wpb_column col-md-12">
-        
         <!--Info Section-->
 
         <section class="info-section contact-section">
@@ -148,10 +147,10 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
             <div class="text"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknownto </p></div>
 
         </div>
-        
-       
+
         <!--Contact Form-->
 
+        <div class="column contact-form">
 
             <div role="form" class="wpcf7" id="wpcf7-f153-p22-o1" lang="en-US" dir="ltr">
                 <div class="screen-reader-response"></div>

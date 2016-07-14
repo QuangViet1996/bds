@@ -22,6 +22,7 @@
     $realestate->real_estate_bathroom = '';
     $realestate->real_estate_sq = '';
     $realestate->real_estate_year_build = '';
+    $realestate->real_estate_images = '';
 ?>
 
 @endif
@@ -42,7 +43,7 @@
         <div class="panel panel-info">
             <div class="panel-heading">
                 <h3 class="panel-title bariol-thin">
-                    {!! isset($realestate->real_estate_id) ? '<i class="fa fa-pencil"></i> '.trans("front.houses.edit") : '<i class="fa fa-plus"></i> '.trans("front.houses.add") !!}
+                    {!! isset($realestate->real_estate_id) ? '<i class="fa fa-pencil"></i> '.trans("re.edit") : '<i class="fa fa-plus"></i> '.trans("re.add") !!}
                 </h3>
             </div>
 
@@ -51,10 +52,10 @@
                 {!! Form::open(['route'=>['realestates.edit'],  'files'=>true, 'method' => 'post'])  !!}
 
                 <ul class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" href="#home">{!! trans('admin.realesates.overview') !!}</a></li>
-                    <li><a data-toggle="tab" href="#menu1">{!! trans('admin.realesates.attributes') !!}</a></li>
-                    <li><a data-toggle="tab" href="#menu2">{!! trans('admin.realesates.images') !!}</a></li>
-                    <li><a data-toggle="tab" href="#menu3">{!! trans('admin.realesates.map') !!}</a></li>
+                    <li class="active"><a data-toggle="tab" href="#home">{!! trans('re.overview') !!}</a></li>
+                    <li><a data-toggle="tab" href="#menu1">{!! trans('re.attributes') !!}</a></li>
+                    <li><a data-toggle="tab" href="#menu2">{!! trans('re.images') !!}</a></li>
+                    <li><a data-toggle="tab" href="#menu3">{!! trans('re.map') !!}</a></li>
                 </ul>
 
                 <div class="tab-content">
@@ -83,8 +84,8 @@
 
                 {!! Form::hidden('id', $realestate->real_estate_id) !!}
 
-                <a href="{!! URL::route('realestates.delete',['id' => $realestate->real_estate_id, '_token' => csrf_token()]) !!}" class="btn btn-danger pull-right margin-left-5 delete">{!!trans("front.testimonials.delete")!!}</a>
-                {!! Form::submit('Save', array("class"=>"btn btn-info pull-right ")) !!}
+                <a href="{!! URL::route('realestates.delete',['id' => $realestate->real_estate_id, '_token' => csrf_token()]) !!}" class="btn btn-danger pull-right margin-left-5 delete">{!!trans('re.delete')!!}</a>
+                {!! Form::submit(trans('re.save'), array("class"=>"btn btn-info pull-right ")) !!}
 
                 {!! Form::close() !!}
             </div>
@@ -98,7 +99,7 @@
 {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/slugit.js') !!}
 <script>
     $(".delete").click(function () {
-        return confirm("Are you sure to delete this item?");
+        return confirm('{!!trans('re.you_want_delete')!!}');
     });
     $(function () {
         $('#slugme').slugIt();

@@ -3,7 +3,7 @@ if (! class_exists ( 'lessc')) {
    include (public_path() . '/packages/jacopo/laravel-authentication-acl/less/lessc.inc.php');
 }
 $less = new lessc;
-$less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/less/contactIndex.less', public_path() . '/packages/jacopo/laravel-authentication-acl/_css/contactIndex.css');
+$less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/less/footer.less', public_path() . '/packages/jacopo/laravel-authentication-acl/_css/footer.css');
 ?>
 
 <section class="section  general-row">
@@ -123,6 +123,38 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                 <div class="separator big-separator"></div>
 
                 <!--Footer Content-->
+
+                <div class="footer-content">
+
+                    <!--Social Links-->
+
+                    <div class="social-links">
+
+
+                        <a title="Facebook" href="#"><span class="fa fa-facebook"></span></a>
+
+
+                        <a title="Twitter" href="#"><span class="fa fa-twitter"></span></a>
+
+
+                        <a title="Linked in" href="#"><span class="fa fa-linkedin"></span></a>
+
+
+                        <a title="Google Plus" href="#"><span class="fa fa-google-plus"></span></a>
+
+
+                    </div>
+
+
+
+
+
+
+                    <div class="copyright">© 2015 DREAM LAND All Right Reserved  </div>
+
+                </div>
+
+
 
             </div>
 

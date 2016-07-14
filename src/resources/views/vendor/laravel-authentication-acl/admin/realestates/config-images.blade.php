@@ -2,7 +2,7 @@
 <div class="form-group">
     <div class="controls">
 
-        {!! Form::label('image',trans('realesates.image'),': *') !!}
+        {!! Form::label('image',trans('re.images'),': *') !!}
         {!! Form::file('image') !!}
 
         <span class="text-danger">{!! $errors->first('image') !!}</span>
