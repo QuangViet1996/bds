@@ -18,6 +18,7 @@ use \LaravelAcl\Authentication\Controllers\Controller;
  * Models
  */
 use App\Models\CustomHtml;
+use App\Models\Positions;
 /**
  * Validator
  */
@@ -78,9 +79,9 @@ class CustomHtmlController extends Controller {
         $input = $request->all();
         $real_estate_custom_html_id = $request->get('id');
         $custom = NULL;
-        
+
         if ($validator->validate($input)) {
-            
+
             if (!empty($real_estate_custom_html_id)) {
                 $custom = $obj_custom->find($real_estate_custom_html_id);
             }
@@ -123,7 +124,12 @@ class CustomHtmlController extends Controller {
      */
 
     public function addCustomHtml(Request $request) {
+        $obj_position = new Positions();
+
+        $positions = $obj_position->getPositions();
+
         $data = array_merge($this->data, array(
+            'positions' => $positions,
         ));
         return View::make('laravel-authentication-acl::admin.custom.edit')->with(['data' => $data]);
     }
@@ -140,16 +146,18 @@ class CustomHtmlController extends Controller {
 
     public function editCustomHtml(Request $request) {
         $obj_custom = new CustomHtml();
-
+        $obj_position = new Positions();
 
         $real_estate_custom_html_id = $request->get('id');
 
         $custom = $obj_custom->find($real_estate_custom_html_id);
 
         if (!empty($custom)) {
+            $positions = $obj_position->getPositions();
 
             $data = array_merge($this->data, array(
                 'custom' => $custom,
+                'positions' => $positions,
                 'request' => $request,
             ));
 

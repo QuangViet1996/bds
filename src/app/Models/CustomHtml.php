@@ -16,6 +16,7 @@ class CustomHtml extends Model {
     
     protected $fillable = [ 
                             "real_estate_custom_html_title",
+                            "real_estate_page_position_id",
                             "real_estate_custom_html_slug",
                             "real_estate_custom_html_content",
                         ];
@@ -77,6 +78,7 @@ class CustomHtml extends Model {
             $custom->real_estate_custom_html_title = $input['title'];
             $custom->real_estate_custom_html_slug = $input['slug'];
             $custom->real_estate_custom_html_content = $input['content'];
+            $custom->real_estate_page_position_id = $input['datacat'];
             $custom->save();
             
         } else {
@@ -100,6 +102,7 @@ class CustomHtml extends Model {
                     'real_estate_custom_html_title' => $input['title'],
                     'real_estate_custom_html_slug' => $input['slug'],
                     'real_estate_custom_html_content' => $input['content'],
+                    'real_estate_page_position_id' => $input['datacat'],
         ]);
         
         return $custom;

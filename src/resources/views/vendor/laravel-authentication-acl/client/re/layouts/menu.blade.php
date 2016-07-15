@@ -74,16 +74,8 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                 </ul>
                                 
                             </li>
-                            <li id="menu-item-132" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-132"><a title="Video Tour" href="#" class="hvr-underline-from-left1" data-scroll="" data-options="easing: easeOutQuart">Video Tour</a></li>
-                            <li id="menu-item-209" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-209 dropdown"><a title="Blog" href="#" class="hvr-underline-from-left1" aria-expanded="false" data-scroll="" data-options="easing: easeOutQuart">Blog</a>
-                                <ul role="menu" class="submenu" style="display: none;">
-                                    <li id="menu-item-210" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-210"><a title="Blog" href="#">Blog</a></li>
-                                    <li id="menu-item-211" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-211"><a title="Blog Two Column" href="#">Blog Two Column</a></li>
-                                    <li id="menu-item-212" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-212"><a title="Blog Details" href="#">Blog Details</a></li>
-                                </ul>
-                                
-                            </li>
-                            <li id="menu-item-101" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101"><a title="Contact Us" href="#" class="hvr-underline-from-left1" data-scroll="" data-options="easing: easeOutQuart">Contact Us</a></li>
+                           
+                            <li id="menu-item-101" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101"><a title="Contact Us" href="{!! URL::route('re.contact')!!}" class="hvr-underline-from-left1" data-scroll="" data-options="easing: easeOutQuart">Contact Us</a></li>
 
                         </ul>
                     </div>

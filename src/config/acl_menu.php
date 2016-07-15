@@ -87,7 +87,7 @@ return [
             "name" => "Real Estates",
             "route" => "realestates",
             "link" => '/admin/realestates/list',
-            "permissions" => ["_superadmin", "_real-estate-admin"]
+            "permissions" => ["_superadmin", "_real-estate-admin", "_user"]
         ],
         
           /**

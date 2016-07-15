@@ -100,11 +100,15 @@ class RealEstatesServiceProvider extends ServiceProvider {
                     "url" => URL::route('custom.add'),
                     "icon" => '<i class="fa fa-tachometer"></i>'
                 ],
+                 "Page positon" => [
+                    "url" => URL::route('positions.list'),
+                    "icon" => '<i class="fa fa-tachometer"></i>'
+                ],
                 
             ]);
         });
         
-        //Custom HTML
+        //comments HTML
         View::composer(['laravel-authentication-acl::admin.comments.*'], function ($view) {
             $view->with('sidebar_items', [
                 "List" => [
@@ -113,6 +117,24 @@ class RealEstatesServiceProvider extends ServiceProvider {
                 ],
                 "Add comment" => [
                     "url" => URL::route('comments.add'),
+                    "icon" => '<i class="fa fa-tachometer"></i>'
+                ],
+                
+            ]);
+        });
+        //Positions
+        View::composer(['laravel-authentication-acl::admin.positions.*'], function ($view) {
+            $view->with('sidebar_items', [
+                "List" => [
+                    "url" => URL::route('custom.list'),
+                    "icon" => '<i class="fa fa-tachometer"></i>'
+                ],
+                "Add custom html" => [
+                    "url" => URL::route('custom.add'),
+                    "icon" => '<i class="fa fa-tachometer"></i>'
+                ],
+                 "Page positon" => [
+                    "url" => URL::route('positions.list'),
                     "icon" => '<i class="fa fa-tachometer"></i>'
                 ],
                 
