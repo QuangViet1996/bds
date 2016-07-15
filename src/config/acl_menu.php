@@ -119,5 +119,14 @@ return [
             "link" => '/admin/comments',
             "permissions" => ["_superadmin", "_real-estate-admin"]
         ],
+            /**
+         * Comments
+         */
+        [
+            "name" => "Agency",
+            "route" => "agency",
+            "link" => '/admin/agency',
+            "permissions" => ["_superadmin", "_real-estate-admin", "_agency"]
+        ],
     ]
 ];
