@@ -28,4 +28,8 @@ return [
     'cancel' => 'Cancel',
     'save' => 'Save',
     'not_found_table' => 'Not found table',
+    'edit_successfull' => 'Edit successfull',
+    'delete_successfull' => 'Delete successfull',
+    'add_successfull' => 'Add successfull',
+    'you_want_delete' => 'Do you want delete?',
 ];

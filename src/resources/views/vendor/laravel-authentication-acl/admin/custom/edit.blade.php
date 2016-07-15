@@ -97,7 +97,7 @@ $custom->real_estate_custom_html_content = '';
 {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/slugit.js') !!}
 <script>
     $(".delete").click(function () {
-        return confirm("Are you sure to delete this item?");
+        return confirm('{!!trans('custom.you_want_delete')!!}');
     });
     $(function () {
         $('#slugme').slugIt();

@@ -90,14 +90,14 @@ class CustomHtmlController extends Controller {
 
                 $custom = $obj_custom->updateCustomHtml($input);
 
-                return Redirect::route("custom.list")->withMessage(trans('front.custom.edit_successfull'));
+                return Redirect::route("custom.list")->withMessage(trans('custom.edit_successfull'));
 
                 //Add new 
             } elseif (empty($real_estate_custom_html_id)) {
 
                 $custom = $obj_custom->addCustomHtml($input);
 
-                return Redirect::route("custom.list")->withMessage(trans('front.custom.add_successfull'));
+                return Redirect::route("custom.list")->withMessage(trans('custom.add_successfull'));
             }
         } else {
 
@@ -164,7 +164,7 @@ class CustomHtmlController extends Controller {
             return View::make('laravel-authentication-acl::admin.custom.edit')->with(['data' => $data]);
         } else {
 
-            return Redirect::route("custom.list")->withMessage(trans('front.custom.not_table'));
+            return Redirect::route("custom.list")->withMessage(trans('custom.not_table'));
         }
     }
 
@@ -186,7 +186,7 @@ class CustomHtmlController extends Controller {
         } catch (JacopoExceptionsInterface $e) {
             return Redirect::route('custom.list')->withErrors($e);
         }
-        return Redirect::route('custom.list')->withMessage(trans('front.custom.delete_successful'));
+        return Redirect::route('custom.list')->withMessage(trans('custom.delete_successfull'));
     }
 
 }
