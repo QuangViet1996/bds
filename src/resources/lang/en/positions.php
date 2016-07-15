@@ -12,7 +12,7 @@ return [
       |
      */
     /*
-     * Real Estates admin page
+     * Positions admin page
      */
     'page_positions' => 'Position',
     'list' => 'List Position',

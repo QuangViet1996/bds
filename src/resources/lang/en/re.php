@@ -12,7 +12,7 @@ return [
       |
      */
     /*
-     * Testimonial admin page
+     * Real Estates admin page
      */
     /*     * *****Page list******* */
     'page' => 'Real Estates',

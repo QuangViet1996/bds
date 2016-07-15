@@ -12,7 +12,7 @@ return [
       |
      */
     /*
-     * Real Estates admin page
+     * custom admin page
      */
     'page_custom' => 'Custom Html',
     'name_table' => 'List Custom Html',

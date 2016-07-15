@@ -12,7 +12,7 @@ return [
       |
      */
     /*
-     * Real Estates admin page
+     * Comments admin page
      */
     'page_comments' => 'Comments',
     'list' => 'List Comments',
@@ -26,4 +26,8 @@ return [
     'save' => 'Save',
     'house_id' => 'House ID',
     'list_not_found' => 'Not found table',
+    'edit_successfull' => 'Edit successfull',
+    'delete_successfull' => 'Delete successfull',
+    'add_successfull' => 'Add successfull',
+    'you_want_delete' => 'Do you want delete?',
 ];

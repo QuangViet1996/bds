@@ -12,7 +12,7 @@ return [
       |
      */
     /*
-     * Real Estates admin page
+     * Categories admin page
      */
     'page_categories' => 'Categories',
     'list' => 'List categories',

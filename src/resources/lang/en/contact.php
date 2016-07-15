@@ -12,7 +12,7 @@ return [
       |
      */
     /*
-     * Real Estates admin page
+     * Contact admin page
      */
     'page_contact' => 'Contact',
     'name_table' => 'List Contact',

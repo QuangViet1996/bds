@@ -85,7 +85,7 @@ class CommentsController extends Controller {
             ));
             return View::make('laravel-authentication-acl::admin.comments.edit')->with(['data' => $data]);
         } else {
-            return Redirect::route("comments.list")->withMessage(trans('front.comments.list_not_found'));
+            return Redirect::route("comments.list")->withMessage(trans('comments.list_not_found'));
         }
     }
 
@@ -119,14 +119,14 @@ class CommentsController extends Controller {
 
             $cmt = $obj_cmt->updateComments($input);
 
-                return Redirect::route("comments.list")->withMessage(trans('front.comments.edit_successful'));
+                return Redirect::route("comments.list")->withMessage(trans('comments.edit_successfull'));
 
                 //Add new category
             } elseif (empty($cmt_id)) {
 
                 $cmt = $obj_cmt->addComments($input);
 
-                return Redirect::route("comments.list")->withMessage(trans('front.comments.add_successful'));
+                return Redirect::route("comments.list")->withMessage(trans('comments.add_successfull'));
             }
         } else {
             $errors = $validator->getErrors();
@@ -161,7 +161,7 @@ class CommentsController extends Controller {
 
             return Redirect::route('comments.list')->withErrors($e);
         }
-        return Redirect::route('comments.list')->withMessage(trans('front.comments.delete_successfull'));
+        return Redirect::route('comments.list')->withMessage(trans('comments.delete_successfulll'));
     }
 
     /*     * ********************************************
@@ -194,7 +194,7 @@ class CommentsController extends Controller {
             return View::make('laravel-authentication-acl::admin.comments.view')->with(['data' => $data]);
         } else {
 
-            return Redirect::route("comments.list")->withMessage(trans('comments.comment.list_not_found'));
+            return Redirect::route("comments.list")->withMessage(trans('comments.list_not_found'));
         }
     }
 
