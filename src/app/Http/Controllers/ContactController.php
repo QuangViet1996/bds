@@ -89,14 +89,14 @@ class ContactController extends Controller {
 
                 $contact = $obj_contact->updateContact($input);
 
-                return Redirect::route("contact.list")->withMessage(trans('front.contact.edit_successfull'));
+                return Redirect::route("contact.list")->withMessage(trans('contact.edit_successfull'));
 
                 //Add new 
             } elseif (empty($real_estate_contact_id)) {
 
                 $contact = $obj_contact->addContact($input);
 
-                return Redirect::route("contact.list")->withMessage(trans('front.contact.add_successfull'));
+                return Redirect::route("contact.list")->withMessage(trans('contact.add_successfull'));
             }
         } else {
 
@@ -157,7 +157,7 @@ class ContactController extends Controller {
             
         } else {
             
-            return Redirect::route("contact.list")->withMessage(trans('front.contact.not_table'));
+            return Redirect::route("contact.list")->withMessage(trans('contact.not_table'));
             
         }
     }
@@ -180,7 +180,7 @@ class ContactController extends Controller {
         } catch (JacopoExceptionsInterface $e) {
             return Redirect::route('contact.list')->withErrors($e);
         }
-        return Redirect::route('contact.list')->withMessage(trans('front.contact.delete_successful'));
+        return Redirect::route('contact.list')->withMessage(trans('contact.delete_successfull'));
     }
 
 }

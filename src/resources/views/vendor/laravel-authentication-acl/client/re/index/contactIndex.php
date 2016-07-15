@@ -72,8 +72,6 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
                     </div>
 
-
-
                     <!--Column-->
 
                     <div class="col-md-7 col-sm-12 col-xs-12 column">
