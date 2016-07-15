@@ -13,18 +13,23 @@ return [
      */
     /*
      * Comments admin page
+     * * link:   resource/views/vendor/laravel-authentication-acl/admin/comments
      */
+    /*     * ******************Page**************************** */
+
     'page_comments' => 'Comments',
     'list' => 'List Comments',
-    'add' => 'Add new',
     'title' => 'Title',
     'description' => 'Description',
     'operations' => 'Operations',
+    /*     * ***************Button************************ */
+    'add' => 'Add new',
     'edit' => 'Edit',
     'delete' => 'Delete',
     'cancel' => 'Cancel',
     'save' => 'Save',
     'house_id' => 'House ID',
+    /*     * *************Messenger****************** */
     'list_not_found' => 'Not found table',
     'edit_successfull' => 'Edit successfull',
     'delete_successfull' => 'Delete successfull',

@@ -13,21 +13,23 @@ return [
      */
     /*
      * Categories admin page
+     * link resource/views/vendor/laravel-authentication-acl/admin/categories
      */
+    /********************Page*****************************/
     'page_categories' => 'Categories',
     'list' => 'List categories',
-    'add' => 'Add new',
     'title' => 'Title',
     'description' => 'Description',
     'operations' => 'Operations',
+    /*****************Button*************************/
+    'add' => 'Add new',
     'edit' => 'Edit',
     'delete' => 'Delete',
     'cancel' => 'Cancel',
     'save' => 'Save',
-    'save' => 'Save',
+    /*     * *************Messenger****************** */
     'list_not_found' => 'Not found table',
     'edit_successful' => 'Edit successfull',
     'add_successful' => 'Add successfull',
     'delete_successful' => 'Delete successfull',
-    
 ];
