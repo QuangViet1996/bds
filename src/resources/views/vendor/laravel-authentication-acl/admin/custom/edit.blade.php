@@ -56,7 +56,7 @@ $custom->real_estate_custom_html_content = '';
                 <div class="form-group">
                     <div class="controls">
 
-                        {!! Form::label('datacat',trans('re.positions'),': *') !!}
+                        {!! Form::label('datacat',trans('custom.positions'),': *') !!}
                         {!! Form::select('datacat',$data['positions'], $custom->real_estate_page_position_id, ['class' => 'form-control']) !!}
 
                         <span class="text-danger">{!! $errors->first('datacat') !!}</span>

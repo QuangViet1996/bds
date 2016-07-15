@@ -14,12 +14,10 @@ return [
     /*
      * Real Estates admin page
      */
-    'page_custom' => 'Custom Html',
-    'name_table' => 'List Custom Html',
+    'page_positions' => 'Position',
+    'list' => 'List Position',
     'add_new' => 'Add new',
     'title' => 'Title',
-    'slug' => 'Slug',
-    'content' => 'Content',
     'operations' => 'Operations',
     'edit' => 'Edit',
     'add' => 'Add',
