@@ -26,4 +26,8 @@ return [
     'cancel' => 'Cancel',
     'save' => 'Save',
     'not_found_table' => 'Not found table',
+    'delete_successfull' => 'Delete successfull',
+    'edit_successfull' => 'Edit successfull',
+    'add_successfull' => 'Add successfull',
+    'you_want_delete' => 'Do you want delete?',
 ];

@@ -85,7 +85,7 @@ class PositionController extends Controller {
             ));
             return View::make('laravel-authentication-acl::admin.positions.edit')->with(['data' => $data]);
         } else {
-            return Redirect::route("positions.list")->withMessage(trans('positions.list_not_found'));
+            return Redirect::route("positions.list")->withMessage(trans('positions.not_found_table'));
         }
     }
 
@@ -119,14 +119,14 @@ class PositionController extends Controller {
 
                 $position = $obj_position->updatePositions($input);
 
-                return Redirect::route("positions.list")->withMessage(trans('positions.edit_successful'));
+                return Redirect::route("positions.list")->withMessage(trans('positions.edit_successfull'));
 
                 //Add new category
             } elseif (empty($position_id)) {
 
                 $position = $obj_position->addPositions($input);
 
-                return Redirect::route("positions.list")->withMessage(trans('positions.add_successful'));
+                return Redirect::route("positions.list")->withMessage(trans('positions.add_successfull'));
             }
         } else {
             $errors = $validator->getErrors();
