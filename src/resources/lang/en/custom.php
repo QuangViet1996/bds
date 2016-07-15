@@ -13,20 +13,25 @@ return [
      */
     /*
      * custom admin page
+     * link:   resource/views/vendor/laravel-authentication-acl/admin/custom
      */
+    /*     * ******************Page**************************** */
+
     'page_custom' => 'Custom Html',
     'name_table' => 'List Custom Html',
-    'add_new' => 'Add new',
     'title' => 'Title',
     'slug' => 'Slug',
     'content' => 'Content',
     'operations' => 'Operations',
+    /*     * ***************Button************************ */
+    'add_new' => 'Add new',
     'edit' => 'Edit',
     'add' => 'Add',
     'positions' => 'Positions',
     'delete' => 'Delete',
     'cancel' => 'Cancel',
     'save' => 'Save',
+    /*     * *************Messenger****************** */
     'not_found_table' => 'Not found table',
     'edit_successfull' => 'Edit successfull',
     'delete_successfull' => 'Delete successfull',

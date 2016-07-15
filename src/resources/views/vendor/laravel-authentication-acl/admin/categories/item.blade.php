@@ -3,7 +3,7 @@
 <!--Title-->
 <div class="row payroll-view">
     <div class="payroll-item">
-        <span class="item-title">{!! trans('front.categories.view_category_title') !!}</span>
+        <span class="item-title">{!! trans('categories.title') !!}</span>
         <div class="item-value">{!! $data['cat']->real_estate_category_title !!}</div>
     </div>
 </div>
@@ -11,7 +11,7 @@
 <!--Description -->
 <div class="row payroll-view">
     <div class="payroll-item">
-        <span class="item-title">{!! trans('front.categories.view_category_description') !!}</span>
+        <span class="item-title">{!! trans('categories.description') !!}</span>
         <div class="item-value">{!! $data['cat']->real_estate_category_description !!}</div>
     </div>
 </div>
@@ -22,7 +22,7 @@
 @section('footer_scripts')
 <script>
     $(".payroll-delete").click(function(){
-    return confirm('{!!trans('front.categories.you_want_delete')!!}');
+    return confirm('{!!trans('categories.you_want_delete')!!}');
     });
 </script>
 @stop

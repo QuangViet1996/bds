@@ -1,7 +1,7 @@
 <?php
 
 return [
-     /*
+    /*
       |--------------------------------------------------------------------------
       | Authentication Language Lines
       |--------------------------------------------------------------------------
@@ -13,20 +13,26 @@ return [
      */
     /*
      * Testimonial admin page
+     * link:   resource/views/vendor/laravel-authentication-acl/admin/testimonials
      */
-    /*******Page list********/
-     'page_testimorial' => 'Testimonial',
-     'name_table' => 'List testimonial',
-     'add_new' => 'Add new',
-     'title' => 'Title',
-     'description' => 'Description',
-     'author' => 'Author',
-     'operations' => 'Operation',
-     'edit' => 'Edit',
-     'add' => 'Add',
-     'delete' => 'Delete',
-     'author_name' => 'Author name',
-     'image' => 'Image',
-     'you_want_delete' => 'Do you want delete?',
-    
+    /*     * ******************Page**************************** */
+    'page_testimorial' => 'Testimonial',
+    'name_table' => 'List testimonial',
+    'title' => 'Title',
+    'description' => 'Description',
+    'author' => 'Author',
+    'operations' => 'Operation',
+    'author_name' => 'Author name',
+    'image' => 'Image',
+    /*     * ***************Button************************ */
+    'add_new' => 'Add new',
+    'edit' => 'Edit',
+    'add' => 'Add',
+    'delete' => 'Delete',
+    /*     * *************Messenger****************** */
+    'you_want_delete' => 'Do you want delete?',
+    'delete_successfull' => 'Delete successfull',
+    'add_successfull' => 'Add successfull',
+    'edit_successfull' => 'Edit successfull',
+    'not_found' => 'Not found table',
 ];

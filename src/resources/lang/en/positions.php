@@ -13,18 +13,23 @@ return [
      */
     /*
      * Positions admin page
+     * link:   resource/views/vendor/laravel-authentication-acl/admin/positions
      */
+    /*     * ******************Page**************************** */
+
     'page_positions' => 'Position',
     'list' => 'List Position',
-    'add_new' => 'Add new',
     'title' => 'Title',
+    'positions' => 'Positions',
     'operations' => 'Operations',
+    /*     * ***************Button************************ */
+    'add_new' => 'Add new',
     'edit' => 'Edit',
     'add' => 'Add',
-    'positions' => 'Positions',
     'delete' => 'Delete',
     'cancel' => 'Cancel',
     'save' => 'Save',
+    /*     * *************Messenger****************** */
     'not_found_table' => 'Not found table',
     'delete_successfull' => 'Delete successfull',
     'edit_successfull' => 'Edit successfull',

@@ -13,22 +13,26 @@ return [
      */
     /*
      * Contact admin page
+     * link: resource/views/vendor/laravel-authentication-acl/admin/contact
      */
+    /*     * ******************Page**************************** */
+
     'page_contact' => 'Contact',
     'name_table' => 'List Contact',
-    'add_new' => 'Add new',
     'title' => 'Title',
     'description' => 'Description',
     'author' => 'Author',
     'operations' => 'Operations',
+    /*     * ***************Button************************ */
+    'add_new' => 'Add new',
     'edit' => 'Edit',
     'delete' => 'Delete',
     'cancel' => 'Cancel',
     'save' => 'Save',
+    /*     * *************Messenger****************** */
     'not_found_table' => 'Not found table',
     'edit_successfull' => 'Edit successfull',
     'delete_successfull' => 'Delete successfull',
     'add_successfull' => 'Add successfull',
     'you_want_delete' => 'Do you want delete?',
-    
 ];

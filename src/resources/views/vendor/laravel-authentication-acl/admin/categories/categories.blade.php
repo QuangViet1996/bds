@@ -45,7 +45,7 @@
 @section('footer_scripts')
 <script>
     $(".delete").click(function () {
-        return confirm('{!!trans('categories.category.get_category_delete')!!}');
+        return confirm('{!!trans('categories.you_want_delete')!!}');
     });
 </script>
 @stop

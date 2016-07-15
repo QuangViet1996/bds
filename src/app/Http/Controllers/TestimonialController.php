@@ -105,14 +105,14 @@ class TestimonialController extends Controller {
 
                 $testimonial = $obj_testimonial->updateTestimonial($input);
 
-                return Redirect::route("testimonials.list")->withMessage(trans('front.testimonial.edit_successfull'));
+                return Redirect::route("testimonials.list")->withMessage(trans('testimonials.edit_successfull'));
 
                 //Add new 
             } elseif (empty($real_estate_testimonial_id)) {
                 
                 $testimonial = $obj_testimonial->addTestimonial($input);
 
-                return Redirect::route("testimonials.list")->withMessage(trans('front.testimonial.add_successfull'));
+                return Redirect::route("testimonials.list")->withMessage(trans('testimonials.add_successfull'));
             }
         } else {
 
@@ -177,7 +177,7 @@ class TestimonialController extends Controller {
             
         } else {
             
-            return Redirect::route("testimonials.list")->withMessage(trans('front.testimonial.not_table'));
+            return Redirect::route("testimonials.list")->withMessage(trans('testimonials.not_table'));
             
         }
     }
@@ -200,7 +200,7 @@ class TestimonialController extends Controller {
         } catch (JacopoExceptionsInterface $e) {
             return Redirect::route('testimonials.list')->withErrors($e);
         }
-        return Redirect::route('testimonials.list')->withMessage(trans('front.testimonial.delete_successful'));
+        return Redirect::route('testimonials.list')->withMessage(trans('testimonials.delete_successfull'));
     }
 
 }

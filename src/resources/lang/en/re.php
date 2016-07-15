@@ -13,35 +13,34 @@ return [
      */
     /*
      * Real Estates admin page
+     *      * link:   resource/views/vendor/laravel-authentication-acl/admin/re
      */
-    /*     * *****Page list******* */
+    /*     * ******************Page**************************** */
     'page' => 'Real Estates',
     'name_table' => 'List Real Estates',
-    'you_want_delete' => 'Do you want delete?',
-    'add_new' => 'Add New',
     'title' => 'Title',
     'description' => 'Description',
     'sq' => 'Sq',
     'build_year' => 'Build year',
     'Operations' => 'Operations',
-    'edit' => 'Edit',
-    'delete' => 'Delete',
-    'not_found' => 'Not table',
-    /*     * *****Page edit******* */
+    'category' => 'Category',
+    'bedroom' => 'Bedrooms',
+    'bathroom' => 'Bathrooms',
+    'cost' => 'Cost',
     'overview' => 'Overview',
     'attributes' => 'Attributes',
     'images' => 'Images',
     'map' => 'Map',
+    /*     * ***************Button************************ */
+    'add_new' => 'Add New',
+    'edit' => 'Edit',
+    'delete' => 'Delete',
     'save' => 'Save',
     'add' => 'Add',
-    'category' => 'Category',
-    'bedroom' => 'Bedrooms',
-    'bathroom' => 'Bathrooms',
-    'sq' => 'Sq',
-    'build_year' => 'Build year',
-    'cost' => 'Cost',
-    
-     'delete_successful' => 'Delete successful',
-     'add_successful' => 'Add successful',
-     'edit_successful' => 'Edit successful',
+    /*     * *************Messenger****************** */
+    'not_found' => 'Not table',
+    'delete_successfull' => 'Delete successfull',
+    'add_successfull' => 'Add successfull',
+    'edit_successfull' => 'Edit successfull',
+    'you_want_delete' => 'Do you want delete?',
 ];

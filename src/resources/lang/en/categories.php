@@ -13,7 +13,7 @@ return [
      */
     /*
      * Categories admin page
-     * link resource/views/vendor/laravel-authentication-acl/admin/categories
+     * link: resource/views/vendor/laravel-authentication-acl/admin/categories
      */
     /********************Page*****************************/
     'page_categories' => 'Categories',
@@ -32,4 +32,5 @@ return [
     'edit_successful' => 'Edit successfull',
     'add_successful' => 'Add successfull',
     'delete_successful' => 'Delete successfull',
+    'you_want_delete' => 'Do you want delete?',
 ];
