@@ -11,4 +11,8 @@
             <property name="less.enabled" value="true"/>
         </module>
     </preferences>
+    <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+        <word>pv</word>
+        <word>pvd</word>
+    </spellchecker-wordlist>
 </auxiliary-configuration>

@@ -6,14 +6,14 @@ use \LaravelAcl\Library\Validators\AbstractValidator;
 class RealEstatesValidator extends AbstractValidator
 {
     protected static $rules = array(
-        'title' => 'required',
-        'description' => 'required',
-        'sq' => 'required',
-        'bedroom' => 'required',
-        'bathroom' => 'required',
-        'build_year' => 'required',
-        'cost' => 'required',
-        'datacat' => 'required',
+//        'title' => 'required',
+//        'description' => 'required',
+//        'sq' => 'required',
+//        'bedroom' => 'required',
+//        'bathroom' => 'required',
+//        'build_year' => 'required',
+//        'cost' => 'required',
+//        'datacat' => 'required',
     );
     
     protected static $messages = [

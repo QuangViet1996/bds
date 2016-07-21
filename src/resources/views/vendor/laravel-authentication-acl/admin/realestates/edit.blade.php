@@ -56,7 +56,7 @@
                     <li class="active"><a data-toggle="tab" href="#home">{!! trans('re.overview') !!}</a></li>
                     <li><a data-toggle="tab" href="#menu1">{!! trans('re.attributes') !!}</a></li>
                     <li><a data-toggle="tab" href="#menu2">{!! trans('re.images') !!}</a></li>
-                    <li><a data-toggle="tab" href="#menu3">{!! trans('re.map') !!}</a></li>
+                    <li><a data-toggle="tab" href="#menu3" class="menu-config-map">{!! trans('re.map') !!}</a></li>
                 </ul>
 
                 <div class="tab-content">
@@ -77,7 +77,7 @@
                     </div>
                     
                     <!--config-map-->
-                    <div id="menu3" class="tab-pane fade">
+                    <div id="menu3" class="tab-pane fade menu-config-gmap">
                         @include('laravel-authentication-acl::admin.realestates.config-map')
                     </div>
                 </div>

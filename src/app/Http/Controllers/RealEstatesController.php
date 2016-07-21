@@ -64,7 +64,7 @@ class RealEstatesController extends Controller {
     }
 
     /*     * ********************************************
-     * postHouses
+     * postRe
      * 
      * @author: Kang
      * @web: http://tailieuweb.com
@@ -73,7 +73,7 @@ class RealEstatesController extends Controller {
      * @status: REVIEWED
      */
 
-    public function postHouses(Request $request) {
+    public function postRe(Request $request) {
         $obj_re = new RealEstates();
         $validator = new RealEstatesValidator();
         $libFiles = new LibFiles();
@@ -93,10 +93,11 @@ class RealEstatesController extends Controller {
                 $configs = config('app.libfiles');
                 $file = $request->file('image');
                 $fileinfo = $libFiles->upload($configs['realestate'], $file);
+            } else {
+                $fileinfo['file-no-update'] = true;
             }
             //TODO: check
             $input = array_merge($input, $fileinfo);
-            
             
             if (!empty($real_estate_id)) {
                 $realestate = $obj_re->find($real_estate_id);
@@ -127,7 +128,7 @@ class RealEstatesController extends Controller {
     }
 
     /*     * ********************************************
-     * addHousesl
+     * addRe
      * 
      * @author: Kang
      * @web: http://tailieuweb.com
@@ -136,7 +137,7 @@ class RealEstatesController extends Controller {
      * @status: REVIEWED
      */
 
-    public function addHouses(Request $request) {
+    public function addRe(Request $request) {
         $obj_cat = new Categories();
         $cat = $obj_cat->getCategories();
 
@@ -148,7 +149,7 @@ class RealEstatesController extends Controller {
     }
 
     /*     * ********************************************
-     * editHouses
+     * editRe
      * 
      * @author: Kang
      * @web: http://tailieuweb.com
@@ -157,7 +158,7 @@ class RealEstatesController extends Controller {
      * @status: REVIEWED
      */
 
-    public function editHouses(Request $request) {
+    public function editRe(Request $request) {
         $obj_re = new RealEstates();
         $obj_cat = new Categories();
         $real_estate_id = $request->get('id');
@@ -193,7 +194,7 @@ class RealEstatesController extends Controller {
      * @status: REVIEWED
      */
 
-    public function deleteHouses(Request $request) {
+    public function deleteRe(Request $request) {
         try {
             $obj_re = new RealEstates();
             $obj = new Testimonial();
