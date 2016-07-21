@@ -183,6 +183,15 @@
     width: 460px !important;
   }
 }
+.bx-wrapper .bx-viewport {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.slide-text {
+  min-height: 135px;
+  text-overflow: ellipsis;
+}
 @media only screen and (max-width: 900px) {
   .testimonials-slider .bx-wrapper {
     width: 430px;
