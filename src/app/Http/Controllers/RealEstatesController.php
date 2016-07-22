@@ -94,17 +94,21 @@ class RealEstatesController extends Controller {
                 $file = $request->file('image');
                 $fileinfo = $libFiles->upload($configs['realestate'], $file);
             } else {
-                $fileinfo['file-no-update'] = true;
+                $fileinfo['filename'] = '';
             }
+            
             //TODO: check
             $input = array_merge($input, $fileinfo);
             
             if (!empty($real_estate_id)) {
                 $realestate = $obj_re->find($real_estate_id);
             }
-
             //Update existing 
             if (!empty($realestate)) {
+                
+                if (empty($fileinfo['filename']) && $input['is_file']) {
+                    $input['filename'] = $realestate->real_estate_image;
+                }
 
                 $realestate = $obj_re->updateRealEstate($input);
 

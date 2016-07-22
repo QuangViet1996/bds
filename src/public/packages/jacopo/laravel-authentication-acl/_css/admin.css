@@ -1,8 +1,8 @@
-.img-thumb img {
+.realestates-edit .img-thumb img {
   width: 200px;
   height: 200px;
 }
-.config-map #pac-input {
+.realestates-edit .config-map #pac-input {
   background-color: #fff;
   font-family: Roboto;
   font-size: 15px;
@@ -12,7 +12,21 @@
   text-overflow: ellipsis;
   width: 300px;
 }
-.config-map .gmap {
+.realestates-edit .config-map .gmap {
   height: 500px;
   width: 900px;
+}
+.realestates-edit .config-images .images-table .view-write {
+  display: none;
+}
+.realestates-edit .config-images .images-table .view-read {
+  display: block;
+}
+.realestates-edit .config-images .images-table .item_image span {
+  color: #5bc0de;
+  background: transparent;
+  cursor: pointer;
+}
+.realestates-edit .config-images .images-table .item_image span:hover {
+  color: #4597AF;
 }

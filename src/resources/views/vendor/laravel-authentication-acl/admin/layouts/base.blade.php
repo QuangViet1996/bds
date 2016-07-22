@@ -44,6 +44,8 @@
 
         @yield('footer_scripts')
         @yield('footer_scripts_google_map')
+        @yield('footer_more_scripts');
+
         {{-- End footer scripts --}}
     </body>
 </html>

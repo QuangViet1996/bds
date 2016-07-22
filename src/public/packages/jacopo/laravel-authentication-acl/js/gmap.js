@@ -99,8 +99,6 @@ jQuery.fn.extend({
     initialize: function (params) {
         
         this.set(params);
-        console.log(this.map_center_lat);
-        console.log(this.map_center_lng);
         var canvas_map = this[0];
         this.gmap = new google.maps.Map(canvas_map, {
             center: {

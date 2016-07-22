@@ -28,7 +28,7 @@
 
 @endif
 
-<div class="row">
+<div class="row realestates-edit">
     <div class="col-md-12">
         {{-- model general errors from the form --}}
         @if($errors->has('model') )
@@ -99,9 +99,6 @@
 @section('footer_scripts')
 {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/slugit.js') !!}
 <script>
-    $(".delete").click(function () {
-        return confirm('{!!trans('re.you_want_delete')!!}');
-    });
     $(function () {
         $('#slugme').slugIt();
     });
