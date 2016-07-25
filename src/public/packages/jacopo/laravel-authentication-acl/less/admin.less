@@ -32,6 +32,9 @@
                 display: block;
             }
             .item_image {
+                td{
+                    vertical-align: middle !important;
+                }
                 span {
                     color: #5bc0de;
                     background: transparent;
@@ -40,7 +43,34 @@
                 span:hover {
                     color: #4597AF;
                 }
+
+                .img-thumb
+                {
+                    img{
+                        width: 40%;
+                        height: 40%;
+                    }
+
+                }
+                td:nth-child(4){
+                    padding:10px;
+                }
             }
         }
     }
+    .ud{
+        float: left;
+        span{
+            float: none !important;
+        }
+        .down{
+            float: none;
+            vertical-align: bottom;
+        }
+        .up{
+            float: none;
+            vertical-align: top;
+        }
+    }
+
 }
