@@ -42,9 +42,10 @@ if (!empty($realestate)) {
         <?php $counter = 1; ?>
         @foreach($arr_images as $index=> $item)
         <tr class="item_image">
-            <td><?php echo $counter;
-        $counter++;
-        ?></td>
+            <td><?php
+                echo $counter;
+                $counter++;
+                ?></td>
             <td>
                 <div class="img-thumb">
                     <img src="{!! url($data['configs']['urlpath'].'/'.$item->name) !!}">
@@ -63,10 +64,9 @@ if (!empty($realestate)) {
                 <span href="#" title='view' class='view'><i class="fa fa-eye fa-2x"></i></span>
                 <span href="#" title='edit' class="edit margin-left-5"><i class="fa fa-pencil-square-o fa-2x"></i></span>
                 <span href="#" title='delete' class="margin-left-5"><i class="fa fa-trash-o delete fa-2x"></i></span>
-                <div class="ud">
-                    <span href="#" title='down' class='down'><i class="fa fa-sort-desc fa-2x" aria-hidden="true"></i></span>
-                    <span href="#" title='up' class='up'><i class="fa fa-sort-asc fa-2x" aria-hidden="true"></i></span>
-                </div>
+                <span href="#" title='down' class='down'><i class="fa fa-sort-desc fa-2x" aria-hidden="true"></i></span>
+                <span href="#" title='up' class='up'><i class="fa fa-sort-asc fa-2x" aria-hidden="true"></i></span>
+
             </td>
         </tr>
         @endforeach
