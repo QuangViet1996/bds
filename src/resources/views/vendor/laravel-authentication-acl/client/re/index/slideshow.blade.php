@@ -16,8 +16,8 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
         <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
             <div data-p="225.00" style="display: none;">
                 <img data-u="image" src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/41.jpg') !!}" />
-                <div style="position: absolute; top: 30px; left: 30px; width: 400px; height: 120px; font-size: 50px; color: #ffffff; line-height: 60px; background:rgba(113, 177, 0, 0.73); text-align: center; padding-top: 25px;">Đồ án BDS</div>
-                <div style="position: absolute; top: 300px; left: 30px; width: 400px; height: 120px; font-size: 20px; color: #ffffff; line-height: 38px; background:rgba(113, 177, 0, 0.73); padding-left: 25px;">Công nghệ tiên tiến<br>Công nghệ tiên tiến<br>Công nghệ tiên tiến</div>
+                <div style="position: absolute; top: 30px; left: 30px; width: 400px; height: 120px; font-size: 50px; color: #ffffff; line-height: 60px; background:rgba(113, 177, 0, 0.73); text-align: center; padding-top: 25px;">Cô tiên xanh</div>
+                <!--<div style="position: absolute; top: 300px; left: 30px; width: 400px; height: 120px; font-size: 20px; color: #ffffff; line-height: 38px; background:rgba(113, 177, 0, 0.73); padding-left: 25px;">Công nghệ tiên tiến<br></div>-->
                 <div data-u="caption" data-t="0" style="position: absolute; top: 100px; left: 600px; width: 445px; height: 300px;">
                     <img style="position: absolute; top: 0px; left: 0px; width: 445px; height: 300px;" src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/phonee.png') !!}" />
                     <!--<img data-u="caption" data-t="1" style="position: absolute; top: 70px; left: 130px; width: 102px; height: 78px;" src="images/BDS.png" />-->
@@ -32,14 +32,14 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                         <img data-u="caption" data-t="7" style="position: absolute; top: 0px; left: 379px; width: 379px; height: 213px;" src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/c-slide-3.png') !!}" />
                     </div>
                     <img style="position: absolute; top: 4px; left: 45px; width: 379px; height: 213px;" src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/c-navigator-horizontal.png') !!}" />
-                    <img data-u="caption" data-t="8" style="position: absolute; top: 740px; left: 1600px; width: 257px; height: 300px;" src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/c-navigator.png') !!}" />
+                    <img data-u="caption" data-t="8" style="position: absolute; top: 740px; left: 1600px; width: 257px; height: 300px;" src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/c-finger-pointing.png') !!}" />
                 </div>
             </div>
             <div data-p="225.00" style="display: none;">
-                <img data-u="image" src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/41.jpg') !!}" />
+                <img data-u="image" src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/21.jpg') !!}" />
             </div>
             <div data-p="225.00" data-po="80% 55%" style="display: none;">
-                <img data-u="image" src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/41.jpg') !!}" />
+                <img data-u="image" src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/room.jpg') !!}" />
             </div>
         </div>
         <!-- Bullet Navigator -->

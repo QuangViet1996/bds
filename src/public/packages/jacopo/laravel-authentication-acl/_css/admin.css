@@ -22,6 +22,9 @@
 .realestates-edit .config-images .images-table .view-read {
   display: block;
 }
+.realestates-edit .config-images .images-table .item_image td {
+  vertical-align: middle;
+}
 .realestates-edit .config-images .images-table .item_image span {
   color: #5bc0de;
   background: transparent;
@@ -29,4 +32,21 @@
 }
 .realestates-edit .config-images .images-table .item_image span:hover {
   color: #4597AF;
+}
+.realestates-edit .config-images .images-table .item_image .img-thumb img {
+  width: 40%;
+  height: 40%;
+}
+.controls input {
+  margin-bottom: 10px;
+}
+.control-file .del,
+.control-file .undo {
+  cursor: pointer;
+}
+.control-file .del {
+  color: red;
+}
+.control-file .undo {
+  color: #FFC107;
 }
