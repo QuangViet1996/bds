@@ -48,11 +48,6 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
                         </article>
 
-
-
-
-
-
                         <!--Column-->
 
                         <article class="column">
