@@ -57,7 +57,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
                                 <li class="address">
 
-                                    <div class="icon"><span class="flaticon-location74"></span></div>
+                                    <div class="icon"><i class="fa fa-book" aria-hidden="true"></i></div>
 
                                     <h4>ADDRESS</h4>
 
@@ -66,7 +66,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
                                 <li class="contact-info">
 
-                                    <div class="icon"><span class="flaticon-telephone51"></span></div>
+                                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
 
                                     <h4>PHONE</h4>
 

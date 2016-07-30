@@ -26,7 +26,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                         <!--Column-->
                         <article class="column">
                             <div class="inner-box">
-                                <div class="icon"><span class="fa fa-bed"></span></div>
+                                <div class="icon"><span class="fa fa-bed"><i class="fa fa-university" aria-hidden="true"></i></span></div>
                                 <h4 class="title">Bedrooms</h4>
                                 <h3 class="count">3</h3>
                             </div>

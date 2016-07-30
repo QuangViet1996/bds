@@ -36,7 +36,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
                             <li>
 
-                                <span class="icon flaticon-location74"></span>
+                                <span class="icon"><i class="fa fa-book" aria-hidden="true"></i></span>
 
                                 <h3>ADDRESS</h3>
 
@@ -48,7 +48,9 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
                             <li>
 
-                                <span class="icon flaticon-telephone51"></span>
+                                <span class="icon">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </span>
 
                                 <h3>PHONE</h3>
 
@@ -60,7 +62,10 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
                             <li>
 
-                                <span class="icon flaticon-envelope126"></span>
+                                <span class="icon flaticon-envelope126">
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    
+                                </span>
 
                                 <h3>EMAIL</h3>
 
