@@ -60,12 +60,15 @@
         {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/animate_agent.js') !!}
         {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/slugit.js') !!}
         {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/detail.js') !!}
-
+        {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/ion.rangeSlider.min.js') !!}
+        
         @yield('footer_scripts_part1')
 
         {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/jquery.bxslider.js') !!}
         {!! HTML::script('packages/jacopo/laravel-authentication-acl/js/vendor/jquery.bxslider.min.js') !!}
         @yield('footer_scripts_part2')
+        
+        @yield('footer_scripts_form_search')
      
         {{-- End footer scripts --}}
     </body>
