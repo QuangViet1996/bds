@@ -34,7 +34,7 @@ jQuery(document).ready(function ($) {
 	
 	//Submenu Dropdown Toggle
 	if($('.main-header li.dropdown > ul').length){
-		$('.main-header li.dropdown').append('<div class="dropdown-btn"></div>');
+		$('.main-header li.dropdown').append('<div class="dropdown-btn"><i class="fa fa-bars" aria-hidden="true"></i></div>');
 		
 		//Dropdown Button
 		$('.main-header li.dropdown .dropdown-btn').on('click', function() {
