@@ -10,7 +10,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
     <div class="wpb_column col-md-12">
         <!--Contact Section-->
 
-        <section class="default-section faded-section contact-section" style="background-image:url('http://wp1.themexlab.com/wp/dreamland/wp-content/uploads/2015/12/contact-bg.jpg');">
+        <section class="default-section faded-section contact-section" style="background: url('../../images/contact-bg.jpg') repeat-x;">
 
             <div class="auto-container">
 

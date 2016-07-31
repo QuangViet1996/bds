@@ -86,7 +86,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
                         <div class="column col-md-4 col-sm-6 col-xs-12">
 
-                            <span class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                            <span class="icon"></span>
 
                             <h3>EMAIL</h3>
 
@@ -107,7 +107,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
     <div class="clearfix"></div>
 </section>
 
-<section class="default-section faded-section contact-section" style="background-image:url('http://wp1.themexlab.com/wp/dreamland/wp-content/uploads/2015/12/contact-bg.jpg');">
+<section class="default-section faded-section contact-section" style="background-image:url('../../../images/contact-bg.jpg');">
 
     <div class="auto-container small-container">
 
@@ -125,60 +125,48 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
             <div role="form" class="wpcf7" id="wpcf7-f153-p22-o1" lang="en-US" dir="ltr">
                 <div class="screen-reader-response"></div>
-                
+                {!! Form::open(['route'=>['usercontact.edit'], 'method' => 'post'])  !!}
 
                 <div class="row clearfix">
 
                     <div class="col-md-6 col-sm-6 col-xs-12 form-group">
                         <span class="wpcf7-form-control-wrap text-355">
+                            {!! Form::text('author_name',null, ['class' => 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required', 'placeholder' => 'Name']) !!}
                             
-                            <span class="text-danger"></span>
 
+                            <span class="text-danger"></span>
                         </span>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-12 form-group">
-                        
+                        {!! Form::text('title',null, ['class' => 'wpcf7-form-control-wrap text-356', 'placeholder' => 'Title']) !!}
                         <span class="text-danger"></span>
 
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                       
+                        {!! Form::textarea('description',null, ['class' => 'wpcf7-form-control wpcf7-textarea', 'placeholder' => 'Mesenger']) !!}
                         <span class="text-danger"></span>
 
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12 form-group text-center">
-                        
+                        {!! Form::submit('Save', array("class"=>"btn btn-info pull-right wpcf7-form-control wpcf7-submit")) !!}
                     </div>
-
                 </div>
                 <div class="wpcf7-response-output wpcf7-display-none"></div>
-                    
+                {!! Form::close() !!}     
             </div>
         </div>
-
-
-
         <!--add information-->
         <!-- it1-->
         <div class="information">
             <div id="home" class="">
                 <!-- title text field -->
-                <div class="form-group">
+                <div class="form-group col-md-6">
                     <label for="title">Title: </label>
                     <input class="form-control" placeholder="Title" name="title" type="text" value="" id="title">
                     <span class="text-danger"></span>
                 </div>
-
-                <!-- description text field -->
-
-                <div class="form-group">
-                    <label for="description">Description:</label>
-                    <input class="form-control tinymce" placeholder="Description" name="description" type="text" value="" id="description">
-                    <span class="text-danger"></span>
-                </div>
-
                 <!-- List categories -->
-                <div class="form-group">
+                <div class="form-group col-md-6">
                     <div class="controls">
                         <label>Category:</label>
                         <select class="form-control" id="datacat" name="datacat"><option value="5">Apartment</option><option value="8">Bedroom</option><option value="7">Kitchen</option><option value="6">Living Room</option></select>
@@ -187,9 +175,20 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
                     </div>
                 </div>
+                <!-- description text field -->
+                <div class="container">
+                    <div class="form-group col-md-12">
+                        <label for="description">Description:</label>  
+                        <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                            <textarea class="d" placeholder="Description" name="description" style="height: 180px"></textarea>
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <!--it2-->
-            <div id="menu1" class="">
+            <div id="menu1" class="container">
                 <!-- bedroome text field -->
                 <div class="form-group">
                     <label for="bedroom">Bedrooms: </label>
