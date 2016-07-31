@@ -125,34 +125,34 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
             <div role="form" class="wpcf7" id="wpcf7-f153-p22-o1" lang="en-US" dir="ltr">
                 <div class="screen-reader-response"></div>
-                {!! Form::open(['route'=>['usercontact.edit'], 'method' => 'post'])  !!}
+                
 
                 <div class="row clearfix">
 
                     <div class="col-md-6 col-sm-6 col-xs-12 form-group">
                         <span class="wpcf7-form-control-wrap text-355">
-                            {!! Form::text('author_name',null, ['class' => 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required', 'placeholder' => 'Name']) !!}
-                            <span class="text-danger">{!! $errors->first('author_name') !!}</span>
+                            
+                            <span class="text-danger"></span>
 
                         </span>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-12 form-group">
-                        {!! Form::text('title',null, ['class' => 'wpcf7-form-control-wrap text-356', 'placeholder' => 'Title']) !!}
-                        <span class="text-danger">{!! $errors->first('title') !!}</span>
+                        
+                        <span class="text-danger"></span>
 
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                        {!! Form::textarea('description',null, ['class' => 'wpcf7-form-control wpcf7-textarea', 'placeholder' => 'Mesenger']) !!}
-                        <span class="text-danger">{!! $errors->first('description') !!}</span>
+                       
+                        <span class="text-danger"></span>
 
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12 form-group text-center">
-                        {!! Form::submit('Save', array("class"=>"btn btn-info pull-right wpcf7-form-control wpcf7-submit")) !!}
+                        
                     </div>
 
                 </div>
                 <div class="wpcf7-response-output wpcf7-display-none"></div>
-                {!! Form::close() !!}     
+                    
             </div>
         </div>
 
