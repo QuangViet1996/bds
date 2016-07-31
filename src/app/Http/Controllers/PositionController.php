@@ -73,7 +73,7 @@ class PositionController extends Controller {
      * @status: REVIEWED
      */
 
-    public function editPositions(Request $request) {
+    public function editPosition(Request $request) {
 
         $position_id = $request->get('id');
         $obj_position = new Positions();
@@ -99,7 +99,7 @@ class PositionController extends Controller {
      * @status: REVIEWED
      */
 
-    public function postPositions(Request $request) {
+    public function postPosition(Request $request) {
 
         $obj_position = new Positions();
         $validator = new PositionsValidator();
@@ -150,7 +150,7 @@ class PositionController extends Controller {
      * @status: REVIEWED
      */
 
-    public function deletePositions(Request $request) {
+    public function deletePosition(Request $request) {
 
         try {
 
@@ -175,7 +175,7 @@ class PositionController extends Controller {
      * @status: REVIEWED
      */
 
-    public function addPositions(Request $request) {
+    public function addPosition(Request $request) {
 
         $data = array_merge($this->data, array(
         ));

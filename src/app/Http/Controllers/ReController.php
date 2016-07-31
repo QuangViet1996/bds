@@ -160,6 +160,20 @@ class ReController extends Controller {
     public function reContact(Request $request) {
         return view('laravel-authentication-acl::client.re.contact.contact');
     }
+    
+    /*     * ********************************************
+     * reAdd
+     * 
+     * @author: Kang
+     * @web: http://tailieuweb.com
+     * @date: 26/6/2016
+     * 
+     * @status: REVIEWED
+     */
+
+    public function regAdd(Request $request) {
+        return view('laravel-authentication-acl::client.re.reg.add');
+    }
 
     /*     * ********************************************
      * postContact

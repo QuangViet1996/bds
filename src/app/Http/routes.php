@@ -40,3 +40,8 @@ Route::post('/contact', [
     'uses' => '\App\Http\Controllers\ReController@postContact'
 ]);
 
+Route::get('/add', [
+    'as' => 'reg_re.add',
+    'uses' => '\App\Http\Controllers\ReController@regAdd'
+]);
+
