@@ -29,7 +29,10 @@
     .row_add_house > span {
         display: block;
         float: left;
-        width: 200px;
+        width: 161px;
+    }
+    #priceunit{
+        margin-top: 15px;
     }
     #alert_title{
         border-radius: 0;
@@ -47,6 +50,9 @@
         width: 225px!important;
         height: 50px;
     }
+    .row_add_house #priceunit{
+        width: 99px;
+    }
     .accordion{
         margin-bottom: 0;
         border-bottom: none;
@@ -58,14 +64,14 @@
         margin-bottom: 0;
     }
     .accordion {
-        background-color: #71b100;
+        background-color: #a7e331;
         padding: 15px;
         border-bottom: 1px solid #ddd;
         font-weight: bold;
 
     }
     .accordion:hover{
-        background-color: rgba(113, 177, 0, 0.89);;
+        background-color: #71b100;
     }
     .accordion-toggle{
         color: #fff;
@@ -76,6 +82,50 @@
         padding: 8px 5px;
         margin-bottom: 5px;
         background: #efefef;
+    }
+    input#button_show_address {
+        width: 100%;
+    }
+    input#button_show_address:hover {
+        background-color: #71b100;
+    }
+    #v_add:hover {
+        background-color: #71b100;
+    }
+    #t_add:hover {
+        background-color: #71b100;
+    }
+    .saveit:hover {
+        background-color: #71b100;
+    }
+    .row_add_house #button_show_address,#v_add,#t_add,.saveit
+    {
+        background-color: #a7e331;
+        color: #fff;
+        font-size: 14px;
+        border-radius: 4px;
+        text-transform: uppercase;
+        border: none;
+        padding: 9px 14px;
+
+    }
+    .box{
+        display: block;
+        width: 100%;
+        height: 34px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555555;
+        background-color: #ffffff;
+        background-image: none;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+        -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     }
 }
 
