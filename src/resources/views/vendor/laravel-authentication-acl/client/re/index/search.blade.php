@@ -85,26 +85,17 @@
                                         <input type="hidden" name="price_to" id="price_to">
                                     </div>
                                     <!--END PRICE-->
-
-                                   
-
-                                   
-
                                 </form>
                             </div>
                             <div class="form-group">
                                 <form action="#" method="POST">
-                                    
-
-                                    <!--AREA-->
+                                                        <!--AREA-->
                                     <div class="group-item">
                                         <input type="text" id="area" name="area" value="" />
                                         <input type="hidden" name="area_from" id="area_from">
                                         <input type="hidden" name="area_to" id="area_to">
                                     </div>
                                     <!--END AREA-->
-
-
                                 </form>
                             </div>
                         </div>

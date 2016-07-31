@@ -1,5 +1,5 @@
 <?php
-$realestate = $data['realestate'];
+$realestate = @$data['realestate'];
 $arr_images = array();
 
 if (!empty($realestate)) {

@@ -24,7 +24,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
             <div class="bread-crumb">
 
-                <ul class="breadcrumb pull-right"><li><a href="http://wp1.themexlab.com/wp/dreamland/">Home</a></li><li>Contact Us</li></ul>
+                <ul class="breadcrumb pull-right"><li><a href="#">Home</a></li><li>Contact Us</li></ul>
             </div>
 
         </div>
@@ -61,7 +61,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
                         <div class="column col-md-4 col-sm-6 col-xs-12">
 
-                            <span class="icon flaticon-location74"></span>
+                            <span class="icon"><i class="fa fa-book" aria-hidden="true"></i></span>
 
                             <h3>ADDRESS</h3>
 
@@ -74,7 +74,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
                         <div class="column col-md-4 col-sm-6 col-xs-12">
 
-                            <span class="icon flaticon-telephone51"></span>
+                            <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
 
                             <h3>PHONE</h3>
 
@@ -86,7 +86,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
                         <div class="column col-md-4 col-sm-6 col-xs-12">
 
-                            <span class="icon flaticon-envelope126"></span>
+                            <span class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
 
                             <h3>EMAIL</h3>
 

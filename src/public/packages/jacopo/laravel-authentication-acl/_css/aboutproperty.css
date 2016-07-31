@@ -105,6 +105,15 @@
   background: -ms-linear-gradient(top,rgba(0,0,0,0),#cccccc,rgba(0,0,0,0));
   background: -o-linear-gradient(top,rgba(0,0,0,0),#cccccc,rgba(0,0,0,0));
 }
+.search-box {
+  position: relative;
+  background: url("../images/search-box-bg.jpg") repeat-x;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  background-size: cover;
+}
 .re-search-box html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -576,7 +585,7 @@
   padding: 40px 10px;
 }
 .gsearch .gsearch-wrap .gsearch-content .gsearch-action .gsubmit .btn {
-  background: #f0e797;
+  background: #71b100;
 }
 .gsearch .gsearch-wrap .gsearch-content .gsearch-action .gsubmit .btn {
   width: 100%;
