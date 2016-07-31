@@ -156,74 +156,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
             </div>
         </div>
         <!--add information-->
-        <!-- it1-->
-        <div class="information">
-            <div id="home" class="">
-                <!-- title text field -->
-                <div class="form-group col-md-6">
-                    <label for="title">Title: </label>
-                    <input class="form-control" placeholder="Title" name="title" type="text" value="" id="title">
-                    <span class="text-danger"></span>
-                </div>
-                <!-- List categories -->
-                <div class="form-group col-md-6">
-                    <div class="controls">
-                        <label>Category:</label>
-                        <select class="form-control" id="datacat" name="datacat"><option value="5">Apartment</option><option value="8">Bedroom</option><option value="7">Kitchen</option><option value="6">Living Room</option></select>
-
-                        <span class="text-danger"></span>
-
-                    </div>
-                </div>
-                <!-- description text field -->
-                <div class="container">
-                    <div class="form-group col-md-12">
-                        <label for="description">Description:</label>  
-                        <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                            <textarea class="d" placeholder="Description" name="description" style="height: 180px"></textarea>
-                            <span class="text-danger"></span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!--it2-->
-            <div id="menu1" class="container">
-                <!-- bedroome text field -->
-                <div class="form-group">
-                    <label for="bedroom">Bedrooms: </label>
-                    <input class="form-control" placeholder="Bedrooms" name="bedroom" type="number" value="" id="bedroom">
-                    <span class="text-danger"></span>
-                </div>
-
-                <!-- bathroom text field -->
-                <div class="form-group">
-                    <label for="bathroom">Bathrooms: </label>
-                    <input class="form-control" placeholder="Bedrooms" name="bathroom" type="number" value="" id="bathroom">
-                    <span class="text-danger"></span>
-                </div>
-
-                <!-- bathroom text field -->
-                <div class="form-group">
-                    <label for="sq">Sq: </label>
-                    <input class="form-control" placeholder="Sq" name="sq" type="number" value="" id="sq">
-                    <span class="text-danger"></span>
-                </div>
-
-                <!-- bathroom text field -->
-                <div class="form-group">
-                    <label for="build_year">Build year: </label>
-                    <input class="form-control" placeholder="Build year" name="build_year" type="number" value="" id="build_year">
-                    <span class="text-danger"></span>
-                </div>
-
-                <!-- bathroom text field -->
-                <div class="form-group">
-                    <label for="cost">Cost: </label>
-                    <input class="form-control" placeholder="Cost" name="cost" type="number" value="" id="cost">
-                    <span class="text-danger"></span>
-                </div>                    </div>
-        </div>
+        
         <!--end add information-->
 
         <!--Footer Content-->
