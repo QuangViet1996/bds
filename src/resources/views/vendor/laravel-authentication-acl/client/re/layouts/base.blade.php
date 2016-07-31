@@ -29,6 +29,7 @@
         {!! HTML::style('packages/jacopo/laravel-authentication-acl/_css/contactIndex.css') !!}
         {!! HTML::style('packages/jacopo/laravel-authentication-acl/_css/cat.css') !!}
         {!! HTML::style('packages/jacopo/laravel-authentication-acl/_css/contact.css') !!}
+        {!! HTML::style('packages/jacopo/laravel-authentication-acl/_css/reg_re_add.css') !!}
 
         @yield('head_css')
         {{-- End head css --}}
