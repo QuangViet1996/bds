@@ -9,7 +9,6 @@
         <tr>
             <th>{!!trans('custom.title')!!} </th>
             <th>{!!trans('custom.slug')!!}</th>
-            <th>{!!trans('custom.content')!!} </th>
             <th>{!!trans('custom.operations')!!}</th>
         </tr>
     </thead>
@@ -18,7 +17,6 @@
         <tr>
             <td style="width:45%">{!! $custom->real_estate_custom_html_title !!}</td>
             <td style="width:45%">{!! $custom->real_estate_custom_html_slug !!}</td>
-            <td style="width:45%">{!! $custom->real_estate_custom_html_content !!}</td>
             <td style="witdh:10%">
                  <a href="{!! URL::route('custom.edit', ['id' => $custom->real_estate_custom_html_id]) !!}" title='{{ trans('custom.edit') }}' class="margin-left-5">
                      <i class="fa fa-pencil-square-o fa-2x"></i>

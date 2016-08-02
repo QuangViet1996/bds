@@ -56,7 +56,7 @@
                     </div>
 
 
-                    {!! Form::hidden('id', $position->real_estate_page_position_title) !!}
+                    {!! Form::hidden('id', $position->real_estate_page_position_id) !!}
                     @if($position->real_estate_page_position_title != null)
                     
                         <a href="{!! URL::route('positions.delete',['id' => $position->real_estate_page_position_title, '_token' => csrf_token()]) !!}" class="btn btn-danger pull-right margin-left-5 delete">

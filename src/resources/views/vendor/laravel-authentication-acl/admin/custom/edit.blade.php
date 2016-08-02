@@ -100,7 +100,9 @@ $custom->real_estate_custom_html_content = '';
         return confirm('{!!trans('custom.you_want_delete')!!}');
     });
     $(function () {
-        $('#slugme').slugIt();
+        $('#title').slugIt({
+            output: '#slug'
+        });
     });
 </script>
 @stop
