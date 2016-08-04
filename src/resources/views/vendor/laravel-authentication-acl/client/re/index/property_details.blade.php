@@ -6,28 +6,30 @@ $less = new lessc;
 $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/less/property_details.less', public_path() . '/packages/jacopo/laravel-authentication-acl/_css/property_details.css');
 ?>
 
+<!--FAVORITES PRODUCT - DETAIL-->
 <section class="section  general-row">
-    <div class="wpb_column col-md-12">		   
+    <div class="wpb_column col-md-12">
         <!--Tabs Section-->
-        <section class="property-details" style="background-image:url('http://wp1.themexlab.com/wp/dreamland/wp-content/uploads/2015/12/image-21.jpg');">
+        <section class="property-details" style="background-image:url('/packages/images/image-21.jpg');">
             <div class="auto-container">
-                <div class="row clearfix">        	
+                <div class="row clearfix">
                     <!--Left Column-->
                     <div class="col-md-7 col-sm-12 col-xs-12 left-column">
-                        <h2>Property Details</h2>
+                        <h2><?php echo trans('clients.re_detail') ?></h2>
                         <!--Tabs Box-->
-                        <div class="tabs-box">                  	
+                        <div class="tabs-box">
                             <!--Tab Buttons-->
-                            <div class="tab-buttons clearfix">                   	
-                                <a href="#tab-one179" class="tab-btn active-btn">Exterior Details</a>
+                            <div class="tab-buttons clearfix">
+                                <a href="#tab-one179" class="tab-btn active-btn"><?php echo trans('clients.re_intro') ?></a>
 
-                                <a href="#tab-one178" class="tab-btn ">Room Dimensions</a>
-                                
-                                 <a href="#tab-one181" class="tab-btn ">Interior Details</a>
+                                <a href="#tab-one178" class="tab-btn "><?php echo trans('clients.re_paypal') ?></a>
+
+                                 <a href="#tab-one181" class="tab-btn "><?php echo trans('clients.re_rating') ?></a>
 
                             </div>
                             <!--Tabs Content-->
                             <div class="tab-content">
+
                                 <!--Tab / Active Tab-->
                                 <div class="tab active-tab" id="tab-one179" style="display: block">
                                     <h3>Exterior Details</h3>
@@ -44,6 +46,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                         </div>
                                     </div>
                                 </div>
+
                                 <!--Tab / Active Tab-->
                                 <div class="tab " id="tab-one178">
                                     <h3>Room Dimensions</h3>
@@ -60,6 +63,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                         </div>
                                     </div>
                                 </div>
+
                                 <!--Tab / Active Tab-->
                                 <div class="tab " id="tab-one181">
                                     <h3>Interior Details</h3>
