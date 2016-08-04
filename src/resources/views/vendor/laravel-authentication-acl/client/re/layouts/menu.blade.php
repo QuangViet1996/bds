@@ -8,15 +8,15 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 <div class="preloader" style="display: none;"></div>
 <header class="main-header header-style-two">
     <!-- Header Top -->
-    
+
     <div class="header-top">
         <div class="auto-container clearfix">
 
             <!-- Top Right -->
             <div class="top-right">
                 <ul class="info pull-left clearfix">
-                    <li class="email"><a href="#"><span class="icon fa fa-envelope-o"></span> companymail@gmailcom</a></li>                        
-                    <li class="phone"><a href="tel:(880) 172 380 1729"><span class="icon fa fa-phone"></span> (880) 172 380 1729 </a></li>                    
+                    <li class="email"><a href="#"><span class="icon fa fa-envelope-o"></span> companymail@gmailcom</a></li>
+                    <li class="phone"><a href="tel:(880) 172 380 1729"><span class="icon fa fa-phone"></span> (880) 172 380 1729 </a></li>
                 </ul>
 
                 <!--Social Links-->
@@ -42,10 +42,10 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
                 <!--Right Container-->
 
-                <!-- Main Menu -->
+                <!--MAIN MENU-->
                 <nav class="main-menu">
                     <div class="navbar-header">
-                        <!-- Toggle Button -->    	
+                        <!-- Toggle Button -->
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -54,6 +54,8 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                     </div>
 
                     <div class="navbar-collapse clearfix collapse" aria-expanded="false" style="height: 2px;">
+
+                        <!--NAVIGATION-->
                         <ul class="navigation">
 
                             <!--HOME-->
@@ -62,30 +64,46 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                     <?php echo trans('clients.home') ?>
                                 </a>
                             </li>
-                            
+
                             <!--SERVICE-->
                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-185 dropdown">
                                 <a title="Pages" href="#" class="hvr-underline-from-left1" aria-expanded="false" data-scroll="" data-options="easing: easeOutQuart">
                                     <?php echo trans('clients.service') ?>
                                 </a>
                                 <ul role="menu" class="submenu" style="display: none;">
-                                    <li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page"><a title="Video Tour" href="{!! URL::route('re.category')!!}">Category</a></li>
-                                    <li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page"><a title="Video Tour" href="{!! URL::route('reg_re.add')!!}">Add</a></li>
-                                    <li id="menu-item-104" class="menu-item menu-item-type-post_type menu-item-object-page"><a title="Gallery" href="#">Gallery</a></li>
-                                    <li id="menu-item-213" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown"><a title="Sidebar Page" href="#">Sidebar Page</a>
+
+                                    <li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                        <a title="Video Tour" href="{!! URL::route('re.category')!!}">
+                                            Category
+                                        </a>
+                                    </li>
+
+                                    <li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                        <a title="Video Tour" href="{!! URL::route('reg_re.add')!!}">
+                                            Add
+                                        </a>
+                                    </li>
+                                    <li id="menu-item-104" class="menu-item menu-item-type-post_type menu-item-object-page">
+                                        <a title="Gallery" href="#">
+                                            Gallery
+                                        </a>
+                                    </li>
+                                    <li id="menu-item-213" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown">
+                                        <a title="Sidebar Page" href="#">
+                                            Sidebar Page
+                                        </a>
                                     </li>
                                 </ul>
                             </li>
-                            
+
                             <!--CONTACT-->
                             <li class="menu-item menu-item-type-post_type menu-item-object-page">
                                 <a title="About US" href="#" class="hvr-underline-from-left1" data-scroll="" data-options="easing: easeOutQuart">
                                     <?php echo trans('clients.contact') ?>
                                 </a>
                             </li>
-                            
-                            <!--/-->
-                           
+
+                            <!--REGISTER-->
                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101">
                                 <a title="Contact Us" href="{!! URL::route('re.contact')!!}" class="hvr-underline-from-left1" data-scroll="" data-options="easing: easeOutQuart">
                                     <?php echo trans('clients.register') ?>
@@ -93,9 +111,13 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                             </li>
 
                         </ul>
+                        <!--END NAVIGATION-->
+
                     </div>
-                </nav><!-- Main Menu End-->
-            </div>    
+                </nav>
+                <!--END MAIN MENU-->
+                
+            </div>
         </div>
 
     </div>
