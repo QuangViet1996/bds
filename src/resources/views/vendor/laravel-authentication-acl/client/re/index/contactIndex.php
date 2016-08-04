@@ -97,7 +97,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                         <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f142-p6-o1">
                                         <input type="hidden" name="_wpnonce" value="f9dad01a5b">
                                     </div>
-                                    <div class="row clearfix">
+                                    <div class="clearfix">
                                         <div class="col-md-6 col-sm-6 col-xs-12 form-group">
                                             <span class="wpcf7-form-control-wrap text-841"><input type="text" name="text-841" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name"></span>
                                         </div>
