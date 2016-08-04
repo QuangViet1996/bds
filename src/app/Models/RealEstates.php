@@ -23,24 +23,24 @@ class RealEstates extends Model {
         "real_estate_image",
         "real_estate_images",
         "real_estate_cost",
-        
+
         "real_estate_map_address",
         "real_estate_map_marker_lat",
         "real_estate_map_marker_lng",
         "real_estate_map_center_lat",
         "real_estate_map_center_lng",
-        
+
         "real_estate_map_zoom",
     ];
-    
+
     protected $guarded = ["real_estate_id"];
     /*     * ********************************************
      * listRealEstate
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
@@ -55,11 +55,11 @@ class RealEstates extends Model {
 
     /*     * ********************************************
      * findRealEstateId
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
@@ -71,20 +71,20 @@ class RealEstates extends Model {
 
     /*     * ********************************************
      * updateRealEstate
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
     public function updateRealEstate($input) {
         $real_estate = self::find($input['id']);
         if (!empty($real_estate)) {
-            
+
             $real_estate_images = $this->encodeImages($input);
-            
+
             $real_estate->real_estate_title = $input['title'];
             $real_estate->real_estate_category_id = $input['datacat'];
             $real_estate->real_estate_description = $input['description'];
@@ -92,7 +92,7 @@ class RealEstates extends Model {
             $real_estate->real_estate_bathroom = $input['bathroom'];
             $real_estate->real_estate_sq = $input['sq'];
             $real_estate->real_estate_year_build = $input['build_year'];
-            
+
             $real_estate->real_estate_cost = (double)$input['cost'];
 
             $real_estate->real_estate_image = $input['filename'];
@@ -107,24 +107,24 @@ class RealEstates extends Model {
 
             $real_estate->save();
         } else {
-            
+
         }
     }
 
     /*     * ********************************************
      * addRealEstate
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
     public function addRealEstate($input) {
 
         $real_estate_images = $this->encodeImages($input);
-        
+
         $real_estate = self::create([
 
                     'real_estate_title' => $input['title'],
@@ -149,11 +149,11 @@ class RealEstates extends Model {
 
     /*     * ********************************************
      * deleteRealEstate
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
@@ -166,11 +166,11 @@ class RealEstates extends Model {
 
     /*     * ********************************************
      * viewRe
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
@@ -181,10 +181,10 @@ class RealEstates extends Model {
 
         return $real_estate;
     }
-    
+
     public function encodeImages($input){
         $json_images = array();
-        
+
         if (!empty($input['images_name'])) {
             foreach ($input['images_name'] as $index => $image_name) {
                 $json_images[] = array(
@@ -193,7 +193,7 @@ class RealEstates extends Model {
                 );
             }
         }
-        
+
         if ($input['filename'] && !$input['set_to']) {
             $json_images[] = array_merge($json_images, array(
                 'name' => $input['filename'],
@@ -203,7 +203,26 @@ class RealEstates extends Model {
         return json_encode($json_images);
     }
     public function decodeImages($json_images){
-        
+
     }
 
+
+    /***************************************************************************
+    /***************************************************************************
+    /*****************************USER FRONT PAGE*******************************
+    /***************************************************************************
+    /***************************************************************************
+     * getHighlightRe
+     *
+     * @author: Kang
+     * @web: http://tailieuweb.com
+     * @date: 04/08/2016
+     *
+     * @status: TODO: RE-CODE
+     */
+
+    public function getHighlightRe() {
+         $real_estate = self::first();
+         return $real_estate;
+    }
 }

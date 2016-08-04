@@ -1,6 +1,4 @@
-<?php
-
-namespace App\Http\Controllers;
+<?php namespace App\Http\Controllers;
 
 /**
  * Lib Core
@@ -17,7 +15,7 @@ use \LaravelAcl\Authentication\Controllers\Controller;
 /**
  * Models
  */
-use App\Models\Testimonial;
+use App\Models\Testimonials;
 use App\Models\RealEstates;
 use App\Models\Contact;
 /**
@@ -30,42 +28,46 @@ use App\Http\Requests\ContactValidator;
 use \LaravelAcl\Library\Exceptions\ValidationException;
 use \LaravelAcl\Library\Exceptions\JacopoExceptionsInterface;
 use App\Http\Requests\HrmPayrollFormRequest;
-use Excel;
-use Maatwebsite\Excel\Writers\CellWriter;
 use App\Http\Requests\ApplyFormRequest;
 use Validator;
 use Response;
 use Illuminate\Support\MessageBag as MessageBag;
 
+
+/**
+ * FRONT PAGE USER
+ */
 class ReController extends Controller {
 
     public $data = array(
     );
 
-    /*     * ********************************************
+    /***************************************************************************
      * index
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
-     * @date: 26/6/2016
-     * 
+     * @date: 04/08/2016
+     *
      * @status: REVIEWED
      */
 
     public function index(Request $request) {
-        $obj_testimonial = new Testimonial();
+        $obj_testimonials = new Testimonials();
         $obj_real_estates = new RealEstates();
 
-        $testimonial = $obj_testimonial->listTestimonial();
+        $testimonials = $obj_testimonials->listTestimonial();
         $real_estates = $obj_real_estates->listRealEstate();
+        $hightlightRe = $obj_real_estates->getHighlightRe();
 
         $configs = config('app.libfiles');
 
         $data = array_merge($this->data, array(
-            'testimonial' => $testimonial,
+            'testimonial' => $testimonials,
             'config_testimonial' => $configs['testimonial'],
             'real_estates' => $real_estates,
-            'request' => $request
+            'request' => $request,
+            'hightlightRe' => $hightlightRe
         ));
 
         return view('laravel-authentication-acl::client.re.index.index')->with(['data' => $data]);
@@ -73,11 +75,11 @@ class ReController extends Controller {
 
     /*     * ********************************************
      * reList
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
@@ -87,11 +89,11 @@ class ReController extends Controller {
 
     /*     * ********************************************
      * reSearch
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
@@ -103,11 +105,11 @@ class ReController extends Controller {
 
     /*     * ********************************************
      * reView
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
@@ -117,10 +119,10 @@ class ReController extends Controller {
         $params = array(
             'real_estate_id' => $request->get('id')
         );
-       
+
         $re = $obj_re->viewRe($params);
         if (!empty($re)) {
-            
+
             $data = array_merge($this->data, array(
                 're' => $re,
                 'request' => $request
@@ -134,40 +136,40 @@ class ReController extends Controller {
 
     /*     * ********************************************
      * reCat
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
     public function reCategory(Request $request) {
-        
+
         return view('laravel-authentication-acl::client.re.category.cat_list');
     }
 
     /*     * ********************************************
      * reContact
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
     public function reContact(Request $request) {
         return view('laravel-authentication-acl::client.re.contact.contact');
     }
-    
+
     /*     * ********************************************
      * reAdd
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
@@ -177,11 +179,11 @@ class ReController extends Controller {
 
     /*     * ********************************************
      * postContact
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 

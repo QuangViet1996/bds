@@ -7,14 +7,19 @@ Trang chủ
 @section('section')
 
     @include('laravel-authentication-acl::client.re.index.slideshow')
-    @include('laravel-authentication-acl::client.re.index.aboutproperty')
-    @include('laravel-authentication-acl::client.re.index.property_details')
+
+    <!--HIGHTLIGHT RE-->
+    @include('laravel-authentication-acl::client.re.index.hightlightRe-overview')
+
+    @include('laravel-authentication-acl::client.re.index.hightlightRe-detail')
+    <!--END HIGHTLIGHT RE-->
+
     @include('laravel-authentication-acl::client.re.index.properties')
     @include('laravel-authentication-acl::client.re.index.CT')
     @include('laravel-authentication-acl::client.re.index.aboutagent')
     @include('laravel-authentication-acl::client.re.index.testimonial')
     @include('laravel-authentication-acl::client.re.index.FAQ')
-    
+
     @include('laravel-authentication-acl::client.re.index.contactIndex')
 
 @stop
