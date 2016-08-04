@@ -10,7 +10,6 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
 <!--FAVORITES PRODUCT - OVERVIEW-->
 <section class="section  general-row">
-
     <div class="wpb_column col-md-12">
         <!--Properties Section-->
         <section class="properties-section">
@@ -24,7 +23,6 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                 <!--Full Image Box-->
                 <div class="five-col-theme">
                     <div class="row clearfix">
-
                         <!--BEDROOMS-->
                         <article class="column">
                             <div class="inner-box">
@@ -33,7 +31,6 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                 <h3 class="count">3</h3>
                             </div>
                         </article>
-
                         <!--SQUARE FEET-->
                         <article class="column">
                             <div class="inner-box">
@@ -42,7 +39,6 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                 <h3 class="count">2530</h3>
                             </div>
                         </article>
-
                         <!--BATHS-->
                         <article class="column">
                             <div class="inner-box">
@@ -51,7 +47,6 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                 <h3 class="count">2</h3>
                             </div>
                         </article>
-
                         <!--YEAR BUILD-->
                         <article class="column">
                             <div class="inner-box">
@@ -60,8 +55,6 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                 <h3 class="count">2010</h3>
                             </div>
                         </article>
-
-
                         <!--CAR PARKING-->
                         <article class="column">
                             <div class="inner-box">
@@ -72,11 +65,8 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                         </article>
                     </div>
                 </div>
-
             </div>
-
         </section>
-
     </div>
     <div class="clearfix"></div>
 </section>
