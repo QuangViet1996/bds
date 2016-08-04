@@ -6,7 +6,6 @@ $less = new lessc;
 $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/less/properties.less', public_path() . '/packages/jacopo/laravel-authentication-acl/_css/properties.css');
 ?>
 <section class="gallery-section full-width">
-
     <div class="auto-container">    
         <!--Section Title-->
         <div class="sec-title">               
@@ -16,7 +15,6 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
         </div>           
         <!--Filter-->
         <div class="filters">
-
             <ul class="filter-tabs clearfix anim-3-all nav nav-tabs">
                 <li class="filter"><a data-toggle="tab" href="#All">All</a></li>
                 <li class="filter"><a data-toggle="tab" href="#Apartment">Apartment</a></li>
@@ -33,8 +31,12 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                     @foreach($data['real_estates'] as $real_estates)
                     <div class="featured_houses_block col-md-4 col-sm-6 col-xs-12">
                         <div style="position:relative">
-                            <a href="{!! URL::route('re.view',['id' => $real_estates->real_estate_id])!!}" target="_self"> <img src="http://wp1.themexlab.com/wp/dreamland/wp-content/uploads/2016/01/3.jpg" alt="Avenel House" border="0"></a>    <div class="col_rent">
-                                For sale                </div><!-- col_rent -->
+                            <a href="{!! URL::route('re.view',['id' => $real_estates->real_estate_id])!!}" target="_self"> 
+                                <img src="images/3.jpg" alt="Avenel House" border="0">
+                            </a>    
+                            <div class="col_rent">
+                                For sale                
+                            </div><!-- col_rent -->
                         </div>
                         <div class="feature_texthouse">
                             <h4 class="featured_houses_title">
@@ -44,28 +46,21 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                 <a href="#" class="category">
                                     Apartment</a>
                             </div>
-
                             <div class="featured_houses_size featured_houses_inline">
                                 <i class="fa fa-expand"></i> {!!$real_estates->real_estate_sq!!}&nbsp;Sqrt
                             </div>
-
                             <div class="featured_houses_rooms featured_houses_inline">
                                 <i class="fa fa-building-o"></i> Rooms: 4&nbsp;
                             </div>
-
                             <div class="featured_houses_year featured_houses_inline">
                                 <i class="fa fa-tint"></i> Build year: {!!$real_estates->real_estate_year_build!!} &nbsp;
                             </div>
-
                             <div class="featured_houses_bedrooms featured_houses_inline">
                                 <i class="fa fa-inbox"></i> Bedrooms: {!!$real_estates->real_estate_bedroom!!} &nbsp;
                             </div>
-
                             <div class="featured_houses_bathrooms featured_houses_inline">
                                 <i class="fa fa-inbox"></i> Bathrooms: {!!$real_estates->real_estate_bathroom!!} &nbsp;
                             </div>
-
-
                         </div>
                         <div class="rem_house_viewlist">
                             <a href="{!! URL::route('re.view',['id' => $real_estates->real_estate_id])!!}" target="_self" style="display: block">
@@ -81,8 +76,11 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                 <div class="featured_houses tab-pane fade" id="Apartment">
                     <div class="featured_houses_block col-md-4 col-sm-6 col-xs-12">
                         <div style="position:relative">
-                            <a href="#" target="_self"> <img src="http://wp1.themexlab.com/wp/dreamland/wp-content/uploads/2016/01/3.jpg" alt="Avenel House" border="0"></a>    <div class="col_rent">
-                                For sale                </div><!-- col_rent -->
+                            <a href="#" target="_self"> <img src="../images/3.jpg" alt="Avenel House" border="0"></a>    
+                            <div class="col_rent">
+
+                                For sale               
+                            </div><!-- col_rent -->
                         </div>
                         <div class="feature_texthouse">
                             <h4 class="featured_houses_title">
@@ -104,7 +102,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                 <div class="featured_houses tab-pane fade" id="LivingRoom">
                     <div class="featured_houses_block col-md-4 col-sm-6 col-xs-12">
                         <div style="position:relative">
-                            <a href="#" target="_self"> <img src="http://wp1.themexlab.com/wp/dreamland/wp-content/uploads/2016/01/3.jpg" alt="Avenel House" border="0"></a>    <div class="col_rent">
+                            <a href="#" target="_self"> <img src="images/3.jpg" alt="Avenel House" border="0"></a>    <div class="col_rent">
                                 For sale                </div><!-- col_rent -->
                         </div>
                         <div class="feature_texthouse">
@@ -124,7 +122,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                     </div>
                     <div class="featured_houses_block col-md-4 col-sm-6 col-xs-12">
                         <div style="position:relative">
-                            <a href="#" target="_self"> <img src="http://wp1.themexlab.com/wp/dreamland/wp-content/uploads/2016/01/3.jpg" alt="Avenel House" border="0"></a>    <div class="col_rent">
+                            <a href="#" target="_self"> <img src="images/3.jpg" alt="Avenel House" border="0"></a>    <div class="col_rent">
                                 For sale                </div><!-- col_rent -->
                         </div>
                         <div class="feature_texthouse">

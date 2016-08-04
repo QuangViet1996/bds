@@ -8,7 +8,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
 <section class="section  general-row">
     <div class="wpb_column col-md-12">
-        <section class="testimonials-section" style="background-image:url('http://wp1.themexlab.com/wp/dreamland/wp-content/uploads/2015/12/testimonials-bg.jpg');">
+        <section class="testimonials-section" style="background-image:url('images/testimonials-bg.jpg');">
             <div class="auto-container">
                 <div class="sec-title">
                     <h2>WHAT CLIENT SAY </h2>
