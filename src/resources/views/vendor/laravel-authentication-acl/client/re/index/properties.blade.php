@@ -40,8 +40,10 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                         </div>
                         <div class="feature_texthouse">
                             <h4 class="featured_houses_title">
-                                <a href="{!! URL::route('re.view',['id' => $real_estates->real_estate_id])!!}" target="_self">{!!$real_estates->real_estate_title!!}</a>        </h4>
-                            <div class="featured_houses_location"><i class="fa fa-map-marker"></i> USA, Avenel&nbsp;</div>              <div class="featured_houses_category">
+                                <a href="{!! URL::route('re.view',['id' => $real_estates->real_estate_id])!!}" target="_self">{!!$real_estates->real_estate_title!!}</a>        
+                            </h4>
+                            <div class="featured_houses_location"><i class="fa fa-map-marker"></i> USA, Avenel&nbsp;</div>              
+                            <div class="featured_houses_category">
                                 <i class="fa fa-tag"></i>
                                 <a href="#" class="category">
                                     Apartment</a>
@@ -70,21 +72,21 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                     </div>
                     @endforeach
                 </div>
-                <!-- 1 -->
+                <!-- Apartment -->
 
-
+                
                 <div class="featured_houses tab-pane fade" id="Apartment">
                     <div class="featured_houses_block col-md-4 col-sm-6 col-xs-12">
                         <div style="position:relative">
                             <a href="#" target="_self"> <img src="../images/3.jpg" alt="Avenel House" border="0"></a>    
                             <div class="col_rent">
-
                                 For sale               
                             </div><!-- col_rent -->
                         </div>
                         <div class="feature_texthouse">
                             <h4 class="featured_houses_title">
-                                <a href="#" target="_self">Avenel House</a>        </h4>
+                                <a href="#" target="_self">Avenel House</a>        
+                            </h4>
                             <div class="featured_houses_location"><i class="fa fa-map-marker"></i> USA, Avenel&nbsp;</div>              <div class="featured_houses_category">
                                 <i class="fa fa-tag"></i>
                                 <a href="#" class="category">
@@ -98,25 +100,33 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                         </div>
                     </div>
                 </div>
-                <!-- 2 -->
+                <!-- Livingroom -->
                 <div class="featured_houses tab-pane fade" id="LivingRoom">
                     <div class="featured_houses_block col-md-4 col-sm-6 col-xs-12">
                         <div style="position:relative">
-                            <a href="#" target="_self"> <img src="images/3.jpg" alt="Avenel House" border="0"></a>    <div class="col_rent">
-                                For sale                </div><!-- col_rent -->
+                            <a href="#" target="_self"> 
+                                <img src="images/3.jpg" alt="Avenel House" border="0">
+                            </a>    
+                            <div class="col_rent">
+                                For sale                
+                            </div><!-- col_rent -->
                         </div>
                         <div class="feature_texthouse">
                             <h4 class="featured_houses_title">
-                                <a href="#" target="_self">Avenel House</a>        </h4>
+                                <a href="#" target="_self">Avenel House</a>        
+                            </h4>
                             <div class="featured_houses_location"><i class="fa fa-map-marker"></i> USA, Avenel&nbsp;</div>              <div class="featured_houses_category">
                                 <i class="fa fa-tag"></i>
                                 <a href="#" class="category">
-                                    Apartment</a>
+                                    Apartment
+                                </a>
                             </div>
                             <div class="featured_houses_size featured_houses_inline"><i class="fa fa-expand"></i> 3500&nbsp;Sqrt</div><div class="featured_houses_rooms featured_houses_inline"><i class="fa fa-building-o"></i> Rooms: 4&nbsp;</div><div class="featured_houses_year featured_houses_inline"><i class="fa fa-tint"></i> Built year: 2004&nbsp;</div><div class="featured_houses_bedrooms featured_houses_inline"><i class="fa fa-inbox"></i> Bedrooms: 2&nbsp;</div><div class="featured_houses_hits featured_houses_inline"><i class="fa fa-eye"></i> Hits: 162</div>    </div>
                         <div class="rem_house_viewlist">
                             <a href="#" target="_self" style="display: block">
-                                <div class="featured_houses_price ">7.000.000,00&nbsp;USD</div><div class="featured_houses_viewlisting">View listing</div>                </a>
+                                <div class="featured_houses_price ">7.000.000,00&nbsp;USD</div>
+                                <div class="featured_houses_viewlisting">View listing</div>                
+                            </a>
                             <div style="clear: both;"></div>
                         </div>
                     </div>
@@ -131,12 +141,15 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                             <div class="featured_houses_location"><i class="fa fa-map-marker"></i> USA, Avenel&nbsp;</div>              <div class="featured_houses_category">
                                 <i class="fa fa-tag"></i>
                                 <a href="#" class="category">
-                                    Apartment</a>
+                                    Apartment
+                                </a>
                             </div>
                             <div class="featured_houses_size featured_houses_inline"><i class="fa fa-expand"></i> 3500&nbsp;Sqrt</div><div class="featured_houses_rooms featured_houses_inline"><i class="fa fa-building-o"></i> Rooms: 4&nbsp;</div><div class="featured_houses_year featured_houses_inline"><i class="fa fa-tint"></i> Built year: 2004&nbsp;</div><div class="featured_houses_bedrooms featured_houses_inline"><i class="fa fa-inbox"></i> Bedrooms: 2&nbsp;</div><div class="featured_houses_hits featured_houses_inline"><i class="fa fa-eye"></i> Hits: 162</div>    </div>
                         <div class="rem_house_viewlist">
                             <a href="#" target="_self" style="display: block">
-                                <div class="featured_houses_price ">7.000.000,00&nbsp;USD</div><div class="featured_houses_viewlisting">View listing</div>                </a>
+                                <div class="featured_houses_price ">7.000.000,00&nbsp;USD</div>
+                                <div class="featured_houses_viewlisting">View listing</div>                
+                            </a>
                             <div style="clear: both;"></div>
                         </div>
                     </div>
