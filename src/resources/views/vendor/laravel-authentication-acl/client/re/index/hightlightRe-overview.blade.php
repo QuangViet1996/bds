@@ -6,7 +6,6 @@ $less = new lessc;
 $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/less/aboutproperty.less', public_path() . '/packages/jacopo/laravel-authentication-acl/_css/aboutproperty.css');
 ?>
 
-@include('laravel-authentication-acl::client.re.index.search')
 
 <!--FAVORITES PRODUCT - OVERVIEW-->
 <section class="section  general-row">

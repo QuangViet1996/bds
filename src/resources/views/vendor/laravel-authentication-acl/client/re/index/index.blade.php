@@ -8,6 +8,8 @@ Trang chủ
 
     @include('laravel-authentication-acl::client.re.index.slideshow')
 
+    @include('laravel-authentication-acl::client.re.index.search')
+    
     <!--HIGHTLIGHT RE-->
     @include('laravel-authentication-acl::client.re.index.hightlightRe-overview')
 
