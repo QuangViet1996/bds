@@ -59,7 +59,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                         <ul class="navigation">
 
                             <!--HOME-->
-                            <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home current-menu-ancestor current-menu-parent menu-item-has-children menu-item-109 active">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom">
                                 <a title="Home" href="{!! URL::route('re.home')!!}" class="hvr-underline-from-left1" aria-expanded="false" data-scroll="" data-options="easing: easeOutQuart">
                                     <?php echo trans('clients.home') ?>
                                 </a>
@@ -88,7 +88,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                             Gallery
                                         </a>
                                     </li>
-                                    <li id="menu-item-213" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown">
+                                    <li id="menu-item-213" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
                                         <a title="Sidebar Page" href="#">
                                             Sidebar Page
                                         </a>
