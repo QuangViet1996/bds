@@ -32,16 +32,15 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
                                 <!--Tab / Active Tab-->
                                 <div class="tab active-tab" id="tab-one179" style="display: block">
-                                    <h3>Exterior Details</h3>
+                                    <h3><?php echo $hightlight_re->real_estate_title ?></h3>
                                     <div class="text">
-                                        Real Estate agents are Property consisting of land and the buildings on it, along with its seds naturals resources such seds as crops, minerals, or water; immovable property of this nature.
+                                        <?php echo $hightlight_re->real_estate_overview ?>
                                     </div>
                                     <div class="row clearfix">
-                                        <div class="column col-md-4 col-sm-4 col-xs-12"><!--Styled List-->
+                                        <div class="column col-xs-12">
                                             <ul class="styled-list">
-                                                <li>Water Strg : 5000/ltr</li>
-                                                <li>No of Floors : 2</li>
-                                                <li>No Air Condition : 2</li>
+                                                <li>Địa chỉ : <?php echo $hightlight_re->real_estate_map_address ?></li>
+                                                <li><a href="#">Xem chi tiết >></a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -49,16 +48,14 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
                                 <!--Tab / Active Tab-->
                                 <div class="tab " id="tab-one178">
-                                    <h3>Room Dimensions</h3>
+                                    <h3>Các hình thức thanh toán được liệt kê bên dưới</h3>
                                     <div class="text">
-                                        Real Estate agents are Property consisting of land and the buildings on it, along with its seds naturals resources such seds as crops, minerals, or water; immovable property of this nature.
+                                        Chúng tôi cam kết là đơn vị uy tín, các thông tin đưa ra hoàn toàn chính xác
                                     </div>
                                     <div class="row clearfix">
-                                        <div class="column col-md-4 col-sm-4 col-xs-12"><!--Styled List-->
+                                        <div class="column col-md-4 col-sm-4 col-xs-12">
                                             <ul class="styled-list">
-                                                <li>Water Strg : 5000/ltr</li>
-                                                <li>No of Floors : 2</li>
-                                                <li>No Air Condition : 2</li>
+                                                <?php echo $hightlight_re->real_estate_pay ?>
                                             </ul>
                                         </div>
                                     </div>
@@ -66,16 +63,15 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
                                 <!--Tab / Active Tab-->
                                 <div class="tab " id="tab-one181">
-                                    <h3>Interior Details</h3>
+                                    <h3>Từ khách hàng</h3>
                                     <div class="text">
-                                        Real Estate agents are Property consisting of land and the buildings on it, along with its seds naturals resources such seds as crops, minerals, or water; immovable property of this nature,
+                                        <?php echo $hightlight_re->real_estate_rating ?>
                                     </div>
                                     <div class="row clearfix">
                                         <div class="column col-md-4 col-sm-4 col-xs-12"><!--Styled List-->
                                             <ul class="styled-list">
-                                                <li>Water Strg : 5000/ltr</li>
-                                                <li>No of Floors : 2</li>
-                                                <li>No Air Condition : 2</li>
+                                                <li>Lượt xem: <?php echo $hightlight_re->real_estate_views  ?></li>
+                                                <li>Lượt likes: <?php echo $hightlight_re->real_estate_likes  ?></li>
                                             </ul>
                                         </div>
                                     </div>

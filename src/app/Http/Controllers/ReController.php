@@ -58,7 +58,7 @@ class ReController extends Controller {
 
         $testimonials = $obj_testimonials->listTestimonial();
         $real_estates = $obj_real_estates->listRealEstate();
-        $hightlightRe = $obj_real_estates->getHighlightRe();
+        $hightlight_re = $obj_real_estates->getHighlightRe();
 
         $configs = config('app.libfiles');
 
@@ -67,7 +67,7 @@ class ReController extends Controller {
             'config_testimonial' => $configs['testimonial'],
             'real_estates' => $real_estates,
             'request' => $request,
-            'hightlightRe' => $hightlightRe
+            'hightlight_re' => $hightlight_re
         ));
 
         return view('laravel-authentication-acl::client.re.index.index')->with(['data' => $data]);
