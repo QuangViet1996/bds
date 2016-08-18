@@ -361,7 +361,7 @@ a {
 @media only screen and (max-width: 767px) {
   .main-menu {
     float: none !important;
-    padding: 50px 0px 18px;
+    padding: 70px 0px 5px;
     z-index: 5;
     width: 100%;
   }
@@ -528,12 +528,6 @@ a {
     min-height: 0px !important;
     max-height: none !important;
     max-width: 100% !important;
-  }
-  .main-menu {
-    float: none !important;
-    padding: 50px 0px 18px;
-    z-index: 5;
-    width: 100%;
   }
   .main-menu .collapse {
     position: relative;
