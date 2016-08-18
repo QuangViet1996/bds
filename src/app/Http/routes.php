@@ -16,6 +16,11 @@ Route::get('/list', [
     'uses' => '\App\Http\Controllers\ReController@reList'
 ]);
 
+Route::get('/categories', [
+    'as' => 're.categories',
+    'uses' => '\App\Http\Controllers\ReController@reCategories'
+]);
+
 Route::get('/category', [
     'as' => 're.category',
     'uses' => '\App\Http\Controllers\ReController@reCategory'

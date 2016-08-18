@@ -4,13 +4,16 @@ if (!class_exists('lessc')) {
 }
 $less = new lessc;
 $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/less/cat.less', public_path() . '/packages/jacopo/laravel-authentication-acl/_css/cat.css');
+
+$less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/less/properties.less', public_path() . '/packages/jacopo/laravel-authentication-acl/_css/properties.css');
+
 $categories = @$data['categories'];
 ?>
 
 <section class="page-title">
     <div class="auto-container">
         <div class="content-box">
-            <h1>Danh mục sản phẩm</h1>
+            <h1>{!! $category->real_estate_category_title !!}</h1>
             <div class="bread-crumb">
                 <ul class="breadcrumb pull-right"><li><a href="#">Home</a></li><li><a href="#">Archive for January, 2016</a>
                     </li>
@@ -25,66 +28,77 @@ $categories = @$data['categories'];
 
             <!--LIST OF CATEGORIES-->
             <div class="tab-content col-md-9 col-sm-8 col-xs-12">
-                @if($categories)
-                    @foreach($categories as $category)
-                    <section class="blog-container">
-                        <!--Blog Post-->
-                        <div id="post-270" class="post-270 post type-post status-publish format-standard has-post-thumbnail hentry category-residential">
-                            <!--Blog Post-->
-                            <div class="blog-post wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;">
-                                <article class="inner-box">
-                                    <!--Image-->
-                                    <figure class="image">
-                                        <a href="#">
-                                            <img width="625" height="401" src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/41.jpg') !!}" class="img-responsive wp-post-image" alt="blog-image-6" sizes="(max-width: 625px) 100vw, 625px">            </a>
-                                        <div class="post-options">
-
-                                            <a href="#" class="heart-icon img-circle jolly_like_it" data-id="270"><span class="icon fa fa-heart"></span></a>
-                                        </div>
-                                    </figure>
-                                    <!--Lower Content-->
-                                    <div class="lower-part">
-                                        <div class="post-info">
-                                            Posted On<a class="extraspace" href="#"><strong>Jan 13, 2016</strong></a>
-                                        </div>
-
-                                        <!--TITLE-->
-                                        <div class="post-title">
-                                            <h3>
-                                                <a href="#">{!! $category->real_estate_category_title !!}</a>
-                                            </h3>
-                                        </div>
-
-                                        <div class="post-text">
-                                            {!! $category->real_estate_category_overview !!}
-                                        </div>
-
-                                        <div class="post-info lower">
-                                            <i class="fa fa-comments"></i> &nbsp; <a href="#"><strong>No Comments</strong> &nbsp; &nbsp; &nbsp;</a> | &nbsp; &nbsp; <a href="#"><i class="fa fa-tag"></i> &nbsp; </a><a href="#" rel="category">Residential</a>
-                                            <span class="pull-right"><a href="{!! URL::route('re.category',['id' => $category->real_estate_category_id])!!}" class="theme-btn read-more">Read More</a></span>
-                                        </div>
-
-                                    </div>
-                                </article>
-                            </div>
+                   @foreach($real_estates as $re)
+                    <div class="featured_houses_block col-md-6 col-sm-6 col-xs-12">
+                        <div style="position:relative">
+                            <a href="{!! URL::route('re.view',['id' => $re->real_estate_id])!!}" target="_self"> <img src="../images/3.jpg" alt="Avenel House" border="0"></a>
+                            <div class="col_rent">
+                                For sale
+                            </div><!-- col_rent -->
                         </div>
-                    </section>
-                    @endforeach
-                @endif
+                        <div class="feature_texthouse">
 
-                <div class="pager-outer">
-                    <ul class="pagination col-md-12">
-                        <ul class="pagination">
-                            <li><span class="page-numbers current">1</span></li>
-                            <li><a class="page-numbers" href="#">2</a></li>
-                            <li><a class="page-numbers" href="#">3</a></li>
-                            <li><a class="next page-numbers" href="#">»</a></li>
-                        </ul>
-                    </ul>
-                </div>
-                <div class="paginator">
-                    {!! $categories->appends($data['request']->except(['page']) )->render() !!}
-                </div>
+                            <!--TITLE-->
+                            <h4 class="featured_houses_title">
+                                <a href="{!! URL::route('re.view',['id' => $re->real_estate_id])!!}" target="_self">{!! $re->real_estate_title !!}</a>
+                            </h4>
+
+                            <!--LOCATION-->
+                            <div class="featured_houses_location">
+                                <i class="fa fa-map-marker"></i>
+                                {!! $re->real_estate_map_address !!}
+                            </div>
+
+                            <!--CATEGORY-->
+                            <div class="featured_houses_category">
+                                <i class="fa fa-tag"></i>
+                                <a href="#" class="category">
+                                    {!! $category->real_estate_category_title !!}
+                                </a>
+                            </div>
+
+                            <!--SQRT-->
+                            <div class="featured_houses_size featured_houses_inline">
+                                <i class="fa fa-expand"></i>
+                                {!! $re->real_estate_sq !!}
+                            </div>
+
+                            <!--BEDROOMS-->
+                            <div class="featured_houses_rooms featured_houses_inline">
+                                <i class="fa fa-building-o"></i>
+                                Rooms: {!! $re->real_estate_bedroom !!}
+                            </div>
+
+                            <!--BATHROOMS-->
+                            <div class="featured_houses_bedrooms featured_houses_inline">
+                                <i class="fa fa-inbox"></i>
+                                Bedrooms: {!! $re->real_estate_bathroom !!}
+                            </div>
+
+                             <!--YEAR-->
+                            <div class="featured_houses_year featured_houses_inline">
+                                <i class="fa fa-tint"></i>
+                                Built year: {!! $re->real_estate_year_build !!}
+                            </div>
+
+                            <!--HITS-->
+                            <div class="featured_houses_hits featured_houses_inline">
+                                <i class="fa fa-eye"></i>
+                                Hits: {!! $re->real_estate_views !!}
+                            </div>
+
+                        </div>
+                        <div class="rem_house_viewlist">
+                            <a href="#" target="_self" style="display: block">
+                                <div class="featured_houses_price ">
+                                    {!! $re->real_estate_cost !!} VNĐ
+                                </div>
+                                <div class="featured_houses_viewlisting">Xem chi tiết</div>
+                            </a>
+                            <div style="clear: both;"></div>
+                        </div>
+                    </div>
+                    @endforeach
             </div>
 
             <div class="col-md-3 col-sm-4 col-xs-12">

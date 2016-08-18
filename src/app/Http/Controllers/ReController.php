@@ -151,9 +151,36 @@ class ReController extends Controller {
      * @status: REVIEWED
      */
 
+    public function reCategories(Request $request) {
+
+        $obj_categories = new Categories();
+
+        $categories = $obj_categories->getList(array());
+        $data = array_merge($this->data, array(
+            'categories' => $categories,
+            'request' => $request
+        ));
+        return view('laravel-authentication-acl::client.re.category.cat_list')->with(['data' => $data]);
+    }
+
     public function reCategory(Request $request) {
 
-        return view('laravel-authentication-acl::client.re.category.cat_list');
+        $obj_categories = new Categories();
+        $obj_real_estates = new RealEstates();
+
+        $category_id = $request->get('id');
+
+        $category = $obj_categories->find($category_id);
+
+        if ($category) {
+            $real_estates  = $obj_real_estates->getByCategory($category);
+            $data = array_merge($this->data, array(
+                'category' => $category,
+                'request' => $request,
+                'real_estates' => $real_estates
+            ));
+            return view('laravel-authentication-acl::client.re.category.list-by-category')->with(['data' => $data]);
+        }
     }
 
     /*     * ********************************************

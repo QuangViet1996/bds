@@ -239,4 +239,15 @@ class RealEstates extends Model {
         }
         return $more_re;
     }
+
+    public function getByCategory($category) {
+
+        $this->config_reader = App::make('config');
+        $results_per_page = $this->config_reader->get('acl_base.testimonial_page');
+
+        $real_estates = self::where('real_estate_category_id', '=', $category->real_estate_category_id )
+                            ->orderBy('real_estate_id', 'DESC')
+                            ->paginate($results_per_page);
+        return $real_estates;
+    }
 }

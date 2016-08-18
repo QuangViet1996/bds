@@ -12,6 +12,7 @@ class Categories extends Model {
     public $timestamps = false;
     protected $fillable = [
         "real_estate_category_title",
+        "real_estate_category_overview",
         "real_estate_category_description",
         "real_estate_category_image",
         "real_estate_category_status",

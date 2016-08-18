@@ -73,8 +73,8 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                 <ul role="menu" class="submenu" style="display: none;">
 
                                     <li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page">
-                                        <a title="Video Tour" href="{!! URL::route('re.category')!!}">
-                                            Category
+                                        <a title="Video Tour" href="{!! URL::route('re.categories')!!}">
+                                            Danh mục
                                         </a>
                                     </li>
 
@@ -98,8 +98,8 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
                             <!--CONTACT-->
                             <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                <a title="About US" href="#" class="hvr-underline-from-left1" data-scroll="" data-options="easing: easeOutQuart">
-                                    <?php echo trans('clients.register') ?>
+                                <a title="About US" href="{!! URL::route('re.contact')!!}" class="hvr-underline-from-left1" data-scroll="" data-options="easing: easeOutQuart">
+                                    <?php echo trans('clients.contact') ?>
                                 </a>
                             </li>
 

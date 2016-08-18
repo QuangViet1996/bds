@@ -102,7 +102,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                     @foreach($item['re'] as $re)
                     <div class="featured_houses_block col-md-4 col-sm-6 col-xs-12">
                         <div style="position:relative">
-                            <a href="#" target="_self"> <img src="../images/3.jpg" alt="Avenel House" border="0"></a>
+                            <a href="{!! URL::route('re.view',['id' => $re->real_estate_id])!!}" target="_self"> <img src="../images/3.jpg" alt="Avenel House" border="0"></a>
                             <div class="col_rent">
                                 For sale
                             </div><!-- col_rent -->
