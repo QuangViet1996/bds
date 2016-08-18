@@ -17,11 +17,11 @@
         var params = {};
         function initGmap() {
             params = {
-                map_marker_lat: <?php echo @$data['realestate']->real_estate_map_marker_lat ?>,
-                map_marker_lng: <?php echo @$data['realestate']->real_estate_map_marker_lng ?>,
-                map_center_lat: <?php echo @$data['realestate']->real_estate_map_center_lat ?>,
-                map_center_lng: <?php echo @$data['realestate']->real_estate_map_center_lng ?>,
-                
+                map_marker_lat: <?php echo $realestate->real_estate_map_marker_lat ?>,
+                map_marker_lng: <?php echo $realestate->real_estate_map_marker_lng ?>,
+                map_center_lat: <?php echo $realestate->real_estate_map_center_lat ?>,
+                map_center_lng: <?php echo $realestate->real_estate_map_center_lng ?>,
+
                 map_zoom: <?php echo @$data['realestate']->real_estate_map_zoom ?>,
                 inputId: 'pac-input',
                 inputs: {
@@ -46,7 +46,7 @@
                 google.maps.event.trigger(gmap, 'resize');
             });
         });
-        
+
     </script>
     @stop
 

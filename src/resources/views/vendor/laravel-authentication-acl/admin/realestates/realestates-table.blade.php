@@ -7,21 +7,25 @@
 <table class="table table-hover">
     <thead>
         <tr>
+            <td>#</td>
             <th>{!!trans('re.title')!!} </th>
-            <th>{!!trans('re.description')!!}</th>
             <th>{!!trans('re.sq')!!}</th>
             <th>{!!trans('re.build_year')!!}</th>
             <th>{!!trans('re.Operations')!!}</th>
         </tr>
     </thead>
     <tbody>
+         <?php
+        $nav = $data['list']->toArray();
+        $counter = ($nav['current_page'] - 1) * $nav['per_page'] + 1;
+        ?>
         @foreach($data['list'] as $houses)
         <tr>
-            <td style="width:20%">{!! $houses->real_estate_title !!}</td>
-            <td style="width:30%">{!! $houses->real_estate_description !!}</td>
-            <td style="width:10%">{!! $houses->real_estate_sq !!}</td>
-            <td style="width:15%">{!! $houses->real_estate_year_build !!}</td>
-            <td style="witdh:10%">
+            <td><?php echo $counter; $counter++ ?></td>
+            <td>{!! $houses->real_estate_title !!}</td>
+            <td>{!! $houses->real_estate_sq !!}</td>
+            <td>{!! $houses->real_estate_year_build !!}</td>
+            <td>
                  <a href="{!! URL::route('realestates.edit', ['id' => $houses->real_estate_id]) !!}" title='{{ trans('re.edit') }}' class="margin-left-5">
                      <i class="fa fa-pencil-square-o fa-2x"></i>
                  </a>

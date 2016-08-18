@@ -17,7 +17,7 @@ use \LaravelAcl\Authentication\Controllers\Controller;
 /**
  * Models
  */
-use App\Models\Testimonial;
+use App\Models\Testimonials;
 /**
  * Validator
  */
@@ -40,17 +40,17 @@ class TestimonialController extends Controller {
 
     /*     * ********************************************
      * index
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
     public function getList(Request $request) {
 
-        $obj_testimonial = new Testimonial();
+        $obj_testimonial = new Testimonials();
         $list = $obj_testimonial->listTestimonial();
 
         $data = array_merge($this->data, array(
@@ -62,11 +62,11 @@ class TestimonialController extends Controller {
 
     /*     * ********************************************
      * postTestimonial
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
@@ -80,7 +80,7 @@ class TestimonialController extends Controller {
         $input = $request->all();
         $real_estate_testimonial_id = $request->get('id');
         $testimonial = NULL;
-        
+
         if ($validator->validate($input)) {
 
             /**
@@ -100,16 +100,16 @@ class TestimonialController extends Controller {
                 $testimonial = $obj_testimonial->find($real_estate_testimonial_id);
             }
 
-            //Update existing 
+            //Update existing
             if (!empty($testimonial)) {
 
                 $testimonial = $obj_testimonial->updateTestimonial($input);
 
                 return Redirect::route("testimonials.list")->withMessage(trans('testimonials.edit_successfull'));
 
-                //Add new 
+                //Add new
             } elseif (empty($real_estate_testimonial_id)) {
-                
+
                 $testimonial = $obj_testimonial->addTestimonial($input);
 
                 return Redirect::route("testimonials.list")->withMessage(trans('testimonials.add_successfull'));
@@ -130,11 +130,11 @@ class TestimonialController extends Controller {
 
     /*     * ********************************************
      * addTestimonial
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
@@ -146,11 +146,11 @@ class TestimonialController extends Controller {
 
     /*     * ********************************************
      * editTestimonial
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
@@ -161,12 +161,12 @@ class TestimonialController extends Controller {
         $real_estate_testimonial_id = $request->get('id');
 
         $testimonial = $obj_testimonial->find($real_estate_testimonial_id);
-        
+
         if (!empty($testimonial)) {
-            
+
             $libFiles = new LibFiles();
             $configs = config('app.libfiles');
-            
+
             $data = array_merge($this->data, array(
                 'testimonial' => $testimonial,
                 'request' => $request,
@@ -174,27 +174,27 @@ class TestimonialController extends Controller {
             ));
 
             return View::make('laravel-authentication-acl::admin.testimonials.edit')->with(['data' => $data]);
-            
+
         } else {
-            
+
             return Redirect::route("testimonials.list")->withMessage(trans('testimonials.not_table'));
-            
+
         }
     }
 
     /*     * ********************************************
      * deleteTestimonial
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
     public function deleteTestimonial(Request $request) {
         try {
-            
+
             $obj_testimonial = new Testimonial();
             $obj_testimonial->deleteTestimonial($request->all());
         } catch (JacopoExceptionsInterface $e) {
