@@ -225,4 +225,18 @@ class RealEstates extends Model {
          $real_estate = self::first();
          return $real_estate;
     }
+
+    public function getMoreByCategories($categories){
+        $more_re = array();
+        foreach ($categories as $category) {
+            $re = self::where('real_estate_category_id', '=', $category->real_estate_category_id )
+                        ->limit(4)
+                        ->get();
+            $more_re[] = array(
+                'category' => $category,
+                're' => $re
+            );
+        }
+        return $more_re;
+    }
 }

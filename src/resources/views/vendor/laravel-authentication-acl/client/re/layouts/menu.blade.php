@@ -99,7 +99,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                             <!--CONTACT-->
                             <li class="menu-item menu-item-type-post_type menu-item-object-page">
                                 <a title="About US" href="#" class="hvr-underline-from-left1" data-scroll="" data-options="easing: easeOutQuart">
-                                    <?php echo trans('clients.contact') ?>
+                                    <?php echo trans('clients.register') ?>
                                 </a>
                             </li>
 
@@ -116,7 +116,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                     </div>
                 </nav>
                 <!--END MAIN MENU-->
-                
+
             </div>
         </div>
 

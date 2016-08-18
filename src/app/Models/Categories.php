@@ -10,19 +10,21 @@ class Categories extends Model {
     protected $table = 'real_estate_categories';
     protected $primaryKey = 'real_estate_category_id';
     public $timestamps = false;
-    protected $fillable = [ "real_estate_category_title",
+    protected $fillable = [
+        "real_estate_category_title",
         "real_estate_category_description",
         "real_estate_category_image",
+        "real_estate_category_status",
     ];
     protected $guarded = ["real_estate_category_id"];
 
     /*     * ********************************************
      * findById
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
@@ -30,14 +32,18 @@ class Categories extends Model {
         $category = self::find($id);
         return $category;
     }
+    public function getTop(){
+        $categories = self::limit(3)->get();
+        return $categories;
+    }
 
     /*     * ********************************************
      * updateCategories
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
@@ -58,11 +64,11 @@ class Categories extends Model {
 
     /*     * ********************************************
      * addCategories
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
@@ -77,11 +83,11 @@ class Categories extends Model {
 
     /*     * ********************************************
      * deleteCategories
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
@@ -97,11 +103,11 @@ class Categories extends Model {
 
     /*     * ********************************************
      * getPayrollSupportListCat
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
@@ -117,11 +123,11 @@ class Categories extends Model {
 
     /*     * ********************************************
      * viewCategories
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
@@ -135,11 +141,11 @@ class Categories extends Model {
 
     /*     * ********************************************
      * getPayrollCat
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 

@@ -18,9 +18,10 @@ Trang chủ
     <!--END HIGHTLIGHT RE-->
 
     <!--MORE RE-->
-    @include('laravel-authentication-acl::client.re.index.properties')
+    <?php $more_re = $data['more_re'] ?>
+    @include('laravel-authentication-acl::client.re.index.more')
     <!--/-->
-    
+
     @include('laravel-authentication-acl::client.re.index.CT')
     @include('laravel-authentication-acl::client.re.index.aboutagent')
     @include('laravel-authentication-acl::client.re.index.testimonial')

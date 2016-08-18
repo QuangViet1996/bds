@@ -17,6 +17,7 @@ use \LaravelAcl\Authentication\Controllers\Controller;
  */
 use App\Models\Testimonials;
 use App\Models\RealEstates;
+use App\Models\Categories;
 use App\Models\Contact;
 /**
  * Validator
@@ -55,10 +56,15 @@ class ReController extends Controller {
     public function index(Request $request) {
         $obj_testimonials = new Testimonials();
         $obj_real_estates = new RealEstates();
+        $obj_categories = new Categories();
 
         $testimonials = $obj_testimonials->listTestimonial();
         $real_estates = $obj_real_estates->listRealEstate();
         $hightlight_re = $obj_real_estates->getHighlightRe();
+
+        $categories = $obj_categories->getTop();
+
+        $more_re = $obj_real_estates->getMoreByCategories($categories);
 
         $configs = config('app.libfiles');
 
@@ -67,7 +73,8 @@ class ReController extends Controller {
             'config_testimonial' => $configs['testimonial'],
             'real_estates' => $real_estates,
             'request' => $request,
-            'hightlight_re' => $hightlight_re
+            'hightlight_re' => $hightlight_re,
+            'more_re' => $more_re
         ));
 
         return view('laravel-authentication-acl::client.re.index.index')->with(['data' => $data]);
