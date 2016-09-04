@@ -22,7 +22,7 @@
                 map_center_lat: <?php echo $realestate->real_estate_map_center_lat ?>,
                 map_center_lng: <?php echo $realestate->real_estate_map_center_lng ?>,
 
-                map_zoom: <?php echo @$data['realestate']->real_estate_map_zoom ?>,
+                map_zoom: <?php echo $realestate->real_estate_map_zoom ?>,
                 inputId: 'pac-input',
                 inputs: {
                     marker_lat: 'input-marker-lat',

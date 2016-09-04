@@ -138,7 +138,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         /**
-         * 
+         *
          */
         LaravelAcl\Authentication\AuthenticationServiceProvider::class,
         Ktquez\Tinymce\TinymceServiceProvider::class,
@@ -211,5 +211,15 @@ return [
             'urlpath' => 'packages/media/realestates',
             'prename' => 're'
         ]
-    ]
+    ],
+    'map' => [
+        'default' => [
+            'marker_lat' => '37.4224764',
+            'marker_lng' => '-122.0842499',
+            'center_lat' => '37.4224764',
+            'center_lng' => '-122.0842499',
+            'map_zoom' => 2
+        ]
+
+    ],
 ];

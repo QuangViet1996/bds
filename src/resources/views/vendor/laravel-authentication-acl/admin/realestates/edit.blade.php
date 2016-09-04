@@ -10,19 +10,19 @@
     <?php
         $realestate = $data['realestate'];
         if (!$realestate->real_estate_map_marker_lat) {
-            $realestate->real_estate_map_marker_lat = 0;
+            $realestate->real_estate_map_marker_lat = $data['map']['marker_lat'];
         }
         if (!$realestate->real_estate_map_marker_lng) {
-            $realestate->real_estate_map_marker_lng = 0;
+            $realestate->real_estate_map_marker_lng = $data['map']['marker_lng'];
         }
         if (!$realestate->real_estate_map_center_lat) {
-            $realestate->real_estate_map_center_lat = 0;
+            $realestate->real_estate_map_center_lat = $data['map']['center_lat'];
         }
         if (!$realestate->real_estate_map_center_lng) {
-            $realestate->real_estate_map_center_lng = 0;
+            $realestate->real_estate_map_center_lng = $data['map']['center_lng'];
         }
         if (!$realestate->real_estate_map_zoom) {
-            $realestate->real_estate_map_zoom = 15;
+            $realestate->real_estate_map_zoom = $data['map']['map_zoom'];
         }
     ?>
 
@@ -33,6 +33,7 @@
         $realestate->real_estate_id = null;
         $realestate->real_estate_title = '';
         $realestate->real_estate_category_id = '';
+        $realestate->real_estate_overview = '';
         $realestate->real_estate_description = '';
         $realestate->real_estate_bedroom = '';
         $realestate->real_estate_bathroom = '';
@@ -40,6 +41,12 @@
         $realestate->real_estate_year_build = '';
         $realestate->real_estate_images = '';
         $realestate->real_estate_cost = '';
+
+        $realestate->real_estate_map_marker_lat = $data['map']['marker_lat'];
+        $realestate->real_estate_map_marker_lng = $data['map']['marker_lng'];
+        $realestate->real_estate_map_center_lat = $data['map']['center_lat'];
+        $realestate->real_estate_map_center_lng = $data['map']['center_lng'];
+        $realestate->real_estate_map_zoom = $data['map']['map_zoom'];
     ?>
 
 @endif
@@ -67,6 +74,9 @@
             <div class="panel-body">
 
                 {!! Form::open(['route'=>['realestates.edit'],  'files'=>true, 'method' => 'post'])  !!}
+
+                <a href="{!! URL::route('realestates.delete',['id' => $realestate->real_estate_id, '_token' => csrf_token()]) !!}" class="btn btn-danger pull-right margin-left-5 delete">{!!trans('re.delete')!!}</a>
+                {!! Form::submit(trans('re.save'), array("class"=>"btn btn-info pull-right ")) !!}
 
                 <ul class="nav nav-tabs">
                     <li class="active"><a data-toggle="tab" href="#home">{!! trans('re.overview') !!}</a></li>

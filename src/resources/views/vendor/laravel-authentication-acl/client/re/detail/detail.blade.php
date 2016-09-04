@@ -80,14 +80,14 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                             <li><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/h_hill_fence.jpg') !!}" style="width: 100%"/></li>
                         </ul>
 
-<!--                        <div id="bx-pager" class="bx" style="text-align: center">
+                        <div id="bx-pager" class="bx" style="text-align: center">
                             <a data-slide-index="0" href=""><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/hill_fence.jpg') !!}" /></a>
                             <a data-slide-index="1" href=""><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/hill_fence.jpg') !!}" /></a>
                             <a data-slide-index="2" href=""><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/hill_fence.jpg') !!}" /></a>
                             <a data-slide-index="3" href=""><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/hill_fence.jpg') !!}" /></a>
                             <a data-slide-index="4" href=""><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/hill_fence.jpg') !!}" /></a>
                             <a data-slide-index="5" href=""><img src="{!! URL::asset('/packages/jacopo/laravel-authentication-acl/images/hill_fence.jpg') !!}" /></a>
-                        </div>-->
+                        </div>
                     </div>
                     <div style="clear:both"></div>
                 </div>
@@ -184,11 +184,11 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
                         </div>
                         <div id="location" class="tab-pane fade">
-                            
+
 
 
                         </div>
-                    </div> 
+                    </div>
                 </div>
 
 
@@ -223,7 +223,7 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
 
                 <div class="rem_house_contacts">
                     <div id="rem_house_titlebox">
-                        Contact agent        </div>    
+                        Contact agent        </div>
 
                     <span class="col_02">Thế Lộc<br>pykun6@gmail.com</span>
 
@@ -255,21 +255,21 @@ $less->compileFile(public_path() . '/packages/jacopo/laravel-authentication-acl/
                                 </span>
                             </div>
                             <div class="col-md-12 col">
-                                <textarea name="customer_comment" rows="8" placeholder="Description"></textarea>        
+                                <textarea name="customer_comment" rows="8" placeholder="Description"></textarea>
                                 <input type="hidden" name="bid[]" value="10">
                             </div>
 
                             <div class="col-md-12 bu col-sm-12 col-xs-12">
                                 <span class="col-md-12 bu col-sm-12 col-xs-12">
                                     <input type="button" value="Send message" class="button">
-                                </span> 
+                                </span>
                             </div>
                         </div>
 
                     </div>
 
                 </div>
-            </div> 
+            </div>
         </div>
     </div>
 </section>

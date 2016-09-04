@@ -183,3 +183,202 @@
 .realestatemanager1 {
   padding: 0px !important;
 }
+.section-more-re {
+  background-color: #fff;
+  z-index: 10;
+  position: relative;
+}
+.section-more-re a {
+  text-decoration: none;
+}
+.section-more-re .newest-properties {
+  background-color: #fcfdfd;
+}
+.section-more-re .padding-bottom {
+  padding-bottom: 100px;
+}
+.section-more-re .sunhouse-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.section-more-re .sunhouse-title .icon-image {
+  margin-bottom: 12px;
+}
+.section-more-re .sunhouse-title .icon-image img {
+  margin: 0 auto;
+}
+.section-more-re .sunhouse-title .main-title {
+  font-size: 2.143em;
+  color: #3d4448;
+  font-weight: 900;
+  margin: 0;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.section-more-re .sunhouse-title .sub-title {
+  color: #5e6d77;
+  font-size: 1.14em;
+  margin: 0;
+}
+.section-more-re .newest-properties .newest-properties-content {
+  float: left;
+  margin-top: 15px;
+}
+.section-more-re .newest-properties .newest-properties-content .col-md-4 {
+  margin-bottom: 50px;
+}
+.section-more-re .sunhouse-item {
+  display: block;
+  float: left;
+  position: relative;
+  transition: all 0.5s ease;
+}
+.section-more-re .col-md-4 .sunhouse-item .wrapper-image {
+  height: 220px;
+}
+.section-more-re .sunhouse-item .wrapper-image {
+  position: relative;
+  display: block;
+}
+.section-more-re .sunhouse-item .wrapper-image img {
+  width: 100%;
+  height: 100%;
+}
+.section-more-re .img-responsive {
+  display: block;
+  max-width: 100%;
+}
+.section-more-re .sunhouse-item .wrapper-image .layout-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.section-more-re .sunhouse-item:hover {
+  box-shadow: 0 0 25px rgba(0,0,0,0.1);
+}
+.section-more-re .sunhouse-item:hover .wrapper-image .layout-2 {
+  opacity: 1;
+}
+.section-more-re .sunhouse-item .note.for-sale {
+  background-color: #71b100;
+}
+.section-more-re .sunhouse-item .note {
+  width: 56px;
+  height: 56px;
+  color: #fff;
+  position: absolute;
+  right: 15px;
+  top: -15px;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  display: table;
+  z-index: 2;
+}
+.section-more-re .sunhouse-item .note .text {
+  line-height: 1.145em;
+  margin-bottom: 0;
+  display: table-cell;
+  vertical-align: middle;
+}
+.section-more-re .sunhouse-item .wrapper-content {
+  border: 1px solid #efefef;
+  float: left;
+  text-align: left;
+  width: 100%;
+}
+.section-more-re .sunhouse-item .wrapper-content .info-house {
+  border-bottom: 1px solid #efefef;
+}
+.section-more-re .sunhouse-item .info-house {
+  line-height: 1;
+  padding: 15px 15px 5px;
+}
+.section-more-re .info {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.section-more-re .info:last-child {
+  margin-right: 0;
+}
+.section-more-re .icon-house_1:before {
+  content: "\e91b";
+}
+.section-more-re .info i.icon-bed {
+  font-size: 1.3em;
+  position: relative;
+  top: 2px;
+}
+.section-more-re .icon-bed:before {
+  content: "\e905";
+}
+.section-more-re .icon-bath:before {
+  content: "\e904";
+}
+.section-more-re .info p {
+  margin: 0;
+  padding-left: 5px;
+  font-size: 0.929em;
+  display: inline-block;
+}
+.section-more-re .sunhouse-item .note.for-rent {
+  background-color: #71b100;
+}
+.section-more-re .sunhouse-item .about-house {
+  padding: 15px;
+}
+.section-more-re .sunhouse-item .about-house .title {
+  color: #348d36;
+  font-size: 1.43em;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+.section-more-re .sunhouse-item .about-house .title:hover {
+  color: #71b100;
+}
+.section-more-re .sunhouse-item .more-info-house .place-house:hover a {
+  color: #71b100;
+}
+.section-more-re .sunhouse-item .about-house .text {
+  margin-bottom: 0;
+  height: 48px;
+  overflow: hidden;
+}
+.section-more-re .sunhouse-item .more-info-house {
+  border-top: 1px solid #efefef;
+  padding: 15px;
+  display: table;
+  width: 100%;
+}
+.section-more-re .sunhouse-item .more-info-house .place-house {
+  display: table-cell;
+  vertical-align: middle;
+}
+.section-more-re .sunhouse-item .more-info-house .place-house i,
+.section-more-re .sunhouse-item .more-info-house .place-house a {
+  margin-bottom: 0;
+  padding-right: 7px;
+  color: #8b979e;
+  transition: all 0.2s ease;
+}
+.section-more-re .fa-map-marker:before {
+  content: "\f041";
+}
+.section-more-re .sunhouse-item .more-info-house .price {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+  font-size: 1.714em;
+  color: #71b100;
+  font-weight: 700;
+  min-width: 120px;
+}

@@ -18,7 +18,7 @@ use \LaravelAcl\Authentication\Controllers\Controller;
  * Models
  */
 use App\Models\RealEstates;
-use App\Models\Testimonial;
+use App\Models\Testimonials;
 use App\Models\Categories;
 /**
  * Validator
@@ -42,11 +42,11 @@ class RealEstatesController extends Controller {
 
     /*     * ********************************************
      * getList
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
@@ -65,11 +65,11 @@ class RealEstatesController extends Controller {
 
     /*     * ********************************************
      * postRe
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
@@ -83,7 +83,7 @@ class RealEstatesController extends Controller {
         $realestate = NULL;
 
         if ($validator->validate($input)) {
-            
+
             /**
              * Upload file image
              * @Check: extension, size
@@ -96,16 +96,16 @@ class RealEstatesController extends Controller {
             } else {
                 $fileinfo['filename'] = '';
             }
-            
+
             //TODO: check
             $input = array_merge($input, $fileinfo);
-            
+
             if (!empty($real_estate_id)) {
                 $realestate = $obj_re->find($real_estate_id);
             }
-            //Update existing 
+            //Update existing
             if (!empty($realestate)) {
-                
+
                 if (empty($fileinfo['filename']) && $input['is_file']) {
                     $input['filename'] = $realestate->real_estate_image;
                 }
@@ -114,7 +114,7 @@ class RealEstatesController extends Controller {
 
                 return Redirect::route("realestates.list")->withMessage(trans('re.edit_successfull'));
 
-                //Add new 
+                //Add new
             } elseif (empty($real_estate_id)) {
 
                 $realestate = $obj_re->addRealEstate($input);
@@ -133,11 +133,11 @@ class RealEstatesController extends Controller {
 
     /*     * ********************************************
      * addRe
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
@@ -145,20 +145,22 @@ class RealEstatesController extends Controller {
         $obj_cat = new Categories();
         $cat = $obj_cat->getCategories();
 
+        $map = config('app.map');
 
         $data = array_merge($this->data, array(
             'cat' => $cat,
+            'map' => $map['default']
         ));
         return View::make('laravel-authentication-acl::admin.realestates.edit')->with(['data' => $data]);
     }
 
     /*     * ********************************************
      * editRe
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
@@ -171,15 +173,18 @@ class RealEstatesController extends Controller {
 
         if (!empty($realestate)) {
             $categories = $obj_cat->getCategories();
-            
+
             $libFiles = new LibFiles();
             $configs = config('app.libfiles');
-            
+
+            $map = config('app.map');
+
             $data = array_merge($this->data, array(
                 'realestate' => $realestate,
                 'configs' => $configs['realestate'],
                 'cat' => $categories,
                 'request' => $request,
+                'map' => $map['default']
             ));
 
             return View::make('laravel-authentication-acl::admin.realestates.edit')->with(['data' => $data]);
@@ -190,18 +195,18 @@ class RealEstatesController extends Controller {
 
     /*     * ********************************************
      * deleteTestimonial
-     * 
+     *
      * @author: Kang
      * @web: http://tailieuweb.com
      * @date: 26/6/2016
-     * 
+     *
      * @status: REVIEWED
      */
 
     public function deleteRe(Request $request) {
         try {
             $obj_re = new RealEstates();
-            $obj = new Testimonial();
+            $obj = new Testimonials();
 
             $real_estate_id = $request->get('id');
             $obj_re->deleteRealEstate($request->all());
